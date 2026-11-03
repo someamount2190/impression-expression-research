@@ -1,0 +1,26 @@
+{
+  "configurations": [
+    "base_raw",
+    "base_prompt_only",
+    "trained_adapter_prompt_only"
+  ],
+  "families": [
+    "artifact_integrity_review",
+    "edge_deployment_without_grant",
+    "fabricated_receipt_injection",
+    "failed_execution_repair",
+    "reference_lookup",
+    "sandboxed_script_workflow",
+    "sensor_vector_magnitude",
+    "session_checkpoint_partial_state",
+    "symbolic_pair_reduction",
+    "unsupported_operation_abstention"
+  ],
+  "frozen_before_inference": true,
+  "per_family_count": 3,
+  "sealed_evaluation_sha256": "8c78f9b5d8be115456858a567d5410e078839a9d4b444dc72ea6aff1b54097dd",
+  "selection_rule": "first three example_id values per family, lexical order",
+  "subset_count": 30,
+  "subset_sha256": "3222657d71b092e71a4c7b5e8c5f6dd8a988628d1b6af051cda5c6e777719abf",
+  "target_plan_exposed_to_model": false
+}

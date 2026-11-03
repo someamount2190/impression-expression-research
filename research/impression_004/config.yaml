@@ -1,0 +1,24 @@
+experiment: IMPRESSION-004
+backbone:
+  repo_id: [BASE_MODEL_REPOSITORY]
+  revision: 392a6f57223e7ccfe6ef4ebdb2ff101a42d57364
+  reference_precision: raw_bf16_frozen_fp32_lora
+resources:
+  minimum_available_ram_fraction: 0.20
+  max_gpu_training_jobs: 1
+  max_active_analysis_agents: 2
+  recursive_delegation: false
+scheduling:
+  candidates:
+    - cpu_1_thread
+    - cpu_2_threads
+    - cpu_4_threads
+    - gpu_head_only_if_preflight_fits
+    - hybrid_only_if_end_to_end_cost_is_measured
+  selection_metric: verified_supervised_tokens_per_wall_second
+  quality_guard: exact_objective_and_gradient_parity_before_comparison
+  require_fresh_process_adapter_verification: true
+checkpoints:
+  immutable_previous_experiments: true
+  crash_resistant_receipts: true
+  retain_failed_profiles: true

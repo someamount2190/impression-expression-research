@@ -1,0 +1,46 @@
+experiment: IMPRESSION-001
+started_local: "2026-11-02"
+maximum_runtime_hours: 8
+primary_model: "[BASE_MODEL]"
+checkpoint: "models/[BASE_MODEL].gguf"
+checkpoint_sha256: 5d6d02eeefa1ab5dbf23f97afdf5c2c95ad3d946dc3b6e9ab72e6c1637d54177
+executor:
+  model: gpt-6-luna
+  max_concurrent: 1
+  recursive_delegation: false
+  max_completed_tasks: 4
+  active_tasks_completed: 4
+  token_ceiling: 20000
+  estimated_tokens_used: unavailable_from_tooling
+  cost_ceiling_usd: null
+  cost_ceiling_note: "Codex usage API exposes account-wide rate-limit percentages but no per-task token count, model price, or dollar limit. Hard stop: 4 executor tasks total; no further delegation in this experiment."
+  account_usage_snapshot:
+    plan_type: plus
+    ordinary_usage_allowed: true
+    five_hour_window_used_percent: 14
+    five_hour_window_minutes: 300
+    weekly_window_used_percent: 18
+    weekly_window_minutes: 10080
+    credits_balance: 0
+    spend_control_reached: false
+    individual_limit: unavailable
+  future_stop_threshold_percent:
+    five_hour_window: 16
+    weekly_window: 20
+hardware:
+  gpu: "NVIDIA GeForce RTX 2050"
+  vram_bytes: 4294443008
+  system_ram_bytes: 24919851008
+  available_ram_bytes_at_audit: 12708524032
+resource_policy:
+  one_gpu_heavy_process: true
+  do_not_overlap_gpu_training: true
+  stop_on_oom_or_nonfinite_loss: true
+  minimum_free_ram_fraction: 0.20
+status:
+  phase_0: complete
+  phase_1: verified_and_persisted
+  phase_2_selective_training: real_partition_lora_updated_with_frozen_backbone
+  phase_3_reintegration: fresh_load_repeatability_passed_training_to_reload_parity_failed
+  phase_4_dynamic_structure: deferred
+  adaptive_efficiency_controller: deferred_to_impression_002

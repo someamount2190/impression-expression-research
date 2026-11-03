@@ -1,0 +1,19 @@
+experiment: IMPRESSION-002C
+parent_experiments: [IMPRESSION-001B, IMPRESSION-002, IMPRESSION-002B]
+maximum_runtime_hours: 8
+model_repo: [BASE_MODEL_REPOSITORY]
+model_revision: 392a6f57223e7ccfe6ef4ebdb2ff101a42d57364
+registry: experiments/impression_001/partitions/[BASE_MODEL]3_q4_registry.json
+streaming_source: experiments/impression_002b
+checkpoint_adapter: experiments/impression_002b/checkpoints/streamed_lora_layer27_qproj_run02/adapter
+runtime:
+  minimum_free_ram_fraction: 0.20
+  dtype: bfloat16
+  selected_region: IMP_L27_ATTENTION_QUERY_PROJECTION
+  max_active_gpu_heavy_workloads: 1
+  explicit_device_placement: true
+delegation:
+  executor_model: gpt-6-luna
+  max_active_subordinates: 1
+  recursive_delegation: false
+  token_spend: unavailable_from_tooling

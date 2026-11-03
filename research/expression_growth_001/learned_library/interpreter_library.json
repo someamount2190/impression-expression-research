@@ -1,0 +1,247 @@
+{
+  "experiment": "EXPRESSION-GROWTH-001",
+  "macros": [
+    {
+      "body": {
+        "intent": "execute",
+        "nodes": [
+          {
+            "arguments": {
+              "args": [
+                "$e501_u",
+                "$e501_v"
+              ],
+              "expr_id": "E501"
+            },
+            "bind": "dot_result",
+            "capability": "expression",
+            "id": "dot",
+            "kind": "action",
+            "operation": "eval"
+          },
+          {
+            "arguments": {
+              "args": [
+                "$dot_result",
+                "$step2_v1"
+              ],
+              "expr_id": "E002"
+            },
+            "bind": "macro_result",
+            "capability": "expression",
+            "depends_on": [
+              "dot"
+            ],
+            "id": "clamp",
+            "kind": "action",
+            "operation": "eval"
+          },
+          {
+            "depends_on": [
+              "clamp"
+            ],
+            "id": "return",
+            "kind": "return",
+            "value": "$macro_result"
+          }
+        ],
+        "objective": "replay discovered E501 to E002 symbolic composition",
+        "variables": [
+          {
+            "name": "e501_u",
+            "source": "input",
+            "type": "array"
+          },
+          {
+            "name": "e501_v",
+            "source": "input",
+            "type": "array"
+          },
+          {
+            "name": "step2_v1",
+            "source": "input",
+            "type": "number"
+          },
+          {
+            "name": "dot_result",
+            "type": "any"
+          },
+          {
+            "name": "macro_result",
+            "type": "any"
+          }
+        ],
+        "version": 1
+      },
+      "discovery_trace_refs": [
+        {
+          "plan_id": "sim_plan_01",
+          "plan_sha256": "9852c078575530d5bc6d5ee78fa227d98f7ecc558d75e7139b748b6c83c549ee",
+          "task_family": "unknown"
+        },
+        {
+          "plan_id": "plan_f6ab7334",
+          "plan_sha256": "7257d23e646eec87973ae4ce92e1e849c0df78cca6589f2e32f945931e202894",
+          "task_family": "unknown"
+        }
+      ],
+      "id": "learned_20dafa1c23cb",
+      "primitive_dependencies": [
+        "E002",
+        "E501"
+      ],
+      "primitive_expansion": [
+        {
+          "arguments": {
+            "args": [
+              "$e501_u",
+              "$e501_v"
+            ],
+            "expr_id": "E501"
+          },
+          "bind": "dot_result",
+          "capability": "expression",
+          "id": "dot",
+          "kind": "action",
+          "operation": "eval"
+        },
+        {
+          "arguments": {
+            "args": [
+              "$dot_result",
+              "$step2_v1"
+            ],
+            "expr_id": "E002"
+          },
+          "bind": "macro_result",
+          "capability": "expression",
+          "depends_on": [
+            "dot"
+          ],
+          "id": "clamp",
+          "kind": "action",
+          "operation": "eval"
+        },
+        {
+          "depends_on": [
+            "clamp"
+          ],
+          "id": "return",
+          "kind": "return",
+          "value": "$macro_result"
+        }
+      ],
+      "signature": {
+        "inputs": {
+          "e501_u": "array",
+          "e501_v": "array",
+          "step2_v1": "number"
+        },
+        "output": "any"
+      },
+      "status": "accepted",
+      "usage_statistics": {
+        "executions": 0,
+        "successful_reuses": 0
+      },
+      "validation": {
+        "broker_replay_cases": [
+          {
+            "broker_output": 20,
+            "case_id": "source_trace_1",
+            "expected_output": 20,
+            "family": "unknown",
+            "inputs": {
+              "e501_u": [
+                3,
+                4,
+                2
+              ],
+              "e501_v": [
+                2,
+                1,
+                5
+              ],
+              "step2_v1": 20
+            },
+            "passed": true,
+            "unhandled_errors": []
+          },
+          {
+            "broker_output": 35,
+            "case_id": "source_trace_2",
+            "expected_output": 35,
+            "family": "unknown",
+            "inputs": {
+              "e501_u": [
+                3,
+                2
+              ],
+              "e501_v": [
+                10,
+                5
+              ],
+              "step2_v1": 35
+            },
+            "passed": true,
+            "unhandled_errors": []
+          },
+          {
+            "broker_output": 8.0,
+            "case_id": "transfer_sensor_weighted_index_v1",
+            "expected_output": 8.0,
+            "family": "sensor_weighted_index",
+            "inputs": {
+              "e501_u": [
+                0.5,
+                4,
+                3
+              ],
+              "e501_v": [
+                2,
+                1,
+                1
+              ],
+              "step2_v1": 9
+            },
+            "passed": true,
+            "unhandled_errors": []
+          },
+          {
+            "broker_output": 25,
+            "case_id": "transfer_resource_priority_v1",
+            "expected_output": 25,
+            "family": "resource_priority_scoring",
+            "inputs": {
+              "e501_u": [
+                6,
+                2
+              ],
+              "e501_v": [
+                3,
+                4
+              ],
+              "step2_v1": 25
+            },
+            "passed": true,
+            "unhandled_errors": []
+          }
+        ],
+        "broker_replay_passed": true,
+        "expansion_sha256": "00aaa84c7c3e61bc0f02f8cae0278d9962546b9d505f207df40f08e3ef9f015e",
+        "primitive_expansion_equivalent": true,
+        "source_discovery_validation_passed": true,
+        "validation_record_ids": [
+          "source_trace_1",
+          "source_trace_2",
+          "transfer_sensor_weighted_index_v1",
+          "transfer_resource_priority_v1"
+        ]
+      },
+      "version": 1
+    }
+  ],
+  "schema_version": 1,
+  "source_discovery_library": "[REDACTED_LOCAL_PATH]\\.gemini\\antigravity\\scratch\\[PROJECT_NAME]\\experiments\\expression_growth_001\\learned_library\\library.json",
+  "source_discovery_library_sha256": "f364a7655b5f33a55aec5d4a7f465a41d9c8b11ea7752add96e73485b77a9dbf"
+}

@@ -1,0 +1,39 @@
+experiment: IMPRESSION-001B
+parent_experiment: IMPRESSION-001
+maximum_runtime_hours: 4
+model_repo: [BASE_MODEL_REPOSITORY]
+model_revision: 392a6f57223e7ccfe6ef4ebdb2ff101a42d57364
+adapter_source: checkpoints/impression_001/layer0_ffn_gate_lora
+controlled_adapter: checkpoints/impression_001b/controlled-02
+selected_module: model.layers.0.mlp.gate_proj
+selected_partition: IMP_L00_FEED_FORWARD_GATE_PROJECTION
+training:
+  optimizer_steps: 1
+  device: cpu
+  dtype: bfloat16
+  max_sequence_length: 16
+  deterministic_algorithms: true
+  deterministic_warn_only: true
+  lora_rank: 4
+  lora_alpha: 8
+  lora_dropout: 0.0
+parity:
+  device_map: cpu
+  rtol: 0.0001
+  atol: 0.0001
+  deterministic_algorithms: true
+  deterministic_warn_only: false
+  cublas_workspace_config: ":4096:8"
+delegation:
+  executor_model: gpt-6-luna
+  max_concurrent: 1
+  recursive_delegation: false
+  delegated_tasks: 1
+  token_spend: unavailable_from_tooling
+status:
+  root_cause_found: true
+  cpu_training_to_fresh_cpu_reload_parity: passed
+  independent_fresh_cpu_reload_repeatability: passed
+  base_restoration: passed
+  selective_parameters_verified: true
+  full_repository_suite: not_verified

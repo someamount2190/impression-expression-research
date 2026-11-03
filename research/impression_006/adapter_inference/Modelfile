@@ -1,0 +1,12 @@
+FROM [BASE_MODEL_GGUF]
+TEMPLATE """<|im_start|>system
+{{ .System }}<|im_end|>
+<|im_start|>user
+{{ .Prompt }}<|im_end|>
+<|im_start|>assistant
+{{ .Response }}"""
+PARAMETER stop <|im_start|>
+PARAMETER stop <|im_end|>
+PARAMETER stop <|eot_id|>
+PARAMETER stop <|end_of_text|>
+PARAMETER temperature 0

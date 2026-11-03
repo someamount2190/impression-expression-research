@@ -1,0 +1,18 @@
+experiment: IMPRESSION-002B
+parent_experiments: [IMPRESSION-001B, IMPRESSION-002]
+maximum_runtime_hours: 8
+model_repo: [BASE_MODEL_REPOSITORY]
+model_revision: 392a6f57223e7ccfe6ef4ebdb2ff101a42d57364
+registry: experiments/impression_001/partitions/[BASE_MODEL]3_q4_registry.json
+checkpoint_index: model.safetensors.index.json
+dtype: bfloat16
+runtime:
+  minimum_free_ram_fraction: 0.20
+  maximum_sequence_length: 16
+  target_residency_device: cpu
+  gpu_allowed_only_after_measured_preflight: true
+delegation:
+  executor_model: gpt-6-luna
+  max_active_subordinates: 1
+  recursive_delegation: false
+  token_spend: unavailable_from_tooling

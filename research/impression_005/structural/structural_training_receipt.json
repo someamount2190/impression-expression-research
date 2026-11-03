@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "experiment": "IMPRESSION-005",
+  "status": "completed",
+  "source_receipt": "experiments\\impression_004\\partition_training_receipts\\cuda_head_sparse02\\training_receipt.json",
+  "source_receipt_sha256": "203751cb1f9c74efd6249cfe3739c46bf2117075a320764ee3a5747e9186790d",
+  "training_record_id": "eg001_train_balanced",
+  "validation_record_id": "eg001_validation_family_holdout",
+  "checkpoint_revision": "392a6f57223e7ccfe6ef4ebdb2ff101a42d57364",
+  "checkpoint_index_sha256": "e6322ad005d27134ba439f7ddd572e632e5b2116ebfbdc88186596dada904c75",
+  "pinned_configuration_sha256": "e21ff53ea39726f972362beba869807216775d5e308bc2f531784846c06a0249",
+  "checkpoint_precision": "raw_bfloat16_frozen",
+  "graph_before_id": "[BASE_MODEL]3_impression004_fixed_graph_v1",
+  "graph_candidate_id": "[BASE_MODEL]3_layer26_residual_connector_v1",
+  "graph_candidate_checkpoint_sha256": "c575b20a4ddd7104988dd12de6c377dd91608571b30f25e7582b36d04938b31e",
+  "trainable_parameters": 49152,
+  "updates": [
+    {
+      "step": 1,
+      "loss_before_update": 3.533327341079712,
+      "gradient_norm": 0.30863383412361145,
+      "wall_seconds": 235.163673199997
+    },
+    {
+      "step": 2,
+      "loss_before_update": 3.5031983852386475,
+      "gradient_norm": 0.6116247177124023,
+      "wall_seconds": 232.50008089999756
+    }
+  ],
+  "max_updates": 2,
+  "frozen_backbone_unchanged": true,
+  "initial_identity_logits_equal_bitwise": true,
+  "initial_identity_logits_max_abs_diff": 0.0,
+  "training_loss_first_before_update": 3.533327341079712,
+  "training_loss_last_before_update": 3.5031983852386475,
+  "validation_loss_before": 3.7946877479553223,
+  "validation_loss_after": 3.6964499950408936,
+  "validation_loss_delta": -0.09823775291442871,
+  "validation_regression_limit": 0.0001,
+  "candidate_retained": true,
+  "rollback_reproduced_original_logits_bitwise": true,
+  "capture_prefix_seconds": 715.3343617999999,
+  "training_seconds": 467.66521990000183,
+  "model_load_preflight": {
+    "total_ram_bytes": 24919851008,
+    "available_ram_after_load_bytes": 13850923008,
+    "ram_reserve_bytes": 4983970201,
+    "checkpoint_bytes": 6425511936
+  },
+  "resource_summary": {
+    "sample_count": 463,
+    "peak_process_rss_bytes": 7829778432,
+    "minimum_system_available_ram_bytes": 7312945152,
+    "minimum_ram_reserve_bytes": 4983970201,
+    "peak_cpu_percent_sampled": 43.3,
+    "gpu_used": false,
+    "temperature": "GPU nvidia-smi sensor available; CPU sensor not read in this run"
+  },
+  "numerical_artifacts": {
+    "baseline_train_logits_sha256": "0058c3aee74ed6fdc097d6a9c335f4fa9d54be7568f9c81348026662c179fbe2",
+    "baseline_validation_logits_sha256": "03a3933d989e82473917c523306dac267717808c14dfac9ea290f2b5499c7def",
+    "candidate_train_logits_file": "candidate_train_logits.npy",
+    "candidate_validation_logits_file": "candidate_validation_logits.npy"
+  },
+  "agent_usage": {
+    "llm_monitor_agents": 0,
+    "deterministic_sampler": true
+  },
+  "fresh_process_reload_verified": true
+}

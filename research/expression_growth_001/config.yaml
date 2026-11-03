@@ -1,0 +1,14 @@
+experiment: EXPRESSION-GROWTH-001
+backbone: [BASE_MODEL]
+source_experiment: IMPRESSION-002E
+max_runtime_hours: 8
+max_active_lower_cost_executors: 1
+max_concurrent_gpu_jobs: 1
+ram_reserve_fraction: 0.20
+sealed_evaluation_count: 100
+historical_benchmark_is_final_eval: false
+training_checkpoint_revision: 392a6f57223e7ccfe6ef4ebdb2ff101a42d57364
+primary_training_path: streamed_cpu_lora
+existing_adapter_source: experiments/impression_002e/streaming_training/run03/adapter/adapter.safetensors
+native_symbolic_learning_claim_requires_heldout_improvement: true
+preserve_original_checkpoint: true

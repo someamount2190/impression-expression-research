@@ -1,0 +1,22 @@
+{
+  "experiment": "IMPRESSION-002",
+  "status": "partial_foundation_verified_full_model_acceptance_blocked_by_resources",
+  "checkpoint_revision": "392a6f57223e7ccfe6ef4ebdb2ff101a42d57364",
+  "registry_partition_count": 255,
+  "system_ram_bytes": 24919851008,
+  "gpu": "NVIDIA GeForce RTX 2050",
+  "full_bf16_parameter_memory_bytes": 6425512064,
+  "gpu_full_model_feasible": false,
+  "full_model_training_started": false,
+  "active_training_interrupted": false,
+  "component_probe_candidates": ["IMP_L00_FEED_FORWARD_GATE_PROJECTION", "IMP_L00_ATTENTION_QUERY_PROJECTION"],
+  "component_probe_controller_restore_verified": true,
+  "measured_task_learning_gain": false,
+  "efficiency_gain_measured": "isolated one-repeat synthetic-objective component probes only; not full-model or task-level",
+  "focused_impression_002_tests": "6 passed",
+  "focused_regression_tests": "43 passed, 1 skipped",
+  "compile_checks": "passed",
+  "subordinate_model_limit": 1,
+  "subordinate_models_used_sequentially": 1,
+  "token_spend": "unavailable_from_tooling"
+}

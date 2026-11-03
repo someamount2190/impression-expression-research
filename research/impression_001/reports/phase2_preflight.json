@@ -1,0 +1,28 @@
+{
+  "experiment": "IMPRESSION-001",
+  "phase": "selective_training_preflight",
+  "status": "blocked_resource_preflight",
+  "checkpoint_path": "[REDACTED_LOCAL_PATH]\\.gemini\\antigravity\\scratch\\[PROJECT_NAME]\\models\\[BASE_MODEL].gguf",
+  "checkpoint_sha256": "5d6d02eeefa1ab5dbf23f97afdf5c2c95ad3d946dc3b6e9ab72e6c1637d54177",
+  "target_partition": "IMP_L00_FEED_FORWARD_GATE_PROJECTION",
+  "target_module": "model.layers.0.mlp.gate_proj",
+  "target_tensor": "blk.0.ffn_gate.weight",
+  "target_shape": [
+    8192,
+    3072
+  ],
+  "target_parameter_count": 25165824,
+  "estimate": {
+    "parameter_count": 3212756032,
+    "gguf_loader_state_dict_bytes_fp32": 12851024128,
+    "resident_model_bytes_fp16": 6425512064,
+    "estimated_minimum_peak_bytes": 19276536192,
+    "available_ram_bytes": 18797678592,
+    "total_ram_bytes": 24919851008,
+    "required_free_ram_bytes_after_load": 4983970201,
+    "feasible": false
+  },
+  "training_started": false,
+  "efficiency_gain_measured": false,
+  "limitation": "Standard Transformers GGUF loading dequantizes the complete checkpoint into an FP32 state dict before constructing the requested model dtype. The conservative minimum working set exceeds available RAM; no training was started. A streaming GGUF-to-model loader or a verified matching trainable checkpoint is required."
+}

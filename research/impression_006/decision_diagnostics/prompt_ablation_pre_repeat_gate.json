@@ -1,0 +1,1326 @@
+{
+  "schema_version": 1,
+  "experiment": "IMPRESSION-006-followup",
+  "snapshot_kind": "actual_live_telemetry",
+  "snapshot": {
+    "captured_utc": "2026-11-03T15:43:16.063145+00:00",
+    "snapshot_kind": "actual_live_telemetry",
+    "ram_total_bytes": 24919851008,
+    "ram_available_bytes": 14490841088,
+    "ram_used_percent": 41.9,
+    "cpu_utilization_percent": 8.8,
+    "logical_cpu_count": 12,
+    "disk_read_bytes": 113479146496,
+    "disk_write_bytes": 96175264256,
+    "name": "NVIDIA GeForce RTX 2050",
+    "vram_total_bytes": 4294967296,
+    "vram_available_bytes": 4156555264,
+    "vram_used_bytes": 0,
+    "gpu_utilization_percent": 0,
+    "temperature_c": 42,
+    "sensor_available": true
+  },
+  "historical_candidate_profiles_reused_for_diagnostic_only": [
+    {
+      "configuration_id": "dense_cpu1",
+      "profile_ids": [
+        "8c50a644e410c0fcee0443ebac9472bf151051739055834a4783d01784b0d820:cpu1_resume01"
+      ],
+      "repeat_count": 1,
+      "placement": "cpu",
+      "wall_seconds_median": 1558.850539500003,
+      "validation_after_median": 3.7960946559906006,
+      "peak_rss_bytes_max": 1724923904,
+      "peak_vram_bytes_max": 0,
+      "frozen_backbone_unchanged": true,
+      "fresh_process_reload_verified": true,
+      "task_id": "expression_family_disjoint_one_step",
+      "objective_fingerprint": "056e754b3f2c557e1f3af22dedd2484eb93416492b59be7386656e422a19b400",
+      "training_ids": [
+        "eg001_train_balanced"
+      ],
+      "heldout_ids": [
+        "eg001_validation_family_holdout"
+      ]
+    },
+    {
+      "configuration_id": "sparse_cuda_head_cpu_suffix",
+      "profile_ids": [
+        "b109cc08f0d76ba437e919038def7182cf0ac76d41a2d628b161836e86eeaf0a:cuda_head_sparse01",
+        "b109cc08f0d76ba437e919038def7182cf0ac76d41a2d628b161836e86eeaf0a:cuda_head_sparse02"
+      ],
+      "repeat_count": 2,
+      "placement": "cuda_lm_head_cpu_suffix",
+      "wall_seconds_median": 905.267233999999,
+      "validation_after_median": 3.7961463928222656,
+      "peak_rss_bytes_max": 1798791168,
+      "peak_vram_bytes_max": 1129316352,
+      "frozen_backbone_unchanged": true,
+      "fresh_process_reload_verified": true,
+      "task_id": "expression_family_disjoint_one_step",
+      "objective_fingerprint": "056e754b3f2c557e1f3af22dedd2484eb93416492b59be7386656e422a19b400",
+      "training_ids": [
+        "eg001_train_balanced"
+      ],
+      "heldout_ids": [
+        "eg001_validation_family_holdout"
+      ]
+    },
+    {
+      "configuration_id": "sparse_supervised_cpu1",
+      "profile_ids": [
+        "6335a2c81336bdcd00678b30bfb710c9d23b149516213e9dedcc85312601c0aa:cpu1_sparse01"
+      ],
+      "repeat_count": 1,
+      "placement": "cpu",
+      "wall_seconds_median": 1050.9448535000047,
+      "validation_after_median": 3.7960946559906006,
+      "peak_rss_bytes_max": 1529872384,
+      "peak_vram_bytes_max": 0,
+      "frozen_backbone_unchanged": true,
+      "fresh_process_reload_verified": true,
+      "task_id": "expression_family_disjoint_one_step",
+      "objective_fingerprint": "056e754b3f2c557e1f3af22dedd2484eb93416492b59be7386656e422a19b400",
+      "training_ids": [
+        "eg001_train_balanced"
+      ],
+      "heldout_ids": [
+        "eg001_validation_family_holdout"
+      ]
+    },
+    {
+      "configuration_id": "sparse_supervised_cpu2",
+      "profile_ids": [
+        "7f3f31454429ee3fe2c4eca5eda65885c2774a7ae309428dba454152af5f50ea:cpu2_sparse01"
+      ],
+      "repeat_count": 1,
+      "placement": "cpu",
+      "wall_seconds_median": 1067.1049446000034,
+      "validation_after_median": 3.7960946559906006,
+      "peak_rss_bytes_max": 1531006976,
+      "peak_vram_bytes_max": 0,
+      "frozen_backbone_unchanged": true,
+      "fresh_process_reload_verified": true,
+      "task_id": "expression_family_disjoint_one_step",
+      "objective_fingerprint": "056e754b3f2c557e1f3af22dedd2484eb93416492b59be7386656e422a19b400",
+      "training_ids": [
+        "eg001_train_balanced"
+      ],
+      "heldout_ids": [
+        "eg001_validation_family_holdout"
+      ]
+    }
+  ],
+  "candidate_profile_source": "verified IMPRESSION-004 receipts; no new training cycles executed",
+  "variants": [
+    "historical_prompt_reconstructed",
+    "baseline_anchor_removed_and_reversed",
+    "compact_mixed_order_comparative_table",
+    "compact_fastest_first_table"
+  ],
+  "summary": {
+    "historical_prompt_reconstructed": {
+      "calls": 2,
+      "proposals": [
+        "dense_cpu1",
+        "dense_cpu1"
+      ],
+      "broker_statuses": [
+        "SUCCESS",
+        "SUCCESS"
+      ],
+      "mean_latency_seconds": 8.9390146500009
+    },
+    "baseline_anchor_removed_and_reversed": {
+      "calls": 2,
+      "proposals": [
+        "sparse_supervised_cpu1",
+        "sparse_supervised_cpu1"
+      ],
+      "broker_statuses": [
+        "SUCCESS",
+        "SUCCESS"
+      ],
+      "mean_latency_seconds": 6.754015049998998
+    },
+    "compact_mixed_order_comparative_table": {
+      "calls": 2,
+      "proposals": [
+        "sparse_supervised_cpu2",
+        "sparse_supervised_cpu2"
+      ],
+      "broker_statuses": [
+        "SUCCESS",
+        "SUCCESS"
+      ],
+      "mean_latency_seconds": 8.434584950002318
+    },
+    "compact_fastest_first_table": {
+      "calls": 2,
+      "proposals": [
+        "sparse_cuda_head_cpu_suffix",
+        "sparse_cuda_head_cpu_suffix"
+      ],
+      "broker_statuses": [
+        "SUCCESS",
+        "SUCCESS"
+      ],
+      "mean_latency_seconds": 8.19557205000092
+    }
+  },
+  "calls": [
+    {
+      "variant": "historical_prompt_reconstructed",
+      "repeat": 1,
+      "exact_prompt": "Select a verified configuration for this snapshot. Input data:\n{\"hardware_telemetry\":{\"captured_utc\":\"2026-11-03T15:43:16.063145+00:00\",\"snapshot_kind\":\"actual_live_telemetry\",\"ram_total_bytes\":24919851008,\"ram_available_bytes\":14490841088,\"ram_used_percent\":41.9,\"cpu_utilization_percent\":8.8,\"logical_cpu_count\":12,\"disk_read_bytes\":113479146496,\"disk_write_bytes\":96175264256,\"name\":\"NVIDIA GeForce RTX 2050\",\"vram_total_bytes\":4294967296,\"vram_available_bytes\":4156555264,\"vram_used_bytes\":0,\"gpu_utilization_percent\":0,\"temperature_c\":42,\"sensor_available\":true},\"registered_partition\":{\"block_id\":\"IMP_L27_ATTENTION_QUERY_PROJECTION\",\"component\":\"attention.query_projection\",\"source_layer\":27,\"parameter_count\":9437184,\"registered_connections\":[\"IMP_L27_ATTENTION_INPUT_NORM\"],\"trainable\":false},\"training_objective\":{\"task_id\":\"expression_family_disjoint_one_step\",\"objective_fingerprint\":\"056e754b3f2c557e1f3af22dedd2484eb93416492b59be7386656e422a19b400\",\"description\":\"minimize measured one-step wall time while preserving the held-out quality bound\",\"training_ids\":[\"eg001_train_balanced\"],\"heldout_ids\":[\"eg001_validation_family_holdout\"]},\"candidate_measured_profiles\":[{\"configuration_id\":\"dense_cpu1\",\"profile_ids\":[\"8c50a644e410c0fcee0443ebac9472bf151051739055834a4783d01784b0d820:cpu1_resume01\"],\"repeat_count\":1,\"placement\":\"cpu\",\"wall_seconds_median\":1558.850539500003,\"validation_after_median\":3.7960946559906006,\"peak_rss_bytes_max\":1724923904,\"peak_vram_bytes_max\":0,\"frozen_backbone_unchanged\":true,\"fresh_process_reload_verified\":true,\"task_id\":\"expression_family_disjoint_one_step\",\"objective_fingerprint\":\"056e754b3f2c557e1f3af22dedd2484eb93416492b59be7386656e422a19b400\",\"training_ids\":[\"eg001_train_balanced\"],\"heldout_ids\":[\"eg001_validation_family_holdout\"]},{\"configuration_id\":\"sparse_cuda_head_cpu_suffix\",\"profile_ids\":[\"b109cc08f0d76ba437e919038def7182cf0ac76d41a2d628b161836e86eeaf0a:cuda_head_sparse01\",\"b109cc08f0d76ba437e919038def7182cf0ac76d41a2d628b161836e86eeaf0a:cuda_head_sparse02\"],\"repeat_count\":2,\"placement\":\"cuda_lm_head_cpu_suffix\",\"wall_seconds_median\":905.267233999999,\"validation_after_median\":3.7961463928222656,\"peak_rss_bytes_max\":1798791168,\"peak_vram_bytes_max\":1129316352,\"frozen_backbone_unchanged\":true,\"fresh_process_reload_verified\":true,\"task_id\":\"expression_family_disjoint_one_step\",\"objective_fingerprint\":\"056e754b3f2c557e1f3af22dedd2484eb93416492b59be7386656e422a19b400\",\"training_ids\":[\"eg001_train_balanced\"],\"heldout_ids\":[\"eg001_validation_family_holdout\"]},{\"configuration_id\":\"sparse_supervised_cpu1\",\"profile_ids\":[\"6335a2c81336bdcd00678b30bfb710c9d23b149516213e9dedcc85312601c0aa:cpu1_sparse01\"],\"repeat_count\":1,\"placement\":\"cpu\",\"wall_seconds_median\":1050.9448535000047,\"validation_after_median\":3.7960946559906006,\"peak_rss_bytes_max\":1529872384,\"peak_vram_bytes_max\":0,\"frozen_backbone_unchanged\":true,\"fresh_process_reload_verified\":true,\"task_id\":\"expression_family_disjoint_one_step\",\"objective_fingerprint\":\"056e754b3f2c557e1f3af22dedd2484eb93416492b59be7386656e422a19b400\",\"training_ids\":[\"eg001_train_balanced\"],\"heldout_ids\":[\"eg001_validation_family_holdout\"]},{\"configuration_id\":\"sparse_supervised_cpu2\",\"profile_ids\":[\"7f3f31454429ee3fe2c4eca5eda65885c2774a7ae309428dba454152af5f50ea:cpu2_sparse01\"],\"repeat_count\":1,\"placement\":\"cpu\",\"wall_seconds_median\":1067.1049446000034,\"validation_after_median\":3.7960946559906006,\"peak_rss_bytes_max\":1531006976,\"peak_vram_bytes_max\":0,\"frozen_backbone_unchanged\":true,\"fresh_process_reload_verified\":true,\"task_id\":\"expression_family_disjoint_one_step\",\"objective_fingerprint\":\"056e754b3f2c557e1f3af22dedd2484eb93416492b59be7386656e422a19b400\",\"training_ids\":[\"eg001_train_balanced\"],\"heldout_ids\":[\"eg001_validation_family_holdout\"]}],\"constraints\":{\"baseline_configuration_id\":\"dense_cpu1\",\"baseline_validation_after\":3.7947583198547363,\"maximum_heldout_regression\":0.0001,\"ram_reserve_fraction\":0.2,\"vram_reserve_fraction\":0.2,\"vram_guard_bytes\":268435456,\"max_decision_latency_seconds\":30},\"instructions\":\"Compare feasible candidates. Propose one configuration; no execution is authorized by this call.\"}",
+      "available_configuration_ids": [
+        "dense_cpu1",
+        "sparse_cuda_head_cpu_suffix",
+        "sparse_supervised_cpu1",
+        "sparse_supervised_cpu2"
+      ],
+      "available_measured_evidence": [
+        {
+          "configuration_id": "dense_cpu1",
+          "profile_ids": [
+            "8c50a644e410c0fcee0443ebac9472bf151051739055834a4783d01784b0d820:cpu1_resume01"
+          ],
+          "repeat_count": 1,
+          "placement": "cpu",
+          "wall_seconds_median": 1558.850539500003,
+          "validation_after_median": 3.7960946559906006,
+          "peak_rss_bytes_max": 1724923904,
+          "peak_vram_bytes_max": 0,
+          "frozen_backbone_unchanged": true,
+          "fresh_process_reload_verified": true,
+          "task_id": "expression_family_disjoint_one_step",
+          "objective_fingerprint": "056e754b3f2c557e1f3af22dedd2484eb93416492b59be7386656e422a19b400",
+          "training_ids": [
+            "eg001_train_balanced"
+          ],
+          "heldout_ids": [
+            "eg001_validation_family_holdout"
+          ]
+        },
+        {
+          "configuration_id": "sparse_cuda_head_cpu_suffix",
+          "profile_ids": [
+            "b109cc08f0d76ba437e919038def7182cf0ac76d41a2d628b161836e86eeaf0a:cuda_head_sparse01",
+            "b109cc08f0d76ba437e919038def7182cf0ac76d41a2d628b161836e86eeaf0a:cuda_head_sparse02"
+          ],
+          "repeat_count": 2,
+          "placement": "cuda_lm_head_cpu_suffix",
+          "wall_seconds_median": 905.267233999999,
+          "validation_after_median": 3.7961463928222656,
+          "peak_rss_bytes_max": 1798791168,
+          "peak_vram_bytes_max": 1129316352,
+          "frozen_backbone_unchanged": true,
+          "fresh_process_reload_verified": true,
+          "task_id": "expression_family_disjoint_one_step",
+          "objective_fingerprint": "056e754b3f2c557e1f3af22dedd2484eb93416492b59be7386656e422a19b400",
+          "training_ids": [
+            "eg001_train_balanced"
+          ],
+          "heldout_ids": [
+            "eg001_validation_family_holdout"
+          ]
+        },
+        {
+          "configuration_id": "sparse_supervised_cpu1",
+          "profile_ids": [
+            "6335a2c81336bdcd00678b30bfb710c9d23b149516213e9dedcc85312601c0aa:cpu1_sparse01"
+          ],
+          "repeat_count": 1,
+          "placement": "cpu",
+          "wall_seconds_median": 1050.9448535000047,
+          "validation_after_median": 3.7960946559906006,
+          "peak_rss_bytes_max": 1529872384,
+          "peak_vram_bytes_max": 0,
+          "frozen_backbone_unchanged": true,
+          "fresh_process_reload_verified": true,
+          "task_id": "expression_family_disjoint_one_step",
+          "objective_fingerprint": "056e754b3f2c557e1f3af22dedd2484eb93416492b59be7386656e422a19b400",
+          "training_ids": [
+            "eg001_train_balanced"
+          ],
+          "heldout_ids": [
+            "eg001_validation_family_holdout"
+          ]
+        },
+        {
+          "configuration_id": "sparse_supervised_cpu2",
+          "profile_ids": [
+            "7f3f31454429ee3fe2c4eca5eda65885c2774a7ae309428dba454152af5f50ea:cpu2_sparse01"
+          ],
+          "repeat_count": 1,
+          "placement": "cpu",
+          "wall_seconds_median": 1067.1049446000034,
+          "validation_after_median": 3.7960946559906006,
+          "peak_rss_bytes_max": 1531006976,
+          "peak_vram_bytes_max": 0,
+          "frozen_backbone_unchanged": true,
+          "fresh_process_reload_verified": true,
+          "task_id": "expression_family_disjoint_one_step",
+          "objective_fingerprint": "056e754b3f2c557e1f3af22dedd2484eb93416492b59be7386656e422a19b400",
+          "training_ids": [
+            "eg001_train_balanced"
+          ],
+          "heldout_ids": [
+            "eg001_validation_family_holdout"
+          ]
+        }
+      ],
+      "model_proposal": {
+        "raw_text": "{\n  \"action\": \"partition.select\",\n  \"configuration_id\": \"dense_cpu1\",\n  \"partition_id\": \"IMP_L27_ATTENTION_QUERY_PROJECTION\",\n  \"placement\": \"cpu\",\n  \"reason\": \"This configuration minimizes the measured wall time while preserving the frozen backbone unchanged. It also satisfies the constraints regarding the baseline configuration, validation after, maximum held-out regression, RAM, and VRAM reserves.\"\n}",
+        "parsed": {
+          "action": "partition.select",
+          "configuration_id": "dense_cpu1",
+          "partition_id": "IMP_L27_ATTENTION_QUERY_PROJECTION",
+          "placement": "cpu",
+          "reason": "This configuration minimizes the measured wall time while preserving the frozen backbone unchanged. It also satisfies the constraints regarding the baseline configuration, validation after, maximum held-out regression, RAM, and VRAM reserves."
+        },
+        "parse_error": null,
+        "wall_seconds": 10.343057899997802,
+        "prompt_eval_count": 1368,
+        "eval_count": 92,
+        "stop_reason": "stop"
+      },
+      "broker_decision": {
+        "status": "SUCCESS",
+        "capability": "impression",
+        "operation": "partition.select",
+        "observation": {
+          "status": "validated_proposal_only",
+          "origin": "local_[BASE_MODEL]",
+          "configuration_id": "dense_cpu1",
+          "partition_id": "IMP_L27_ATTENTION_QUERY_PROJECTION",
+          "placement": "cpu",
+          "feasible": true,
+          "reason": "feasible under measured profile and supplied resource envelope",
+          "execution_performed": false,
+          "graph_modified": false
+        },
+        "duration_ms": 0.0,
+        "error": null,
+        "timestamp": 1793720606.6969035,
+        "tool_name": null,
+        "task_status": "IN_PROGRESS",
+        "verified_facts": [],
+        "evidence": null
+      },
+      "proposal_configuration_id": "dense_cpu1",
+      "broker_rejection_or_acceptance": "SUCCESS",
+      "execution_performed": false,
+      "graph_modified": false
+    },
+    {
+      "variant": "historical_prompt_reconstructed",
+      "repeat": 2,
+      "exact_prompt": "Select a verified configuration for this snapshot. Input data:\n{\"hardware_telemetry\":{\"captured_utc\":\"2026-11-03T15:43:16.063145+00:00\",\"snapshot_kind\":\"actual_live_telemetry\",\"ram_total_bytes\":24919851008,\"ram_available_bytes\":14490841088,\"ram_used_percent\":41.9,\"cpu_utilization_percent\":8.8,\"logical_cpu_count\":12,\"disk_read_bytes\":113479146496,\"disk_write_bytes\":96175264256,\"name\":\"NVIDIA GeForce RTX 2050\",\"vram_total_bytes\":4294967296,\"vram_available_bytes\":4156555264,\"vram_used_bytes\":0,\"gpu_utilization_percent\":0,\"temperature_c\":42,\"sensor_available\":true},\"registered_partition\":{\"block_id\":\"IMP_L27_ATTENTION_QUERY_PROJECTION\",\"component\":\"attention.query_projection\",\"source_layer\":27,\"parameter_count\":9437184,\"registered_connections\":[\"IMP_L27_ATTENTION_INPUT_NORM\"],\"trainable\":false},\"training_objective\":{\"task_id\":\"expression_family_disjoint_one_step\",\"objective_fingerprint\":\"056e754b3f2c557e1f3af22dedd2484eb93416492b59be7386656e422a19b400\",\"description\":\"minimize measured one-step wall time while preserving the held-out quality bound\",\"training_ids\":[\"eg001_train_balanced\"],\"heldout_ids\":[\"eg001_validation_family_holdout\"]},\"candidate_measured_profiles\":[{\"configuration_id\":\"dense_cpu1\",\"profile_ids\":[\"8c50a644e410c0fcee0443ebac9472bf151051739055834a4783d01784b0d820:cpu1_resume01\"],\"repeat_count\":1,\"placement\":\"cpu\",\"wall_seconds_median\":1558.850539500003,\"validation_after_median\":3.7960946559906006,\"peak_rss_bytes_max\":1724923904,\"peak_vram_bytes_max\":0,\"frozen_backbone_unchanged\":true,\"fresh_process_reload_verified\":true,\"task_id\":\"expression_family_disjoint_one_step\",\"objective_fingerprint\":\"056e754b3f2c557e1f3af22dedd2484eb93416492b59be7386656e422a19b400\",\"training_ids\":[\"eg001_train_balanced\"],\"heldout_ids\":[\"eg001_validation_family_holdout\"]},{\"configuration_id\":\"sparse_cuda_head_cpu_suffix\",\"profile_ids\":[\"b109cc08f0d76ba437e919038def7182cf0ac76d41a2d628b161836e86eeaf0a:cuda_head_sparse01\",\"b109cc08f0d76ba437e919038def7182cf0ac76d41a2d628b161836e86eeaf0a:cuda_head_sparse02\"],\"repeat_count\":2,\"placement\":\"cuda_lm_head_cpu_suffix\",\"wall_seconds_median\":905.267233999999,\"validation_after_median\":3.7961463928222656,\"peak_rss_bytes_max\":1798791168,\"peak_vram_bytes_max\":1129316352,\"frozen_backbone_unchanged\":true,\"fresh_process_reload_verified\":true,\"task_id\":\"expression_family_disjoint_one_step\",\"objective_fingerprint\":\"056e754b3f2c557e1f3af22dedd2484eb93416492b59be7386656e422a19b400\",\"training_ids\":[\"eg001_train_balanced\"],\"heldout_ids\":[\"eg001_validation_family_holdout\"]},{\"configuration_id\":\"sparse_supervised_cpu1\",\"profile_ids\":[\"6335a2c81336bdcd00678b30bfb710c9d23b149516213e9dedcc85312601c0aa:cpu1_sparse01\"],\"repeat_count\":1,\"placement\":\"cpu\",\"wall_seconds_median\":1050.9448535000047,\"validation_after_median\":3.7960946559906006,\"peak_rss_bytes_max\":1529872384,\"peak_vram_bytes_max\":0,\"frozen_backbone_unchanged\":true,\"fresh_process_reload_verified\":true,\"task_id\":\"expression_family_disjoint_one_step\",\"objective_fingerprint\":\"056e754b3f2c557e1f3af22dedd2484eb93416492b59be7386656e422a19b400\",\"training_ids\":[\"eg001_train_balanced\"],\"heldout_ids\":[\"eg001_validation_family_holdout\"]},{\"configuration_id\":\"sparse_supervised_cpu2\",\"profile_ids\":[\"7f3f31454429ee3fe2c4eca5eda65885c2774a7ae309428dba454152af5f50ea:cpu2_sparse01\"],\"repeat_count\":1,\"placement\":\"cpu\",\"wall_seconds_median\":1067.1049446000034,\"validation_after_median\":3.7960946559906006,\"peak_rss_bytes_max\":1531006976,\"peak_vram_bytes_max\":0,\"frozen_backbone_unchanged\":true,\"fresh_process_reload_verified\":true,\"task_id\":\"expression_family_disjoint_one_step\",\"objective_fingerprint\":\"056e754b3f2c557e1f3af22dedd2484eb93416492b59be7386656e422a19b400\",\"training_ids\":[\"eg001_train_balanced\"],\"heldout_ids\":[\"eg001_validation_family_holdout\"]}],\"constraints\":{\"baseline_configuration_id\":\"dense_cpu1\",\"baseline_validation_after\":3.7947583198547363,\"maximum_heldout_regression\":0.0001,\"ram_reserve_fraction\":0.2,\"vram_reserve_fraction\":0.2,\"vram_guard_bytes\":268435456,\"max_decision_latency_seconds\":30},\"instructions\":\"Compare feasible candidates. Propose one configuration; no execution is authorized by this call.\"}",
+      "available_configuration_ids": [
+        "dense_cpu1",
+        "sparse_cuda_head_cpu_suffix",
+        "sparse_supervised_cpu1",
+        "sparse_supervised_cpu2"
+      ],
+      "available_measured_evidence": [
+        {
+          "configuration_id": "dense_cpu1",
+          "profile_ids": [
+            "8c50a644e410c0fcee0443ebac9472bf151051739055834a4783d01784b0d820:cpu1_resume01"
+          ],
+          "repeat_count": 1,
+          "placement": "cpu",
+          "wall_seconds_median": 1558.850539500003,
+          "validation_after_median": 3.7960946559906006,
+          "peak_rss_bytes_max": 1724923904,
+          "peak_vram_bytes_max": 0,
+          "frozen_backbone_unchanged": true,
+          "fresh_process_reload_verified": true,
+          "task_id": "expression_family_disjoint_one_step",
+          "objective_fingerprint": "056e754b3f2c557e1f3af22dedd2484eb93416492b59be7386656e422a19b400",
+          "training_ids": [
+            "eg001_train_balanced"
+          ],
+          "heldout_ids": [
+            "eg001_validation_family_holdout"
+          ]
+        },
+        {
+          "configuration_id": "sparse_cuda_head_cpu_suffix",
+          "profile_ids": [
+            "b109cc08f0d76ba437e919038def7182cf0ac76d41a2d628b161836e86eeaf0a:cuda_head_sparse01",
+            "b109cc08f0d76ba437e919038def7182cf0ac76d41a2d628b161836e86eeaf0a:cuda_head_sparse02"
+          ],
+          "repeat_count": 2,
+          "placement": "cuda_lm_head_cpu_suffix",
+          "wall_seconds_median": 905.267233999999,
+          "validation_after_median": 3.7961463928222656,
+          "peak_rss_bytes_max": 1798791168,
+          "peak_vram_bytes_max": 1129316352,
+          "frozen_backbone_unchanged": true,
+          "fresh_process_reload_verified": true,
+          "task_id": "expression_family_disjoint_one_step",
+          "objective_fingerprint": "056e754b3f2c557e1f3af22dedd2484eb93416492b59be7386656e422a19b400",
+          "training_ids": [
+            "eg001_train_balanced"
+          ],
+          "heldout_ids": [
+            "eg001_validation_family_holdout"
+          ]
+        },
+        {
+          "configuration_id": "sparse_supervised_cpu1",
+          "profile_ids": [
+            "6335a2c81336bdcd00678b30bfb710c9d23b149516213e9dedcc85312601c0aa:cpu1_sparse01"
+          ],
+          "repeat_count": 1,
+          "placement": "cpu",
+          "wall_seconds_median": 1050.9448535000047,
+          "validation_after_median": 3.7960946559906006,
+          "peak_rss_bytes_max": 1529872384,
+          "peak_vram_bytes_max": 0,
+          "frozen_backbone_unchanged": true,
+          "fresh_process_reload_verified": true,
+          "task_id": "expression_family_disjoint_one_step",
+          "objective_fingerprint": "056e754b3f2c557e1f3af22dedd2484eb93416492b59be7386656e422a19b400",
+          "training_ids": [
+            "eg001_train_balanced"
+          ],
+          "heldout_ids": [
+            "eg001_validation_family_holdout"
+          ]
+        },
+        {
+          "configuration_id": "sparse_supervised_cpu2",
+          "profile_ids": [
+            "7f3f31454429ee3fe2c4eca5eda65885c2774a7ae309428dba454152af5f50ea:cpu2_sparse01"
+          ],
+          "repeat_count": 1,
+          "placement": "cpu",
+          "wall_seconds_median": 1067.1049446000034,
+          "validation_after_median": 3.7960946559906006,
+          "peak_rss_bytes_max": 1531006976,
+          "peak_vram_bytes_max": 0,
+          "frozen_backbone_unchanged": true,
+          "fresh_process_reload_verified": true,
+          "task_id": "expression_family_disjoint_one_step",
+          "objective_fingerprint": "056e754b3f2c557e1f3af22dedd2484eb93416492b59be7386656e422a19b400",
+          "training_ids": [
+            "eg001_train_balanced"
+          ],
+          "heldout_ids": [
+            "eg001_validation_family_holdout"
+          ]
+        }
+      ],
+      "model_proposal": {
+        "raw_text": "{\n  \"action\": \"partition.select\",\n  \"configuration_id\": \"dense_cpu1\",\n  \"partition_id\": \"IMP_L27_ATTENTION_QUERY_PROJECTION\",\n  \"placement\": \"cpu\",\n  \"reason\": \"This configuration minimizes the measured wall time while preserving the frozen backbone unchanged. It also satisfies the constraints regarding the baseline configuration, validation after, maximum held-out regression, RAM, and VRAM reserves.\"\n}",
+        "parsed": {
+          "action": "partition.select",
+          "configuration_id": "dense_cpu1",
+          "partition_id": "IMP_L27_ATTENTION_QUERY_PROJECTION",
+          "placement": "cpu",
+          "reason": "This configuration minimizes the measured wall time while preserving the frozen backbone unchanged. It also satisfies the constraints regarding the baseline configuration, validation after, maximum held-out regression, RAM, and VRAM reserves."
+        },
+        "parse_error": null,
+        "wall_seconds": 7.534971400003997,
+        "prompt_eval_count": 1368,
+        "eval_count": 92,
+        "stop_reason": "stop"
+      },
+      "broker_decision": {
+        "status": "SUCCESS",
+        "capability": "impression",
+        "operation": "partition.select",
+        "observation": {
+          "status": "validated_proposal_only",
+          "origin": "local_[BASE_MODEL]",
+          "configuration_id": "dense_cpu1",
+          "partition_id": "IMP_L27_ATTENTION_QUERY_PROJECTION",
+          "placement": "cpu",
+          "feasible": true,
+          "reason": "feasible under measured profile and supplied resource envelope",
+          "execution_performed": false,
+          "graph_modified": false
+        },
+        "duration_ms": 0.0,
+        "error": null,
+        "timestamp": 1793720614.2329943,
+        "tool_name": null,
+        "task_status": "IN_PROGRESS",
+        "verified_facts": [],
+        "evidence": null
+      },
+      "proposal_configuration_id": "dense_cpu1",
+      "broker_rejection_or_acceptance": "SUCCESS",
+      "execution_performed": false,
+      "graph_modified": false
+    },
+    {
+      "variant": "baseline_anchor_removed_and_reversed",
+      "repeat": 1,
+      "exact_prompt": "Select the lowest-cost feasible measured configuration. Input data:\n{\"hardware_telemetry\":{\"captured_utc\":\"2026-11-03T15:43:16.063145+00:00\",\"snapshot_kind\":\"actual_live_telemetry\",\"ram_total_bytes\":24919851008,\"ram_available_bytes\":14490841088,\"ram_used_percent\":41.9,\"cpu_utilization_percent\":8.8,\"logical_cpu_count\":12,\"disk_read_bytes\":113479146496,\"disk_write_bytes\":96175264256,\"name\":\"NVIDIA GeForce RTX 2050\",\"vram_total_bytes\":4294967296,\"vram_available_bytes\":4156555264,\"vram_used_bytes\":0,\"gpu_utilization_percent\":0,\"temperature_c\":42,\"sensor_available\":true},\"registered_partition\":{\"block_id\":\"IMP_L27_ATTENTION_QUERY_PROJECTION\",\"component\":\"attention.query_projection\",\"source_layer\":27,\"parameter_count\":9437184,\"registered_connections\":[\"IMP_L27_ATTENTION_INPUT_NORM\"],\"trainable\":false},\"training_objective\":{\"task_id\":\"expression_family_disjoint_one_step\",\"objective_fingerprint\":\"056e754b3f2c557e1f3af22dedd2484eb93416492b59be7386656e422a19b400\",\"description\":\"minimize measured one-step wall time while preserving the held-out quality bound\",\"training_ids\":[\"eg001_train_balanced\"],\"heldout_ids\":[\"eg001_validation_family_holdout\"]},\"candidate_measured_profiles\":[{\"configuration_id\":\"sparse_supervised_cpu2\",\"profile_ids\":[\"7f3f31454429ee3fe2c4eca5eda65885c2774a7ae309428dba454152af5f50ea:cpu2_sparse01\"],\"repeat_count\":1,\"placement\":\"cpu\",\"wall_seconds_median\":1067.1049446000034,\"validation_after_median\":3.7960946559906006,\"peak_rss_bytes_max\":1531006976,\"peak_vram_bytes_max\":0,\"frozen_backbone_unchanged\":true,\"fresh_process_reload_verified\":true,\"task_id\":\"expression_family_disjoint_one_step\",\"objective_fingerprint\":\"056e754b3f2c557e1f3af22dedd2484eb93416492b59be7386656e422a19b400\",\"training_ids\":[\"eg001_train_balanced\"],\"heldout_ids\":[\"eg001_validation_family_holdout\"]},{\"configuration_id\":\"sparse_supervised_cpu1\",\"profile_ids\":[\"6335a2c81336bdcd00678b30bfb710c9d23b149516213e9dedcc85312601c0aa:cpu1_sparse01\"],\"repeat_count\":1,\"placement\":\"cpu\",\"wall_seconds_median\":1050.9448535000047,\"validation_after_median\":3.7960946559906006,\"peak_rss_bytes_max\":1529872384,\"peak_vram_bytes_max\":0,\"frozen_backbone_unchanged\":true,\"fresh_process_reload_verified\":true,\"task_id\":\"expression_family_disjoint_one_step\",\"objective_fingerprint\":\"056e754b3f2c557e1f3af22dedd2484eb93416492b59be7386656e422a19b400\",\"training_ids\":[\"eg001_train_balanced\"],\"heldout_ids\":[\"eg001_validation_family_holdout\"]},{\"configuration_id\":\"sparse_cuda_head_cpu_suffix\",\"profile_ids\":[\"b109cc08f0d76ba437e919038def7182cf0ac76d41a2d628b161836e86eeaf0a:cuda_head_sparse01\",\"b109cc08f0d76ba437e919038def7182cf0ac76d41a2d628b161836e86eeaf0a:cuda_head_sparse02\"],\"repeat_count\":2,\"placement\":\"cuda_lm_head_cpu_suffix\",\"wall_seconds_median\":905.267233999999,\"validation_after_median\":3.7961463928222656,\"peak_rss_bytes_max\":1798791168,\"peak_vram_bytes_max\":1129316352,\"frozen_backbone_unchanged\":true,\"fresh_process_reload_verified\":true,\"task_id\":\"expression_family_disjoint_one_step\",\"objective_fingerprint\":\"056e754b3f2c557e1f3af22dedd2484eb93416492b59be7386656e422a19b400\",\"training_ids\":[\"eg001_train_balanced\"],\"heldout_ids\":[\"eg001_validation_family_holdout\"]},{\"configuration_id\":\"dense_cpu1\",\"profile_ids\":[\"8c50a644e410c0fcee0443ebac9472bf151051739055834a4783d01784b0d820:cpu1_resume01\"],\"repeat_count\":1,\"placement\":\"cpu\",\"wall_seconds_median\":1558.850539500003,\"validation_after_median\":3.7960946559906006,\"peak_rss_bytes_max\":1724923904,\"peak_vram_bytes_max\":0,\"frozen_backbone_unchanged\":true,\"fresh_process_reload_verified\":true,\"task_id\":\"expression_family_disjoint_one_step\",\"objective_fingerprint\":\"056e754b3f2c557e1f3af22dedd2484eb93416492b59be7386656e422a19b400\",\"training_ids\":[\"eg001_train_balanced\"],\"heldout_ids\":[\"eg001_validation_family_holdout\"]}],\"constraints\":{\"baseline_validation_after\":3.7947583198547363,\"maximum_heldout_regression\":0.0001,\"ram_reserve_fraction\":0.2,\"vram_reserve_fraction\":0.2,\"vram_guard_bytes\":268435456,\"max_decision_latency_seconds\":30},\"instructions\":\"Compare feasible candidates. Propose one configuration; no execution is authorized by this call.\"}",
+      "available_configuration_ids": [
+        "dense_cpu1",
+        "sparse_cuda_head_cpu_suffix",
+        "sparse_supervised_cpu1",
+        "sparse_supervised_cpu2"
+      ],
+      "available_measured_evidence": [
+        {
+          "configuration_id": "dense_cpu1",
+          "profile_ids": [
+            "8c50a644e410c0fcee0443ebac9472bf151051739055834a4783d01784b0d820:cpu1_resume01"
+          ],
+          "repeat_count": 1,
+          "placement": "cpu",
+          "wall_seconds_median": 1558.850539500003,
+          "validation_after_median": 3.7960946559906006,
+          "peak_rss_bytes_max": 1724923904,
+          "peak_vram_bytes_max": 0,
+          "frozen_backbone_unchanged": true,
+          "fresh_process_reload_verified": true,
+          "task_id": "expression_family_disjoint_one_step",
+          "objective_fingerprint": "056e754b3f2c557e1f3af22dedd2484eb93416492b59be7386656e422a19b400",
+          "training_ids": [
+            "eg001_train_balanced"
+          ],
+          "heldout_ids": [
+            "eg001_validation_family_holdout"
+          ]
+        },
+        {
+          "configuration_id": "sparse_cuda_head_cpu_suffix",
+          "profile_ids": [
+            "b109cc08f0d76ba437e919038def7182cf0ac76d41a2d628b161836e86eeaf0a:cuda_head_sparse01",
+            "b109cc08f0d76ba437e919038def7182cf0ac76d41a2d628b161836e86eeaf0a:cuda_head_sparse02"
+          ],
+          "repeat_count": 2,
+          "placement": "cuda_lm_head_cpu_suffix",
+          "wall_seconds_median": 905.267233999999,
+          "validation_after_median": 3.7961463928222656,
+          "peak_rss_bytes_max": 1798791168,
+          "peak_vram_bytes_max": 1129316352,
+          "frozen_backbone_unchanged": true,
+          "fresh_process_reload_verified": true,
+          "task_id": "expression_family_disjoint_one_step",
+          "objective_fingerprint": "056e754b3f2c557e1f3af22dedd2484eb93416492b59be7386656e422a19b400",
+          "training_ids": [
+            "eg001_train_balanced"
+          ],
+          "heldout_ids": [
+            "eg001_validation_family_holdout"
+          ]
+        },
+        {
+          "configuration_id": "sparse_supervised_cpu1",
+          "profile_ids": [
+            "6335a2c81336bdcd00678b30bfb710c9d23b149516213e9dedcc85312601c0aa:cpu1_sparse01"
+          ],
+          "repeat_count": 1,
+          "placement": "cpu",
+          "wall_seconds_median": 1050.9448535000047,
+          "validation_after_median": 3.7960946559906006,
+          "peak_rss_bytes_max": 1529872384,
+          "peak_vram_bytes_max": 0,
+          "frozen_backbone_unchanged": true,
+          "fresh_process_reload_verified": true,
+          "task_id": "expression_family_disjoint_one_step",
+          "objective_fingerprint": "056e754b3f2c557e1f3af22dedd2484eb93416492b59be7386656e422a19b400",
+          "training_ids": [
+            "eg001_train_balanced"
+          ],
+          "heldout_ids": [
+            "eg001_validation_family_holdout"
+          ]
+        },
+        {
+          "configuration_id": "sparse_supervised_cpu2",
+          "profile_ids": [
+            "7f3f31454429ee3fe2c4eca5eda65885c2774a7ae309428dba454152af5f50ea:cpu2_sparse01"
+          ],
+          "repeat_count": 1,
+          "placement": "cpu",
+          "wall_seconds_median": 1067.1049446000034,
+          "validation_after_median": 3.7960946559906006,
+          "peak_rss_bytes_max": 1531006976,
+          "peak_vram_bytes_max": 0,
+          "frozen_backbone_unchanged": true,
+          "fresh_process_reload_verified": true,
+          "task_id": "expression_family_disjoint_one_step",
+          "objective_fingerprint": "056e754b3f2c557e1f3af22dedd2484eb93416492b59be7386656e422a19b400",
+          "training_ids": [
+            "eg001_train_balanced"
+          ],
+          "heldout_ids": [
+            "eg001_validation_family_holdout"
+          ]
+        }
+      ],
+      "model_proposal": {
+        "raw_text": "{\"action\": \"partition.select\", \"configuration_id\": \"sparse_supervised_cpu1\", \"partition_id\": \"IMP_L27_ATTENTION_QUERY_PROJECTION\", \"placement\": \"cpu\", \"reason\": \"The lowest-cost feasible measured configuration is 'sparse_supervised_cpu1'.\"}",
+        "parsed": {
+          "action": "partition.select",
+          "configuration_id": "sparse_supervised_cpu1",
+          "partition_id": "IMP_L27_ATTENTION_QUERY_PROJECTION",
+          "placement": "cpu",
+          "reason": "The lowest-cost feasible measured configuration is 'sparse_supervised_cpu1'."
+        },
+        "parse_error": null,
+        "wall_seconds": 6.731584900000598,
+        "prompt_eval_count": 1360,
+        "eval_count": 63,
+        "stop_reason": "stop"
+      },
+      "broker_decision": {
+        "status": "SUCCESS",
+        "capability": "impression",
+        "operation": "partition.select",
+        "observation": {
+          "status": "validated_proposal_only",
+          "origin": "local_[BASE_MODEL]",
+          "configuration_id": "sparse_supervised_cpu1",
+          "partition_id": "IMP_L27_ATTENTION_QUERY_PROJECTION",
+          "placement": "cpu",
+          "feasible": true,
+          "reason": "feasible under measured profile and supplied resource envelope",
+          "execution_performed": false,
+          "graph_modified": false
+        },
+        "duration_ms": 0.0,
+        "error": null,
+        "timestamp": 1793720620.9658542,
+        "tool_name": null,
+        "task_status": "IN_PROGRESS",
+        "verified_facts": [],
+        "evidence": null
+      },
+      "proposal_configuration_id": "sparse_supervised_cpu1",
+      "broker_rejection_or_acceptance": "SUCCESS",
+      "execution_performed": false,
+      "graph_modified": false
+    },
+    {
+      "variant": "baseline_anchor_removed_and_reversed",
+      "repeat": 2,
+      "exact_prompt": "Select the lowest-cost feasible measured configuration. Input data:\n{\"hardware_telemetry\":{\"captured_utc\":\"2026-11-03T15:43:16.063145+00:00\",\"snapshot_kind\":\"actual_live_telemetry\",\"ram_total_bytes\":24919851008,\"ram_available_bytes\":14490841088,\"ram_used_percent\":41.9,\"cpu_utilization_percent\":8.8,\"logical_cpu_count\":12,\"disk_read_bytes\":113479146496,\"disk_write_bytes\":96175264256,\"name\":\"NVIDIA GeForce RTX 2050\",\"vram_total_bytes\":4294967296,\"vram_available_bytes\":4156555264,\"vram_used_bytes\":0,\"gpu_utilization_percent\":0,\"temperature_c\":42,\"sensor_available\":true},\"registered_partition\":{\"block_id\":\"IMP_L27_ATTENTION_QUERY_PROJECTION\",\"component\":\"attention.query_projection\",\"source_layer\":27,\"parameter_count\":9437184,\"registered_connections\":[\"IMP_L27_ATTENTION_INPUT_NORM\"],\"trainable\":false},\"training_objective\":{\"task_id\":\"expression_family_disjoint_one_step\",\"objective_fingerprint\":\"056e754b3f2c557e1f3af22dedd2484eb93416492b59be7386656e422a19b400\",\"description\":\"minimize measured one-step wall time while preserving the held-out quality bound\",\"training_ids\":[\"eg001_train_balanced\"],\"heldout_ids\":[\"eg001_validation_family_holdout\"]},\"candidate_measured_profiles\":[{\"configuration_id\":\"sparse_supervised_cpu2\",\"profile_ids\":[\"7f3f31454429ee3fe2c4eca5eda65885c2774a7ae309428dba454152af5f50ea:cpu2_sparse01\"],\"repeat_count\":1,\"placement\":\"cpu\",\"wall_seconds_median\":1067.1049446000034,\"validation_after_median\":3.7960946559906006,\"peak_rss_bytes_max\":1531006976,\"peak_vram_bytes_max\":0,\"frozen_backbone_unchanged\":true,\"fresh_process_reload_verified\":true,\"task_id\":\"expression_family_disjoint_one_step\",\"objective_fingerprint\":\"056e754b3f2c557e1f3af22dedd2484eb93416492b59be7386656e422a19b400\",\"training_ids\":[\"eg001_train_balanced\"],\"heldout_ids\":[\"eg001_validation_family_holdout\"]},{\"configuration_id\":\"sparse_supervised_cpu1\",\"profile_ids\":[\"6335a2c81336bdcd00678b30bfb710c9d23b149516213e9dedcc85312601c0aa:cpu1_sparse01\"],\"repeat_count\":1,\"placement\":\"cpu\",\"wall_seconds_median\":1050.9448535000047,\"validation_after_median\":3.7960946559906006,\"peak_rss_bytes_max\":1529872384,\"peak_vram_bytes_max\":0,\"frozen_backbone_unchanged\":true,\"fresh_process_reload_verified\":true,\"task_id\":\"expression_family_disjoint_one_step\",\"objective_fingerprint\":\"056e754b3f2c557e1f3af22dedd2484eb93416492b59be7386656e422a19b400\",\"training_ids\":[\"eg001_train_balanced\"],\"heldout_ids\":[\"eg001_validation_family_holdout\"]},{\"configuration_id\":\"sparse_cuda_head_cpu_suffix\",\"profile_ids\":[\"b109cc08f0d76ba437e919038def7182cf0ac76d41a2d628b161836e86eeaf0a:cuda_head_sparse01\",\"b109cc08f0d76ba437e919038def7182cf0ac76d41a2d628b161836e86eeaf0a:cuda_head_sparse02\"],\"repeat_count\":2,\"placement\":\"cuda_lm_head_cpu_suffix\",\"wall_seconds_median\":905.267233999999,\"validation_after_median\":3.7961463928222656,\"peak_rss_bytes_max\":1798791168,\"peak_vram_bytes_max\":1129316352,\"frozen_backbone_unchanged\":true,\"fresh_process_reload_verified\":true,\"task_id\":\"expression_family_disjoint_one_step\",\"objective_fingerprint\":\"056e754b3f2c557e1f3af22dedd2484eb93416492b59be7386656e422a19b400\",\"training_ids\":[\"eg001_train_balanced\"],\"heldout_ids\":[\"eg001_validation_family_holdout\"]},{\"configuration_id\":\"dense_cpu1\",\"profile_ids\":[\"8c50a644e410c0fcee0443ebac9472bf151051739055834a4783d01784b0d820:cpu1_resume01\"],\"repeat_count\":1,\"placement\":\"cpu\",\"wall_seconds_median\":1558.850539500003,\"validation_after_median\":3.7960946559906006,\"peak_rss_bytes_max\":1724923904,\"peak_vram_bytes_max\":0,\"frozen_backbone_unchanged\":true,\"fresh_process_reload_verified\":true,\"task_id\":\"expression_family_disjoint_one_step\",\"objective_fingerprint\":\"056e754b3f2c557e1f3af22dedd2484eb93416492b59be7386656e422a19b400\",\"training_ids\":[\"eg001_train_balanced\"],\"heldout_ids\":[\"eg001_validation_family_holdout\"]}],\"constraints\":{\"baseline_validation_after\":3.7947583198547363,\"maximum_heldout_regression\":0.0001,\"ram_reserve_fraction\":0.2,\"vram_reserve_fraction\":0.2,\"vram_guard_bytes\":268435456,\"max_decision_latency_seconds\":30},\"instructions\":\"Compare feasible candidates. Propose one configuration; no execution is authorized by this call.\"}",
+      "available_configuration_ids": [
+        "dense_cpu1",
+        "sparse_cuda_head_cpu_suffix",
+        "sparse_supervised_cpu1",
+        "sparse_supervised_cpu2"
+      ],
+      "available_measured_evidence": [
+        {
+          "configuration_id": "dense_cpu1",
+          "profile_ids": [
+            "8c50a644e410c0fcee0443ebac9472bf151051739055834a4783d01784b0d820:cpu1_resume01"
+          ],
+          "repeat_count": 1,
+          "placement": "cpu",
+          "wall_seconds_median": 1558.850539500003,
+          "validation_after_median": 3.7960946559906006,
+          "peak_rss_bytes_max": 1724923904,
+          "peak_vram_bytes_max": 0,
+          "frozen_backbone_unchanged": true,
+          "fresh_process_reload_verified": true,
+          "task_id": "expression_family_disjoint_one_step",
+          "objective_fingerprint": "056e754b3f2c557e1f3af22dedd2484eb93416492b59be7386656e422a19b400",
+          "training_ids": [
+            "eg001_train_balanced"
+          ],
+          "heldout_ids": [
+            "eg001_validation_family_holdout"
+          ]
+        },
+        {
+          "configuration_id": "sparse_cuda_head_cpu_suffix",
+          "profile_ids": [
+            "b109cc08f0d76ba437e919038def7182cf0ac76d41a2d628b161836e86eeaf0a:cuda_head_sparse01",
+            "b109cc08f0d76ba437e919038def7182cf0ac76d41a2d628b161836e86eeaf0a:cuda_head_sparse02"
+          ],
+          "repeat_count": 2,
+          "placement": "cuda_lm_head_cpu_suffix",
+          "wall_seconds_median": 905.267233999999,
+          "validation_after_median": 3.7961463928222656,
+          "peak_rss_bytes_max": 1798791168,
+          "peak_vram_bytes_max": 1129316352,
+          "frozen_backbone_unchanged": true,
+          "fresh_process_reload_verified": true,
+          "task_id": "expression_family_disjoint_one_step",
+          "objective_fingerprint": "056e754b3f2c557e1f3af22dedd2484eb93416492b59be7386656e422a19b400",
+          "training_ids": [
+            "eg001_train_balanced"
+          ],
+          "heldout_ids": [
+            "eg001_validation_family_holdout"
+          ]
+        },
+        {
+          "configuration_id": "sparse_supervised_cpu1",
+          "profile_ids": [
+            "6335a2c81336bdcd00678b30bfb710c9d23b149516213e9dedcc85312601c0aa:cpu1_sparse01"
+          ],
+          "repeat_count": 1,
+          "placement": "cpu",
+          "wall_seconds_median": 1050.9448535000047,
+          "validation_after_median": 3.7960946559906006,
+          "peak_rss_bytes_max": 1529872384,
+          "peak_vram_bytes_max": 0,
+          "frozen_backbone_unchanged": true,
+          "fresh_process_reload_verified": true,
+          "task_id": "expression_family_disjoint_one_step",
+          "objective_fingerprint": "056e754b3f2c557e1f3af22dedd2484eb93416492b59be7386656e422a19b400",
+          "training_ids": [
+            "eg001_train_balanced"
+          ],
+          "heldout_ids": [
+            "eg001_validation_family_holdout"
+          ]
+        },
+        {
+          "configuration_id": "sparse_supervised_cpu2",
+          "profile_ids": [
+            "7f3f31454429ee3fe2c4eca5eda65885c2774a7ae309428dba454152af5f50ea:cpu2_sparse01"
+          ],
+          "repeat_count": 1,
+          "placement": "cpu",
+          "wall_seconds_median": 1067.1049446000034,
+          "validation_after_median": 3.7960946559906006,
+          "peak_rss_bytes_max": 1531006976,
+          "peak_vram_bytes_max": 0,
+          "frozen_backbone_unchanged": true,
+          "fresh_process_reload_verified": true,
+          "task_id": "expression_family_disjoint_one_step",
+          "objective_fingerprint": "056e754b3f2c557e1f3af22dedd2484eb93416492b59be7386656e422a19b400",
+          "training_ids": [
+            "eg001_train_balanced"
+          ],
+          "heldout_ids": [
+            "eg001_validation_family_holdout"
+          ]
+        }
+      ],
+      "model_proposal": {
+        "raw_text": "{\"action\": \"partition.select\", \"configuration_id\": \"sparse_supervised_cpu1\", \"partition_id\": \"IMP_L27_ATTENTION_QUERY_PROJECTION\", \"placement\": \"cpu\", \"reason\": \"The lowest-cost feasible measured configuration is 'sparse_supervised_cpu1'.\"}",
+        "parsed": {
+          "action": "partition.select",
+          "configuration_id": "sparse_supervised_cpu1",
+          "partition_id": "IMP_L27_ATTENTION_QUERY_PROJECTION",
+          "placement": "cpu",
+          "reason": "The lowest-cost feasible measured configuration is 'sparse_supervised_cpu1'."
+        },
+        "parse_error": null,
+        "wall_seconds": 6.776445199997397,
+        "prompt_eval_count": 1360,
+        "eval_count": 63,
+        "stop_reason": "stop"
+      },
+      "broker_decision": {
+        "status": "SUCCESS",
+        "capability": "impression",
+        "operation": "partition.select",
+        "observation": {
+          "status": "validated_proposal_only",
+          "origin": "local_[BASE_MODEL]",
+          "configuration_id": "sparse_supervised_cpu1",
+          "partition_id": "IMP_L27_ATTENTION_QUERY_PROJECTION",
+          "placement": "cpu",
+          "feasible": true,
+          "reason": "feasible under measured profile and supplied resource envelope",
+          "execution_performed": false,
+          "graph_modified": false
+        },
+        "duration_ms": 0.0,
+        "error": null,
+        "timestamp": 1793720627.7435496,
+        "tool_name": null,
+        "task_status": "IN_PROGRESS",
+        "verified_facts": [],
+        "evidence": null
+      },
+      "proposal_configuration_id": "sparse_supervised_cpu1",
+      "broker_rejection_or_acceptance": "SUCCESS",
+      "execution_performed": false,
+      "graph_modified": false
+    },
+    {
+      "variant": "compact_mixed_order_comparative_table",
+      "repeat": 1,
+      "exact_prompt": "Compare every row numerically. Reject infeasible options, then choose the eligible row with minimum median_wall_s. Return the required JSON proposal only. Data:\n{\"snapshot_kind\":\"actual_live_telemetry\",\"hardware\":{\"captured_utc\":\"2026-11-03T15:43:16.063145+00:00\",\"snapshot_kind\":\"actual_live_telemetry\",\"ram_total_bytes\":24919851008,\"ram_available_bytes\":14490841088,\"ram_used_percent\":41.9,\"cpu_utilization_percent\":8.8,\"logical_cpu_count\":12,\"disk_read_bytes\":113479146496,\"disk_write_bytes\":96175264256,\"name\":\"NVIDIA GeForce RTX 2050\",\"vram_total_bytes\":4294967296,\"vram_available_bytes\":4156555264,\"vram_used_bytes\":0,\"gpu_utilization_percent\":0,\"temperature_c\":42,\"sensor_available\":true},\"objective\":\"Select the fastest resource-feasible configuration whose held-out loss is <= baseline + 0.0001.\",\"baseline_validation_loss\":3.7947583198547363,\"candidates_in_deliberately_mixed_order\":[{\"id\":\"sparse_supervised_cpu2\",\"placement\":\"cpu\",\"median_wall_s\":1067.1049446000034,\"median_validation_loss\":3.7960946559906006,\"max_rss_bytes\":1531006976,\"max_vram_bytes\":0,\"reload_verified\":true,\"frozen_backbone_unchanged\":true,\"repeat_count\":1},{\"id\":\"dense_cpu1\",\"placement\":\"cpu\",\"median_wall_s\":1558.850539500003,\"median_validation_loss\":3.7960946559906006,\"max_rss_bytes\":1724923904,\"max_vram_bytes\":0,\"reload_verified\":true,\"frozen_backbone_unchanged\":true,\"repeat_count\":1},{\"id\":\"sparse_cuda_head_cpu_suffix\",\"placement\":\"cuda_lm_head_cpu_suffix\",\"median_wall_s\":905.267233999999,\"median_validation_loss\":3.7961463928222656,\"max_rss_bytes\":1798791168,\"max_vram_bytes\":1129316352,\"reload_verified\":true,\"frozen_backbone_unchanged\":true,\"repeat_count\":2},{\"id\":\"sparse_supervised_cpu1\",\"placement\":\"cpu\",\"median_wall_s\":1050.9448535000047,\"median_validation_loss\":3.7960946559906006,\"max_rss_bytes\":1529872384,\"max_vram_bytes\":0,\"reload_verified\":true,\"frozen_backbone_unchanged\":true,\"repeat_count\":1}]}",
+      "available_configuration_ids": [
+        "dense_cpu1",
+        "sparse_cuda_head_cpu_suffix",
+        "sparse_supervised_cpu1",
+        "sparse_supervised_cpu2"
+      ],
+      "available_measured_evidence": [
+        {
+          "configuration_id": "dense_cpu1",
+          "profile_ids": [
+            "8c50a644e410c0fcee0443ebac9472bf151051739055834a4783d01784b0d820:cpu1_resume01"
+          ],
+          "repeat_count": 1,
+          "placement": "cpu",
+          "wall_seconds_median": 1558.850539500003,
+          "validation_after_median": 3.7960946559906006,
+          "peak_rss_bytes_max": 1724923904,
+          "peak_vram_bytes_max": 0,
+          "frozen_backbone_unchanged": true,
+          "fresh_process_reload_verified": true,
+          "task_id": "expression_family_disjoint_one_step",
+          "objective_fingerprint": "056e754b3f2c557e1f3af22dedd2484eb93416492b59be7386656e422a19b400",
+          "training_ids": [
+            "eg001_train_balanced"
+          ],
+          "heldout_ids": [
+            "eg001_validation_family_holdout"
+          ]
+        },
+        {
+          "configuration_id": "sparse_cuda_head_cpu_suffix",
+          "profile_ids": [
+            "b109cc08f0d76ba437e919038def7182cf0ac76d41a2d628b161836e86eeaf0a:cuda_head_sparse01",
+            "b109cc08f0d76ba437e919038def7182cf0ac76d41a2d628b161836e86eeaf0a:cuda_head_sparse02"
+          ],
+          "repeat_count": 2,
+          "placement": "cuda_lm_head_cpu_suffix",
+          "wall_seconds_median": 905.267233999999,
+          "validation_after_median": 3.7961463928222656,
+          "peak_rss_bytes_max": 1798791168,
+          "peak_vram_bytes_max": 1129316352,
+          "frozen_backbone_unchanged": true,
+          "fresh_process_reload_verified": true,
+          "task_id": "expression_family_disjoint_one_step",
+          "objective_fingerprint": "056e754b3f2c557e1f3af22dedd2484eb93416492b59be7386656e422a19b400",
+          "training_ids": [
+            "eg001_train_balanced"
+          ],
+          "heldout_ids": [
+            "eg001_validation_family_holdout"
+          ]
+        },
+        {
+          "configuration_id": "sparse_supervised_cpu1",
+          "profile_ids": [
+            "6335a2c81336bdcd00678b30bfb710c9d23b149516213e9dedcc85312601c0aa:cpu1_sparse01"
+          ],
+          "repeat_count": 1,
+          "placement": "cpu",
+          "wall_seconds_median": 1050.9448535000047,
+          "validation_after_median": 3.7960946559906006,
+          "peak_rss_bytes_max": 1529872384,
+          "peak_vram_bytes_max": 0,
+          "frozen_backbone_unchanged": true,
+          "fresh_process_reload_verified": true,
+          "task_id": "expression_family_disjoint_one_step",
+          "objective_fingerprint": "056e754b3f2c557e1f3af22dedd2484eb93416492b59be7386656e422a19b400",
+          "training_ids": [
+            "eg001_train_balanced"
+          ],
+          "heldout_ids": [
+            "eg001_validation_family_holdout"
+          ]
+        },
+        {
+          "configuration_id": "sparse_supervised_cpu2",
+          "profile_ids": [
+            "7f3f31454429ee3fe2c4eca5eda65885c2774a7ae309428dba454152af5f50ea:cpu2_sparse01"
+          ],
+          "repeat_count": 1,
+          "placement": "cpu",
+          "wall_seconds_median": 1067.1049446000034,
+          "validation_after_median": 3.7960946559906006,
+          "peak_rss_bytes_max": 1531006976,
+          "peak_vram_bytes_max": 0,
+          "frozen_backbone_unchanged": true,
+          "fresh_process_reload_verified": true,
+          "task_id": "expression_family_disjoint_one_step",
+          "objective_fingerprint": "056e754b3f2c557e1f3af22dedd2484eb93416492b59be7386656e422a19b400",
+          "training_ids": [
+            "eg001_train_balanced"
+          ],
+          "heldout_ids": [
+            "eg001_validation_family_holdout"
+          ]
+        }
+      ],
+      "model_proposal": {
+        "raw_text": "{\n  \"action\": \"partition.select\",\n  \"configuration_id\": \"sparse_supervised_cpu2\",\n  \"partition_id\": \"IMP_L27_ATTENTION_QUERY_PROJECTION\",\n  \"placement\": \"cpu\",\n  \"reason\": \"The row with configuration_id=sparse_supervised_cpu2 has the minimum median_wall_s of 1067.1049446000034, which is the fastest resource-feasible configuration with a held-out loss of <= baseline + 0.0001.\"\n}",
+        "parsed": {
+          "action": "partition.select",
+          "configuration_id": "sparse_supervised_cpu2",
+          "partition_id": "IMP_L27_ATTENTION_QUERY_PROJECTION",
+          "placement": "cpu",
+          "reason": "The row with configuration_id=sparse_supervised_cpu2 has the minimum median_wall_s of 1067.1049446000034, which is the fastest resource-feasible configuration with a held-out loss of <= baseline + 0.0001."
+        },
+        "parse_error": null,
+        "wall_seconds": 8.317862399999285,
+        "prompt_eval_count": 691,
+        "eval_count": 123,
+        "stop_reason": "stop"
+      },
+      "broker_decision": {
+        "status": "SUCCESS",
+        "capability": "impression",
+        "operation": "partition.select",
+        "observation": {
+          "status": "validated_proposal_only",
+          "origin": "local_[BASE_MODEL]",
+          "configuration_id": "sparse_supervised_cpu2",
+          "partition_id": "IMP_L27_ATTENTION_QUERY_PROJECTION",
+          "placement": "cpu",
+          "feasible": true,
+          "reason": "feasible under measured profile and supplied resource envelope",
+          "execution_performed": false,
+          "graph_modified": false
+        },
+        "duration_ms": 0.0,
+        "error": null,
+        "timestamp": 1793720636.062481,
+        "tool_name": null,
+        "task_status": "IN_PROGRESS",
+        "verified_facts": [],
+        "evidence": null
+      },
+      "proposal_configuration_id": "sparse_supervised_cpu2",
+      "broker_rejection_or_acceptance": "SUCCESS",
+      "execution_performed": false,
+      "graph_modified": false
+    },
+    {
+      "variant": "compact_mixed_order_comparative_table",
+      "repeat": 2,
+      "exact_prompt": "Compare every row numerically. Reject infeasible options, then choose the eligible row with minimum median_wall_s. Return the required JSON proposal only. Data:\n{\"snapshot_kind\":\"actual_live_telemetry\",\"hardware\":{\"captured_utc\":\"2026-11-03T15:43:16.063145+00:00\",\"snapshot_kind\":\"actual_live_telemetry\",\"ram_total_bytes\":24919851008,\"ram_available_bytes\":14490841088,\"ram_used_percent\":41.9,\"cpu_utilization_percent\":8.8,\"logical_cpu_count\":12,\"disk_read_bytes\":113479146496,\"disk_write_bytes\":96175264256,\"name\":\"NVIDIA GeForce RTX 2050\",\"vram_total_bytes\":4294967296,\"vram_available_bytes\":4156555264,\"vram_used_bytes\":0,\"gpu_utilization_percent\":0,\"temperature_c\":42,\"sensor_available\":true},\"objective\":\"Select the fastest resource-feasible configuration whose held-out loss is <= baseline + 0.0001.\",\"baseline_validation_loss\":3.7947583198547363,\"candidates_in_deliberately_mixed_order\":[{\"id\":\"sparse_supervised_cpu2\",\"placement\":\"cpu\",\"median_wall_s\":1067.1049446000034,\"median_validation_loss\":3.7960946559906006,\"max_rss_bytes\":1531006976,\"max_vram_bytes\":0,\"reload_verified\":true,\"frozen_backbone_unchanged\":true,\"repeat_count\":1},{\"id\":\"dense_cpu1\",\"placement\":\"cpu\",\"median_wall_s\":1558.850539500003,\"median_validation_loss\":3.7960946559906006,\"max_rss_bytes\":1724923904,\"max_vram_bytes\":0,\"reload_verified\":true,\"frozen_backbone_unchanged\":true,\"repeat_count\":1},{\"id\":\"sparse_cuda_head_cpu_suffix\",\"placement\":\"cuda_lm_head_cpu_suffix\",\"median_wall_s\":905.267233999999,\"median_validation_loss\":3.7961463928222656,\"max_rss_bytes\":1798791168,\"max_vram_bytes\":1129316352,\"reload_verified\":true,\"frozen_backbone_unchanged\":true,\"repeat_count\":2},{\"id\":\"sparse_supervised_cpu1\",\"placement\":\"cpu\",\"median_wall_s\":1050.9448535000047,\"median_validation_loss\":3.7960946559906006,\"max_rss_bytes\":1529872384,\"max_vram_bytes\":0,\"reload_verified\":true,\"frozen_backbone_unchanged\":true,\"repeat_count\":1}]}",
+      "available_configuration_ids": [
+        "dense_cpu1",
+        "sparse_cuda_head_cpu_suffix",
+        "sparse_supervised_cpu1",
+        "sparse_supervised_cpu2"
+      ],
+      "available_measured_evidence": [
+        {
+          "configuration_id": "dense_cpu1",
+          "profile_ids": [
+            "8c50a644e410c0fcee0443ebac9472bf151051739055834a4783d01784b0d820:cpu1_resume01"
+          ],
+          "repeat_count": 1,
+          "placement": "cpu",
+          "wall_seconds_median": 1558.850539500003,
+          "validation_after_median": 3.7960946559906006,
+          "peak_rss_bytes_max": 1724923904,
+          "peak_vram_bytes_max": 0,
+          "frozen_backbone_unchanged": true,
+          "fresh_process_reload_verified": true,
+          "task_id": "expression_family_disjoint_one_step",
+          "objective_fingerprint": "056e754b3f2c557e1f3af22dedd2484eb93416492b59be7386656e422a19b400",
+          "training_ids": [
+            "eg001_train_balanced"
+          ],
+          "heldout_ids": [
+            "eg001_validation_family_holdout"
+          ]
+        },
+        {
+          "configuration_id": "sparse_cuda_head_cpu_suffix",
+          "profile_ids": [
+            "b109cc08f0d76ba437e919038def7182cf0ac76d41a2d628b161836e86eeaf0a:cuda_head_sparse01",
+            "b109cc08f0d76ba437e919038def7182cf0ac76d41a2d628b161836e86eeaf0a:cuda_head_sparse02"
+          ],
+          "repeat_count": 2,
+          "placement": "cuda_lm_head_cpu_suffix",
+          "wall_seconds_median": 905.267233999999,
+          "validation_after_median": 3.7961463928222656,
+          "peak_rss_bytes_max": 1798791168,
+          "peak_vram_bytes_max": 1129316352,
+          "frozen_backbone_unchanged": true,
+          "fresh_process_reload_verified": true,
+          "task_id": "expression_family_disjoint_one_step",
+          "objective_fingerprint": "056e754b3f2c557e1f3af22dedd2484eb93416492b59be7386656e422a19b400",
+          "training_ids": [
+            "eg001_train_balanced"
+          ],
+          "heldout_ids": [
+            "eg001_validation_family_holdout"
+          ]
+        },
+        {
+          "configuration_id": "sparse_supervised_cpu1",
+          "profile_ids": [
+            "6335a2c81336bdcd00678b30bfb710c9d23b149516213e9dedcc85312601c0aa:cpu1_sparse01"
+          ],
+          "repeat_count": 1,
+          "placement": "cpu",
+          "wall_seconds_median": 1050.9448535000047,
+          "validation_after_median": 3.7960946559906006,
+          "peak_rss_bytes_max": 1529872384,
+          "peak_vram_bytes_max": 0,
+          "frozen_backbone_unchanged": true,
+          "fresh_process_reload_verified": true,
+          "task_id": "expression_family_disjoint_one_step",
+          "objective_fingerprint": "056e754b3f2c557e1f3af22dedd2484eb93416492b59be7386656e422a19b400",
+          "training_ids": [
+            "eg001_train_balanced"
+          ],
+          "heldout_ids": [
+            "eg001_validation_family_holdout"
+          ]
+        },
+        {
+          "configuration_id": "sparse_supervised_cpu2",
+          "profile_ids": [
+            "7f3f31454429ee3fe2c4eca5eda65885c2774a7ae309428dba454152af5f50ea:cpu2_sparse01"
+          ],
+          "repeat_count": 1,
+          "placement": "cpu",
+          "wall_seconds_median": 1067.1049446000034,
+          "validation_after_median": 3.7960946559906006,
+          "peak_rss_bytes_max": 1531006976,
+          "peak_vram_bytes_max": 0,
+          "frozen_backbone_unchanged": true,
+          "fresh_process_reload_verified": true,
+          "task_id": "expression_family_disjoint_one_step",
+          "objective_fingerprint": "056e754b3f2c557e1f3af22dedd2484eb93416492b59be7386656e422a19b400",
+          "training_ids": [
+            "eg001_train_balanced"
+          ],
+          "heldout_ids": [
+            "eg001_validation_family_holdout"
+          ]
+        }
+      ],
+      "model_proposal": {
+        "raw_text": "{\n  \"action\": \"partition.select\",\n  \"configuration_id\": \"sparse_supervised_cpu2\",\n  \"partition_id\": \"IMP_L27_ATTENTION_QUERY_PROJECTION\",\n  \"placement\": \"cpu\",\n  \"reason\": \"The row with configuration_id=sparse_supervised_cpu2 has the minimum median_wall_s of 1067.1049446000034, which is the fastest resource-feasible configuration with a held-out loss of <= baseline + 0.0001.\"\n}",
+        "parsed": {
+          "action": "partition.select",
+          "configuration_id": "sparse_supervised_cpu2",
+          "partition_id": "IMP_L27_ATTENTION_QUERY_PROJECTION",
+          "placement": "cpu",
+          "reason": "The row with configuration_id=sparse_supervised_cpu2 has the minimum median_wall_s of 1067.1049446000034, which is the fastest resource-feasible configuration with a held-out loss of <= baseline + 0.0001."
+        },
+        "parse_error": null,
+        "wall_seconds": 8.55130750000535,
+        "prompt_eval_count": 691,
+        "eval_count": 123,
+        "stop_reason": "stop"
+      },
+      "broker_decision": {
+        "status": "SUCCESS",
+        "capability": "impression",
+        "operation": "partition.select",
+        "observation": {
+          "status": "validated_proposal_only",
+          "origin": "local_[BASE_MODEL]",
+          "configuration_id": "sparse_supervised_cpu2",
+          "partition_id": "IMP_L27_ATTENTION_QUERY_PROJECTION",
+          "placement": "cpu",
+          "feasible": true,
+          "reason": "feasible under measured profile and supplied resource envelope",
+          "execution_performed": false,
+          "graph_modified": false
+        },
+        "duration_ms": 0.0,
+        "error": null,
+        "timestamp": 1793720644.6150997,
+        "tool_name": null,
+        "task_status": "IN_PROGRESS",
+        "verified_facts": [],
+        "evidence": null
+      },
+      "proposal_configuration_id": "sparse_supervised_cpu2",
+      "broker_rejection_or_acceptance": "SUCCESS",
+      "execution_performed": false,
+      "graph_modified": false
+    },
+    {
+      "variant": "compact_fastest_first_table",
+      "repeat": 1,
+      "exact_prompt": "Compare every row numerically. Reject infeasible options, then choose the eligible row with minimum median_wall_s. Return the required JSON proposal only. Data:\n{\"snapshot_kind\":\"actual_live_telemetry\",\"hardware\":{\"captured_utc\":\"2026-11-03T15:43:16.063145+00:00\",\"snapshot_kind\":\"actual_live_telemetry\",\"ram_total_bytes\":24919851008,\"ram_available_bytes\":14490841088,\"ram_used_percent\":41.9,\"cpu_utilization_percent\":8.8,\"logical_cpu_count\":12,\"disk_read_bytes\":113479146496,\"disk_write_bytes\":96175264256,\"name\":\"NVIDIA GeForce RTX 2050\",\"vram_total_bytes\":4294967296,\"vram_available_bytes\":4156555264,\"vram_used_bytes\":0,\"gpu_utilization_percent\":0,\"temperature_c\":42,\"sensor_available\":true},\"objective\":\"Select the fastest resource-feasible configuration whose held-out loss is <= baseline + 0.0001.\",\"baseline_validation_loss\":3.7947583198547363,\"candidates_in_deliberately_mixed_order\":[{\"id\":\"sparse_cuda_head_cpu_suffix\",\"placement\":\"cuda_lm_head_cpu_suffix\",\"median_wall_s\":905.267233999999,\"median_validation_loss\":3.7961463928222656,\"max_rss_bytes\":1798791168,\"max_vram_bytes\":1129316352,\"reload_verified\":true,\"frozen_backbone_unchanged\":true,\"repeat_count\":2},{\"id\":\"sparse_supervised_cpu1\",\"placement\":\"cpu\",\"median_wall_s\":1050.9448535000047,\"median_validation_loss\":3.7960946559906006,\"max_rss_bytes\":1529872384,\"max_vram_bytes\":0,\"reload_verified\":true,\"frozen_backbone_unchanged\":true,\"repeat_count\":1},{\"id\":\"sparse_supervised_cpu2\",\"placement\":\"cpu\",\"median_wall_s\":1067.1049446000034,\"median_validation_loss\":3.7960946559906006,\"max_rss_bytes\":1531006976,\"max_vram_bytes\":0,\"reload_verified\":true,\"frozen_backbone_unchanged\":true,\"repeat_count\":1},{\"id\":\"dense_cpu1\",\"placement\":\"cpu\",\"median_wall_s\":1558.850539500003,\"median_validation_loss\":3.7960946559906006,\"max_rss_bytes\":1724923904,\"max_vram_bytes\":0,\"reload_verified\":true,\"frozen_backbone_unchanged\":true,\"repeat_count\":1}]}",
+      "available_configuration_ids": [
+        "dense_cpu1",
+        "sparse_cuda_head_cpu_suffix",
+        "sparse_supervised_cpu1",
+        "sparse_supervised_cpu2"
+      ],
+      "available_measured_evidence": [
+        {
+          "configuration_id": "dense_cpu1",
+          "profile_ids": [
+            "8c50a644e410c0fcee0443ebac9472bf151051739055834a4783d01784b0d820:cpu1_resume01"
+          ],
+          "repeat_count": 1,
+          "placement": "cpu",
+          "wall_seconds_median": 1558.850539500003,
+          "validation_after_median": 3.7960946559906006,
+          "peak_rss_bytes_max": 1724923904,
+          "peak_vram_bytes_max": 0,
+          "frozen_backbone_unchanged": true,
+          "fresh_process_reload_verified": true,
+          "task_id": "expression_family_disjoint_one_step",
+          "objective_fingerprint": "056e754b3f2c557e1f3af22dedd2484eb93416492b59be7386656e422a19b400",
+          "training_ids": [
+            "eg001_train_balanced"
+          ],
+          "heldout_ids": [
+            "eg001_validation_family_holdout"
+          ]
+        },
+        {
+          "configuration_id": "sparse_cuda_head_cpu_suffix",
+          "profile_ids": [
+            "b109cc08f0d76ba437e919038def7182cf0ac76d41a2d628b161836e86eeaf0a:cuda_head_sparse01",
+            "b109cc08f0d76ba437e919038def7182cf0ac76d41a2d628b161836e86eeaf0a:cuda_head_sparse02"
+          ],
+          "repeat_count": 2,
+          "placement": "cuda_lm_head_cpu_suffix",
+          "wall_seconds_median": 905.267233999999,
+          "validation_after_median": 3.7961463928222656,
+          "peak_rss_bytes_max": 1798791168,
+          "peak_vram_bytes_max": 1129316352,
+          "frozen_backbone_unchanged": true,
+          "fresh_process_reload_verified": true,
+          "task_id": "expression_family_disjoint_one_step",
+          "objective_fingerprint": "056e754b3f2c557e1f3af22dedd2484eb93416492b59be7386656e422a19b400",
+          "training_ids": [
+            "eg001_train_balanced"
+          ],
+          "heldout_ids": [
+            "eg001_validation_family_holdout"
+          ]
+        },
+        {
+          "configuration_id": "sparse_supervised_cpu1",
+          "profile_ids": [
+            "6335a2c81336bdcd00678b30bfb710c9d23b149516213e9dedcc85312601c0aa:cpu1_sparse01"
+          ],
+          "repeat_count": 1,
+          "placement": "cpu",
+          "wall_seconds_median": 1050.9448535000047,
+          "validation_after_median": 3.7960946559906006,
+          "peak_rss_bytes_max": 1529872384,
+          "peak_vram_bytes_max": 0,
+          "frozen_backbone_unchanged": true,
+          "fresh_process_reload_verified": true,
+          "task_id": "expression_family_disjoint_one_step",
+          "objective_fingerprint": "056e754b3f2c557e1f3af22dedd2484eb93416492b59be7386656e422a19b400",
+          "training_ids": [
+            "eg001_train_balanced"
+          ],
+          "heldout_ids": [
+            "eg001_validation_family_holdout"
+          ]
+        },
+        {
+          "configuration_id": "sparse_supervised_cpu2",
+          "profile_ids": [
+            "7f3f31454429ee3fe2c4eca5eda65885c2774a7ae309428dba454152af5f50ea:cpu2_sparse01"
+          ],
+          "repeat_count": 1,
+          "placement": "cpu",
+          "wall_seconds_median": 1067.1049446000034,
+          "validation_after_median": 3.7960946559906006,
+          "peak_rss_bytes_max": 1531006976,
+          "peak_vram_bytes_max": 0,
+          "frozen_backbone_unchanged": true,
+          "fresh_process_reload_verified": true,
+          "task_id": "expression_family_disjoint_one_step",
+          "objective_fingerprint": "056e754b3f2c557e1f3af22dedd2484eb93416492b59be7386656e422a19b400",
+          "training_ids": [
+            "eg001_train_balanced"
+          ],
+          "heldout_ids": [
+            "eg001_validation_family_holdout"
+          ]
+        }
+      ],
+      "model_proposal": {
+        "raw_text": "{\n  \"action\": \"partition.select\",\n  \"configuration_id\": \"sparse_cuda_head_cpu_suffix\",\n  \"partition_id\": \"IMP_L27_ATTENTION_QUERY_PROJECTION\",\n  \"placement\": \"cuda_lm_head_cpu_suffix\",\n  \"reason\": \"The configuration with the lowest median_validation_loss is the fastest resource-feasible configuration with a held-out loss of <= baseline + 0.0001.\"\n}",
+        "parsed": {
+          "action": "partition.select",
+          "configuration_id": "sparse_cuda_head_cpu_suffix",
+          "partition_id": "IMP_L27_ATTENTION_QUERY_PROJECTION",
+          "placement": "cuda_lm_head_cpu_suffix",
+          "reason": "The configuration with the lowest median_validation_loss is the fastest resource-feasible configuration with a held-out loss of <= baseline + 0.0001."
+        },
+        "parse_error": null,
+        "wall_seconds": 8.231115300004603,
+        "prompt_eval_count": 691,
+        "eval_count": 106,
+        "stop_reason": "stop"
+      },
+      "broker_decision": {
+        "status": "SUCCESS",
+        "capability": "impression",
+        "operation": "partition.select",
+        "observation": {
+          "status": "validated_proposal_only",
+          "origin": "local_[BASE_MODEL]",
+          "configuration_id": "sparse_cuda_head_cpu_suffix",
+          "partition_id": "IMP_L27_ATTENTION_QUERY_PROJECTION",
+          "placement": "cuda_lm_head_cpu_suffix",
+          "feasible": true,
+          "reason": "feasible under measured profile and supplied resource envelope",
+          "execution_performed": false,
+          "graph_modified": false
+        },
+        "duration_ms": 0.0,
+        "error": null,
+        "timestamp": 1793720652.8476174,
+        "tool_name": null,
+        "task_status": "IN_PROGRESS",
+        "verified_facts": [],
+        "evidence": null
+      },
+      "proposal_configuration_id": "sparse_cuda_head_cpu_suffix",
+      "broker_rejection_or_acceptance": "SUCCESS",
+      "execution_performed": false,
+      "graph_modified": false
+    },
+    {
+      "variant": "compact_fastest_first_table",
+      "repeat": 2,
+      "exact_prompt": "Compare every row numerically. Reject infeasible options, then choose the eligible row with minimum median_wall_s. Return the required JSON proposal only. Data:\n{\"snapshot_kind\":\"actual_live_telemetry\",\"hardware\":{\"captured_utc\":\"2026-11-03T15:43:16.063145+00:00\",\"snapshot_kind\":\"actual_live_telemetry\",\"ram_total_bytes\":24919851008,\"ram_available_bytes\":14490841088,\"ram_used_percent\":41.9,\"cpu_utilization_percent\":8.8,\"logical_cpu_count\":12,\"disk_read_bytes\":113479146496,\"disk_write_bytes\":96175264256,\"name\":\"NVIDIA GeForce RTX 2050\",\"vram_total_bytes\":4294967296,\"vram_available_bytes\":4156555264,\"vram_used_bytes\":0,\"gpu_utilization_percent\":0,\"temperature_c\":42,\"sensor_available\":true},\"objective\":\"Select the fastest resource-feasible configuration whose held-out loss is <= baseline + 0.0001.\",\"baseline_validation_loss\":3.7947583198547363,\"candidates_in_deliberately_mixed_order\":[{\"id\":\"sparse_cuda_head_cpu_suffix\",\"placement\":\"cuda_lm_head_cpu_suffix\",\"median_wall_s\":905.267233999999,\"median_validation_loss\":3.7961463928222656,\"max_rss_bytes\":1798791168,\"max_vram_bytes\":1129316352,\"reload_verified\":true,\"frozen_backbone_unchanged\":true,\"repeat_count\":2},{\"id\":\"sparse_supervised_cpu1\",\"placement\":\"cpu\",\"median_wall_s\":1050.9448535000047,\"median_validation_loss\":3.7960946559906006,\"max_rss_bytes\":1529872384,\"max_vram_bytes\":0,\"reload_verified\":true,\"frozen_backbone_unchanged\":true,\"repeat_count\":1},{\"id\":\"sparse_supervised_cpu2\",\"placement\":\"cpu\",\"median_wall_s\":1067.1049446000034,\"median_validation_loss\":3.7960946559906006,\"max_rss_bytes\":1531006976,\"max_vram_bytes\":0,\"reload_verified\":true,\"frozen_backbone_unchanged\":true,\"repeat_count\":1},{\"id\":\"dense_cpu1\",\"placement\":\"cpu\",\"median_wall_s\":1558.850539500003,\"median_validation_loss\":3.7960946559906006,\"max_rss_bytes\":1724923904,\"max_vram_bytes\":0,\"reload_verified\":true,\"frozen_backbone_unchanged\":true,\"repeat_count\":1}]}",
+      "available_configuration_ids": [
+        "dense_cpu1",
+        "sparse_cuda_head_cpu_suffix",
+        "sparse_supervised_cpu1",
+        "sparse_supervised_cpu2"
+      ],
+      "available_measured_evidence": [
+        {
+          "configuration_id": "dense_cpu1",
+          "profile_ids": [
+            "8c50a644e410c0fcee0443ebac9472bf151051739055834a4783d01784b0d820:cpu1_resume01"
+          ],
+          "repeat_count": 1,
+          "placement": "cpu",
+          "wall_seconds_median": 1558.850539500003,
+          "validation_after_median": 3.7960946559906006,
+          "peak_rss_bytes_max": 1724923904,
+          "peak_vram_bytes_max": 0,
+          "frozen_backbone_unchanged": true,
+          "fresh_process_reload_verified": true,
+          "task_id": "expression_family_disjoint_one_step",
+          "objective_fingerprint": "056e754b3f2c557e1f3af22dedd2484eb93416492b59be7386656e422a19b400",
+          "training_ids": [
+            "eg001_train_balanced"
+          ],
+          "heldout_ids": [
+            "eg001_validation_family_holdout"
+          ]
+        },
+        {
+          "configuration_id": "sparse_cuda_head_cpu_suffix",
+          "profile_ids": [
+            "b109cc08f0d76ba437e919038def7182cf0ac76d41a2d628b161836e86eeaf0a:cuda_head_sparse01",
+            "b109cc08f0d76ba437e919038def7182cf0ac76d41a2d628b161836e86eeaf0a:cuda_head_sparse02"
+          ],
+          "repeat_count": 2,
+          "placement": "cuda_lm_head_cpu_suffix",
+          "wall_seconds_median": 905.267233999999,
+          "validation_after_median": 3.7961463928222656,
+          "peak_rss_bytes_max": 1798791168,
+          "peak_vram_bytes_max": 1129316352,
+          "frozen_backbone_unchanged": true,
+          "fresh_process_reload_verified": true,
+          "task_id": "expression_family_disjoint_one_step",
+          "objective_fingerprint": "056e754b3f2c557e1f3af22dedd2484eb93416492b59be7386656e422a19b400",
+          "training_ids": [
+            "eg001_train_balanced"
+          ],
+          "heldout_ids": [
+            "eg001_validation_family_holdout"
+          ]
+        },
+        {
+          "configuration_id": "sparse_supervised_cpu1",
+          "profile_ids": [
+            "6335a2c81336bdcd00678b30bfb710c9d23b149516213e9dedcc85312601c0aa:cpu1_sparse01"
+          ],
+          "repeat_count": 1,
+          "placement": "cpu",
+          "wall_seconds_median": 1050.9448535000047,
+          "validation_after_median": 3.7960946559906006,
+          "peak_rss_bytes_max": 1529872384,
+          "peak_vram_bytes_max": 0,
+          "frozen_backbone_unchanged": true,
+          "fresh_process_reload_verified": true,
+          "task_id": "expression_family_disjoint_one_step",
+          "objective_fingerprint": "056e754b3f2c557e1f3af22dedd2484eb93416492b59be7386656e422a19b400",
+          "training_ids": [
+            "eg001_train_balanced"
+          ],
+          "heldout_ids": [
+            "eg001_validation_family_holdout"
+          ]
+        },
+        {
+          "configuration_id": "sparse_supervised_cpu2",
+          "profile_ids": [
+            "7f3f31454429ee3fe2c4eca5eda65885c2774a7ae309428dba454152af5f50ea:cpu2_sparse01"
+          ],
+          "repeat_count": 1,
+          "placement": "cpu",
+          "wall_seconds_median": 1067.1049446000034,
+          "validation_after_median": 3.7960946559906006,
+          "peak_rss_bytes_max": 1531006976,
+          "peak_vram_bytes_max": 0,
+          "frozen_backbone_unchanged": true,
+          "fresh_process_reload_verified": true,
+          "task_id": "expression_family_disjoint_one_step",
+          "objective_fingerprint": "056e754b3f2c557e1f3af22dedd2484eb93416492b59be7386656e422a19b400",
+          "training_ids": [
+            "eg001_train_balanced"
+          ],
+          "heldout_ids": [
+            "eg001_validation_family_holdout"
+          ]
+        }
+      ],
+      "model_proposal": {
+        "raw_text": "{\n  \"action\": \"partition.select\",\n  \"configuration_id\": \"sparse_cuda_head_cpu_suffix\",\n  \"partition_id\": \"IMP_L27_ATTENTION_QUERY_PROJECTION\",\n  \"placement\": \"cuda_lm_head_cpu_suffix\",\n  \"reason\": \"The configuration with the lowest median_validation_loss is the fastest resource-feasible configuration with a held-out loss of <= baseline + 0.0001.\"\n}",
+        "parsed": {
+          "action": "partition.select",
+          "configuration_id": "sparse_cuda_head_cpu_suffix",
+          "partition_id": "IMP_L27_ATTENTION_QUERY_PROJECTION",
+          "placement": "cuda_lm_head_cpu_suffix",
+          "reason": "The configuration with the lowest median_validation_loss is the fastest resource-feasible configuration with a held-out loss of <= baseline + 0.0001."
+        },
+        "parse_error": null,
+        "wall_seconds": 8.160028799997235,
+        "prompt_eval_count": 691,
+        "eval_count": 106,
+        "stop_reason": "stop"
+      },
+      "broker_decision": {
+        "status": "SUCCESS",
+        "capability": "impression",
+        "operation": "partition.select",
+        "observation": {
+          "status": "validated_proposal_only",
+          "origin": "local_[BASE_MODEL]",
+          "configuration_id": "sparse_cuda_head_cpu_suffix",
+          "partition_id": "IMP_L27_ATTENTION_QUERY_PROJECTION",
+          "placement": "cuda_lm_head_cpu_suffix",
+          "feasible": true,
+          "reason": "feasible under measured profile and supplied resource envelope",
+          "execution_performed": false,
+          "graph_modified": false
+        },
+        "duration_ms": 0.0,
+        "error": null,
+        "timestamp": 1793720661.0086749,
+        "tool_name": null,
+        "task_status": "IN_PROGRESS",
+        "verified_facts": [],
+        "evidence": null
+      },
+      "proposal_configuration_id": "sparse_cuda_head_cpu_suffix",
+      "broker_rejection_or_acceptance": "SUCCESS",
+      "execution_performed": false,
+      "graph_modified": false
+    }
+  ],
+  "interpretation": "Prompt ablations test evidence presentation and baseline/order anchoring. This is not a workload-family generalization benchmark or a training-policy result."
+}

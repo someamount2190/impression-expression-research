@@ -1,0 +1,22 @@
+{
+  "experiment": "IMPRESSION-001",
+  "status": "ready_to_resolve_pinned_checkpoint",
+  "model_repo": "[BASE_MODEL_REPOSITORY]",
+  "model_revision": "392a6f57223e7ccfe6ef4ebdb2ff101a42d57364",
+  "license_tag": "llama3.2",
+  "license_url": "https://dev.meta.ai/llama/llama3_2/license",
+  "memory_estimate": {
+    "parameter_count": 3212756032,
+    "model_resident_bytes": 6425512064,
+    "largest_shard_bytes": 4965811384,
+    "conservative_load_peak_bytes": 11391323448,
+    "required_free_ram_bytes_after_load": 4983970201,
+    "available_ram_bytes": 16972419072,
+    "total_ram_bytes": 24919851008,
+    "feasible": true
+  },
+  "free_disk_bytes_before_download": 140010561536,
+  "download_bytes": 6425541336,
+  "training_started": false,
+  "device": "cpu"
+}

@@ -1,0 +1,167 @@
+{
+  "accepted_count": 1,
+  "candidate_count": 1,
+  "distinct_verified_success_rows": 3,
+  "proposals": [
+    {
+      "canonical_ast": [
+        {
+          "arguments": {
+            "u": {
+              "var": "e501_u"
+            },
+            "v": {
+              "var": "e501_v"
+            }
+          },
+          "output": "output_1",
+          "primitive": "E501"
+        },
+        {
+          "arguments": {
+            "v0": {
+              "var": "output_1"
+            },
+            "v1": {
+              "var": "step2_v1"
+            }
+          },
+          "output": "output_2",
+          "primitive": "E002"
+        }
+      ],
+      "discovery_trace_refs": [
+        {
+          "plan_id": "sim_plan_01",
+          "plan_sha256": "9852c078575530d5bc6d5ee78fa227d98f7ecc558d75e7139b748b6c83c549ee",
+          "task_family": "unknown"
+        },
+        {
+          "plan_id": "plan_f6ab7334",
+          "plan_sha256": "7257d23e646eec87973ae4ce92e1e849c0df78cca6589f2e32f945931e202894",
+          "task_family": "unknown"
+        }
+      ],
+      "id": "learned_20dafa1c23cb",
+      "input_signature": {
+        "e501_u": "array",
+        "e501_v": "array",
+        "step2_v1": "number"
+      },
+      "inputs": {
+        "e501_u": [
+          3,
+          4,
+          2
+        ],
+        "e501_v": [
+          2,
+          1,
+          5
+        ],
+        "step2_v1": 20
+      },
+      "output": "any",
+      "primitive_dependencies": [
+        "E002",
+        "E501"
+      ],
+      "status": "accepted",
+      "usage_statistics": {
+        "executions": 0,
+        "successful_reuses": 0
+      },
+      "validation": {
+        "cases": [
+          {
+            "authoritative_trace_output": 20,
+            "case_id": "source_trace_1",
+            "equivalent_to_authoritative_trace": true,
+            "family": "unknown",
+            "inputs": {
+              "e501_u": [
+                3,
+                4,
+                2
+              ],
+              "e501_v": [
+                2,
+                1,
+                5
+              ],
+              "step2_v1": 20
+            },
+            "macro_output": 20
+          },
+          {
+            "authoritative_trace_output": 35,
+            "case_id": "source_trace_2",
+            "equivalent_to_authoritative_trace": true,
+            "family": "unknown",
+            "inputs": {
+              "e501_u": [
+                3,
+                2
+              ],
+              "e501_v": [
+                10,
+                5
+              ],
+              "step2_v1": 35
+            },
+            "macro_output": 35
+          },
+          {
+            "case_id": "transfer_sensor_weighted_index_v1",
+            "equivalent": true,
+            "family": "sensor_weighted_index",
+            "inputs": {
+              "e501_u": [
+                0.5,
+                4,
+                3
+              ],
+              "e501_v": [
+                2,
+                1,
+                1
+              ],
+              "step2_v1": 9
+            },
+            "macro_output": 8.0,
+            "primitive_expansion_output": 8.0
+          },
+          {
+            "case_id": "transfer_resource_priority_v1",
+            "equivalent": true,
+            "family": "resource_priority_scoring",
+            "inputs": {
+              "e501_u": [
+                6,
+                2
+              ],
+              "e501_v": [
+                3,
+                4
+              ],
+              "step2_v1": 25
+            },
+            "macro_output": 25,
+            "primitive_expansion_output": 25
+          }
+        ],
+        "error": null,
+        "passed": true,
+        "transfer_case_count": 2,
+        "transfer_families": [
+          "resource_priority_scoring",
+          "sensor_weighted_index"
+        ]
+      },
+      "version": 1
+    }
+  ],
+  "schema_version": 1,
+  "source_path": "[REDACTED_LOCAL_PATH]\\.gemini\\antigravity\\scratch\\[PROJECT_NAME]\\data\\symbolic_experience_db.jsonl",
+  "source_sha256": "d425c69fea6e14896e2a3004d827638dac7a0fd7aba680c799a7e55ed63f55ad"
+}

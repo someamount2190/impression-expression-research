@@ -1,0 +1,19 @@
+{
+  "status": "running",
+  "phase": "load_and_capture",
+  "profile": {
+    "checkpoint_revision": "392a6f57223e7ccfe6ef4ebdb2ff101a42d57364",
+    "checkpoint_index_sha256": "e6322ad005d27134ba439f7ddd572e632e5b2116ebfbdc88186596dada904c75",
+    "connector_manifest_sha256": "017d0e62120ed4bdeb63ed77e0f626ccb778bfd75e624f7429a16beb2cce28f7",
+    "train_source_sha256": "58c1ead1f56b7a2de545ab7ceb400302ed2ca967ee9bd95fb3d73f95fa497b54",
+    "example_id": "train_file_generation_pipeline_000",
+    "sequence_length": 322,
+    "torch_threads": 1,
+    "total_ram_bytes": 24919851008,
+    "available_ram_before_load_bytes": 13505191936,
+    "reserve_bytes": 4983970201,
+    "gpu_used": false
+  },
+  "run_started_utc": 1793724655.8064485,
+  "output_path": "[REDACTED_LOCAL_PATH]\\.gemini\\antigravity\\scratch\\[PROJECT_NAME]\\experiments\\impression_006\\followup_runs\\connector_capture_probe_20261104T0050"
+}

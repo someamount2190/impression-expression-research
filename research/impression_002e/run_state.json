@@ -1,0 +1,56 @@
+{
+  "experiment": "IMPRESSION-002E",
+  "phase": "F_corrected_cuda_candidate_and_controller_evaluated",
+  "status": "fresh_streamed_training_reload_passed; corrected_cuda_candidate_bound_passed; controller_retained_cpu",
+  "checkpoint_revision": "392a6f57223e7ccfe6ef4ebdb2ff101a42d57364",
+  "source_experiment": "IMPRESSION-002D",
+  "checkpoint_modified": false,
+  "existing_adapter_modified": false,
+  "cuda_training_started": false,
+  "training_update_started": true,
+  "efficiency_gain_measured": false,
+  "phase_a_tests": "2 passed; py_compile passed",
+  "phase_a_execution": "not run; awaits supervisor authorization",
+  "phase_a_harness": "implemented_and_focused_tests_passed_4",
+  "phase_a_cuda_probe": "completed_six_modes",
+  "phase_a_artifact": "experiments/impression_002e/numerical/qproj_six_mode_run02.json",
+  "phase_a_cpu_preflight_passed": true,
+  "phase_a_cuda_preflight_passed": true,
+  "phase_a_resident_partitions_after": [],
+  "phase_a_checkpoint_modified": false,
+  "phase_a_adapter_modified": false,
+  "training_attempt_01": "optimizer_updated_in_memory; pre_post_logits_saved; adapter_commit_failed_before_durable_receipt",
+  "training_attempt_01_failure": "read_only_descriptor_fsync_errno_9",
+  "training_attempt_01_artifact": "experiments/impression_002e/streaming_training/run01",
+  "training_attempt_02": "failed_during_fresh_prefix_before_optimizer",
+  "training_attempt_02_failure": "WinError_5_os_replace_atomic_receipt",
+  "training_attempt_02_artifact": "experiments/impression_002e/streaming_training/run02",
+  "training_attempt_03": "one_adamw_step_saved_and_fresh_process_verified_exactly",
+  "training_attempt_03_artifact": "experiments/impression_002e/streaming_training/run03/training_receipt.json",
+  "training_attempt_03_verification": "experiments/impression_002e/streaming_training/run03/fresh_process_verification.json",
+  "training_attempt_03_changed_adapter_values": 12288,
+  "training_attempt_03_frozen_backbone_unchanged": true,
+  "training_attempt_03_training_loss_delta": -0.0003495216369628906,
+  "training_attempt_03_heldout_loss_delta": 6.008148193359375e-05,
+  "training_attempt_03_peak_rss_bytes": 1479823360,
+  "training_attempt_03_min_available_ram_bytes": 12421083136,
+  "phase_c_reference_scope": "official Transformers layer27 boundary exact; full-model official reference remains open",
+  "phase_b_fp64_probe": "experiments/impression_002e/numerical/qproj_corrected_fp32_cast_run07.json",
+  "phase_b_native_cuda_bf16_one_ulp_bound_passed": false,
+  "phase_b_cuda_fp32_accumulation_cast_bf16_bound_passed": true
+  ,"phase_g_candidate_run01": "supervisor_import_failed_before_child_execution; preserved"
+  ,"phase_g_candidate_run02": "completed_probe_but_strict_nearest_even_acceptance_rejected_valid_fp32_rounding_near_midpoints; controller_profile_failed; preserved"
+  ,"phase_g_candidate_run03": "supervised_corrected_cuda_candidate_passed_combined_rounding_and_accumulation_bound; controller_retained_cpu"
+  ,"phase_g_candidate_artifact": "experiments/impression_002e/diagnostics/phase_g_candidate_run03/phase_g_qproj_cuda_fp32/child_receipt.json"
+  ,"phase_g_selection_artifact": "experiments/impression_002e/diagnostics/phase_g_candidate_run03/phase_g_qproj_cuda_fp32/controller_selection.json"
+  ,"phase_g_gpu_combined_bound_outliers": 0
+  ,"phase_g_cpu_combined_bound_outliers": 0
+  ,"phase_g_gpu_nearest_even_mismatches": 5
+  ,"phase_g_cpu_profile_seconds": 0.11171640000247862
+  ,"phase_g_cuda_profile_seconds": 0.1639098999985437
+  ,"phase_g_cuda_vs_cpu_cost_reduction": -0.4673309419312
+  ,"phase_g_peak_allocated_vram_bytes": 65732608
+  ,"phase_g_final_resident_partitions": []
+  ,"efficiency_gain_measured": false
+  ,"combined_002d_002e_tests": "39 passed"
+}

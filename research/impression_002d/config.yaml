@@ -1,0 +1,21 @@
+experiment: IMPRESSION-002D
+phase: A_native_runtime_baseline
+parent_experiments: [IMPRESSION-001B, IMPRESSION-002, IMPRESSION-002B, IMPRESSION-002C]
+checkpoint:
+  model_repo: [BASE_MODEL_REPOSITORY]
+  revision: 392a6f57223e7ccfe6ef4ebdb2ff101a42d57364
+  source: local pinned Hugging Face snapshot
+scope:
+  collect_runtime_versions: true
+  collect_os_driver_memory: true
+  hash_config_index_and_saved_adapter: true
+  read_model_tensor_data: false
+  import_torch_or_transformers: false
+  load_model: false
+  train: false
+  crash_test: false
+  modify_checkpoint: false
+delegation:
+  executor_model: gpt-6-luna
+  max_active_executors: 1
+  delegate: false

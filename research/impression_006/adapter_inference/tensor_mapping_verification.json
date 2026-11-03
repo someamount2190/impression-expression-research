@@ -1,0 +1,30 @@
+{
+  "status": "passed",
+  "base_gguf_sha256_before": "5d6d02eeefa1ab5dbf23f97afdf5c2c95ad3d946dc3b6e9ab72e6c1637d54177",
+  "base_gguf_sha256_after": "5d6d02eeefa1ab5dbf23f97afdf5c2c95ad3d946dc3b6e9ab72e6c1637d54177",
+  "merged_gguf_sha256": "a2af65d64b84083807235426167d8b6865ca2232c1817c66faeea19373299da9",
+  "adapter_source_sha256": "474b77f3f822dcfc51066e42831c192778a422203d8bb483fb751a225d3f3569",
+  "target_mapping": "blk.27.attn_q.weight",
+  "target_mapping_verified": true,
+  "lora_shapes": {
+    "A": [
+      4,
+      3072
+    ],
+    "B": [
+      3072,
+      4
+    ]
+  },
+  "alpha_over_rank": 2.0,
+  "qk_rope_permutation_applied": true,
+  "target_output_type": "GGMLQuantizationType.Q8_0",
+  "exact_expected_quantized_tensor_match": true,
+  "target_delta_vs_q4_dequant_plus_delta": {
+    "max_abs_error_from_q8_quantization": 0.0011690253159031272,
+    "rmse": 0.00011871360766235739
+  },
+  "untouched_companion_tensor": "blk.27.attn_k.weight",
+  "companion_raw_bytes_preserved": true,
+  "full_logits_parity_between_merged_gguf_and_raw_bf16_hf": "not measured; Q4 base plus Q8 target changes numerical path"
+}

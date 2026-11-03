@@ -1,0 +1,38 @@
+{
+  "status": "stopped_after_partial_low_yield",
+  "requested_arms": [
+    "A",
+    "B",
+    "C"
+  ],
+  "manifest_sha256": "5635078f52eec37ab2a43764e1076065433ed500b30a38801c998ae19e0e9a99",
+  "subset_sha256": "1c0aaeff239e33d6b5289c22eaee7b0c79c36281579597687c784187577f88eb",
+  "checkpoint_snapshot": "[REDACTED_LOCAL_PATH]\\.cache\\huggingface\\hub\\models--dphn--[BASE_MODEL]\\snapshots\\392a6f57223e7ccfe6ef4ebdb2ff101a42d57364",
+  "adapter_sha256": "589ce0f66f9f72530521662a839daab616014ffede3273b51b2c1373fdeda8b9",
+  "macro_library_sha256": "02b89a9b3c3150c73278cffeaee4a17e9de891419d630c4dda3bcd76b52e88dc",
+  "execution_enabled": false,
+  "runtime_completion_scored": false,
+  "provider_usage": null,
+  "model_load_seconds": 71.9059999999954,
+  "completed_calls": [
+    {
+      "arm": "A",
+      "example_id": "sealed_evaluation_artifact_integrity_review_000"
+    },
+    {
+      "arm": "B",
+      "example_id": "sealed_evaluation_artifact_integrity_review_000"
+    },
+    {
+      "arm": "C",
+      "example_id": "sealed_evaluation_artifact_integrity_review_000"
+    },
+    {
+      "arm": "A",
+      "example_id": "sealed_evaluation_edge_deployment_without_grant_000"
+    }
+  ],
+  "stopped_at_utc": "2026-11-03T09:14:46.7012219Z",
+  "elapsed_run_seconds": 2809,
+  "stop_reason": "Stopped after four real calls produced one generated token each at 524.6 to 776.7 seconds per call. No call returned valid JSON or a usable plan; continuing the 30-call matrix was not useful within the remaining budget."
+}

@@ -1,0 +1,1014 @@
+{
+  "adapter": {
+    "changed_parameter_count": 12288,
+    "initial_fingerprint_sha256": "e18eaf997190ac48a5d8add4c9f23b7402b13ab47dfd2278f7a12e56ca62b46b",
+    "path": "[REDACTED_LOCAL_PATH]\\.gemini\\antigravity\\scratch\\[PROJECT_NAME]\\experiments\\impression_002e\\streaming_training\\run03\\adapter\\adapter.safetensors",
+    "post_fingerprint_sha256": "e47485074619902c8d12fbe56e619b37cb2cded285e61d953b85ac9a28fbb69e",
+    "sha256_file": "a5d981160a826cf60959cdbd03e7ebc9fd9505800272ea9d2c52d4a57eaa814b"
+  },
+  "artifact_paths": {
+    "heldout_post_logits": "[REDACTED_LOCAL_PATH]\\.gemini\\antigravity\\scratch\\[PROJECT_NAME]\\experiments\\impression_002e\\streaming_training\\run03\\trace_schema_0034_post_logits.npy",
+    "heldout_pre_logits": "[REDACTED_LOCAL_PATH]\\.gemini\\antigravity\\scratch\\[PROJECT_NAME]\\experiments\\impression_002e\\streaming_training\\run03\\trace_schema_0034_pre_logits.npy",
+    "numerical_comparisons": "[REDACTED_LOCAL_PATH]\\.gemini\\antigravity\\scratch\\[PROJECT_NAME]\\experiments\\impression_002e\\streaming_training\\run03\\numerical_comparisons.json",
+    "train_post_logits": "[REDACTED_LOCAL_PATH]\\.gemini\\antigravity\\scratch\\[PROJECT_NAME]\\experiments\\impression_002e\\streaming_training\\run03\\trace_edge_0035_post_logits.npy",
+    "train_pre_logits": "[REDACTED_LOCAL_PATH]\\.gemini\\antigravity\\scratch\\[PROJECT_NAME]\\experiments\\impression_002e\\streaming_training\\run03\\trace_edge_0035_pre_logits.npy"
+  },
+  "baseline_artifacts_persisted": true,
+  "cache_identity_sha256": {
+    "trace_edge_0035": "855a3c4946b7a2cd6124c8cffff9b2a8a9af2dc8294b9419101c3af3a71091ce",
+    "trace_schema_0034": "9ee163d11b83cc35ba433b3a6df9d65fe1393c2b6cae75e8abc3f76426da1cbc"
+  },
+  "causal_objectives": {
+    "trace_edge_0035": {
+      "ignore_index": -100,
+      "input_ids": [
+        128000,
+        3701,
+        11898,
+        25,
+        10564,
+        12128,
+        26579,
+        23383,
+        449,
+        46763,
+        10860,
+        51,
+        220,
+        777,
+        13,
+        23
+      ],
+      "input_length": 16,
+      "label_mask": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "labels": [
+        3701,
+        11898,
+        25,
+        10564,
+        12128,
+        26579,
+        23383,
+        449,
+        46763,
+        10860,
+        51,
+        220,
+        777,
+        13,
+        23
+      ],
+      "logit_positions": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "loss": "torch.nn.functional.cross_entropy(logits[:, :-1, :].float().reshape(-1,V), labels.reshape(-1), ignore_index=-100, reduction='mean')",
+      "reduction": "mean over non-ignored shifted labels",
+      "shift": "labels=input_ids[1:], logits=logits[:-1]",
+      "valid_label_count": 15
+    },
+    "trace_schema_0034": {
+      "ignore_index": -100,
+      "input_ids": [
+        128000,
+        3701,
+        11898,
+        25,
+        13714,
+        67966,
+        23383,
+        11007,
+        13,
+        1221,
+        55857,
+        11036,
+        16070,
+        7946,
+        627,
+        21255
+      ],
+      "input_length": 16,
+      "label_mask": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "labels": [
+        3701,
+        11898,
+        25,
+        13714,
+        67966,
+        23383,
+        11007,
+        13,
+        1221,
+        55857,
+        11036,
+        16070,
+        7946,
+        627,
+        21255
+      ],
+      "logit_positions": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "loss": "torch.nn.functional.cross_entropy(logits[:, :-1, :].float().reshape(-1,V), labels.reshape(-1), ignore_index=-100, reduction='mean')",
+      "reduction": "mean over non-ignored shifted labels",
+      "shift": "labels=input_ids[1:], logits=logits[:-1]",
+      "valid_label_count": 15
+    }
+  },
+  "checkpoint_revision": "392a6f57223e7ccfe6ef4ebdb2ff101a42d57364",
+  "completed_operation_count": 976,
+  "expected_suffix_resident_partitions": [
+    "IMP_GLOBAL_EMBEDDING_TOKEN",
+    "IMP_GLOBAL_LANGUAGE_MODEL_OUTPUT_NORM",
+    "IMP_L27_ATTENTION_INPUT_NORM",
+    "IMP_L27_ATTENTION_KEY_PROJECTION",
+    "IMP_L27_ATTENTION_OUTPUT_PROJECTION",
+    "IMP_L27_ATTENTION_QUERY_PROJECTION",
+    "IMP_L27_ATTENTION_VALUE_PROJECTION",
+    "IMP_L27_FEED_FORWARD_DOWN_PROJECTION",
+    "IMP_L27_FEED_FORWARD_GATE_PROJECTION",
+    "IMP_L27_FEED_FORWARD_INPUT_NORM",
+    "IMP_L27_FEED_FORWARD_UP_PROJECTION"
+  ],
+  "fresh_prefix_fingerprints": {
+    "trace_edge_0035": "d798d27cd8bcfa7e07bd30aeac61fdadd5e9c10865c232163a5dab2b3a76dd9d",
+    "trace_schema_0034": "8f966981181075d559257f8f490c26a3f44fda9852c0cb887adaa4380b8d6eb6"
+  },
+  "fresh_process_verification": {
+    "adapter_file_sha256": "a5d981160a826cf60959cdbd03e7ebc9fd9505800272ea9d2c52d4a57eaa814b",
+    "adapter_fingerprint_sha256": "e47485074619902c8d12fbe56e619b37cb2cded285e61d953b85ac9a28fbb69e",
+    "checkpoint_revision": "392a6f57223e7ccfe6ef4ebdb2ff101a42d57364",
+    "fresh_process": true,
+    "frozen_backbone_unchanged": true,
+    "frozen_partition_hashes": {
+      "IMP_GLOBAL_EMBEDDING_TOKEN": "3c451a86e5f09748fac607debe9df63b3315d8816ee4f7e8c11856a4f2ce17ff",
+      "IMP_GLOBAL_LANGUAGE_MODEL_OUTPUT_NORM": "7ab8d0ca7bc658920a9c9f809d944ddee95d4773b3fe3853c80c17574a2bce2a",
+      "IMP_L27_ATTENTION_INPUT_NORM": "ad3f8ff76e6837769d472d56aea6ab7e8097f1ae10aedd4bce72dc142e10dde9",
+      "IMP_L27_ATTENTION_KEY_PROJECTION": "a62d2cd4618c7bfe7862bd7a370ff0b518716c2e492fa4923a23bf05a41c9899",
+      "IMP_L27_ATTENTION_OUTPUT_PROJECTION": "5889586d2fb1294c728c8baa1b6156af0726a13b57f239a39f4fd56abdbc2072",
+      "IMP_L27_ATTENTION_QUERY_PROJECTION": "f3f0e6f1044fb68c9c5cd4a77ca19b0c67213abea9403b5da7045771607f274a",
+      "IMP_L27_ATTENTION_VALUE_PROJECTION": "7425e65baa19321ad11ad8e2ec94aa6ee984a2d7aa8406bacff82795e8a27934",
+      "IMP_L27_FEED_FORWARD_DOWN_PROJECTION": "684176b910e55e4bf795a0d03079accf195f4fa60d242f7cf44940facaaf7887",
+      "IMP_L27_FEED_FORWARD_GATE_PROJECTION": "1591a7e85dd165593c12aaad6971a9e7733a775ba478583bd25132bbe73cdc7b",
+      "IMP_L27_FEED_FORWARD_INPUT_NORM": "e5a30263349e3b885c5844aa4872708daacd829b506c8c9dfebf62b642ae25e0",
+      "IMP_L27_FEED_FORWARD_UP_PROJECTION": "9551a7324d44d58a402758b498330bf416aa43fd6b794f89e348d2972337948c"
+    },
+    "frozen_tensor_fingerprints": {
+      "IMP_GLOBAL_EMBEDDING_TOKEN": {
+        "model.embed_tokens.weight": "0fc7818a9704e8a00ca26a2a8aff299fedb69d84996a403c285b94d9f569bc41"
+      },
+      "IMP_GLOBAL_LANGUAGE_MODEL_OUTPUT_NORM": {
+        "model.norm.weight": "da7e3308ca68714b42452bbd868ee8b649f831a9cbc4ce00dca99931d16812ce"
+      },
+      "IMP_L27_ATTENTION_INPUT_NORM": {
+        "model.layers.27.input_layernorm.weight": "18ea0d7ad090805b9e0acd48d595b39f90c9dc22ad92b4bfdb8fea41dd168908"
+      },
+      "IMP_L27_ATTENTION_KEY_PROJECTION": {
+        "model.layers.27.self_attn.k_proj.weight": "0e2e4bbc422e22954146266638ba566e918cf37812145a0e84add5e86400fd28"
+      },
+      "IMP_L27_ATTENTION_OUTPUT_PROJECTION": {
+        "model.layers.27.self_attn.o_proj.weight": "2a298eafadbd65584311957171b62d1fe87fdcdf25207df00e2df6f917b02d70"
+      },
+      "IMP_L27_ATTENTION_QUERY_PROJECTION": {
+        "model.layers.27.self_attn.q_proj.weight": "264bc911c45d9690b632844492f7805a2c27ffb0b34b51d6e292a997085c2f1c"
+      },
+      "IMP_L27_ATTENTION_VALUE_PROJECTION": {
+        "model.layers.27.self_attn.v_proj.weight": "9095954d26d8357ea06330ad2f5408e2ce1cc9435689e58b1b228beada8d2192"
+      },
+      "IMP_L27_FEED_FORWARD_DOWN_PROJECTION": {
+        "model.layers.27.mlp.down_proj.weight": "e0d4236fffb35beb240286288a341923375b1786dab4643f29fb7534dc3f6071"
+      },
+      "IMP_L27_FEED_FORWARD_GATE_PROJECTION": {
+        "model.layers.27.mlp.gate_proj.weight": "4ccd27a7693960cd8da28998282095a0805b9df0ae33f6204a726dc5d677fd1e"
+      },
+      "IMP_L27_FEED_FORWARD_INPUT_NORM": {
+        "model.layers.27.post_attention_layernorm.weight": "9d1835a7c970469e453ed607e582dcf1fa13b2be85485842b463112402777e74"
+      },
+      "IMP_L27_FEED_FORWARD_UP_PROJECTION": {
+        "model.layers.27.mlp.up_proj.weight": "31a9ab4f68e5c1299368939b49d33a35ec94dbd169b95b10b16aa9135c7c35ad"
+      }
+    },
+    "record_results": {
+      "trace_edge_0035": {
+        "actual_logits_sha256": "bb31b20033540ee8eb75fd488d9106cb561a3e91f7e451e41c9fd3ccfdd6d196",
+        "adapter_fingerprint_sha256": "e47485074619902c8d12fbe56e619b37cb2cded285e61d953b85ac9a28fbb69e",
+        "adapter_tensor_hashes": {
+          "lora_A": "4ca48a812dc807e7f3f5245762dbfa535cdc0b459e807713750eb5fc270a8502",
+          "lora_B": "97ae108f3453aec115cb43155bdfde61b319f4cdc9f2b001a4d38db7a10a2c14"
+        },
+        "all_logits_finite": true,
+        "exact_logits_match": true,
+        "fresh_prefix_activation_sha256": "d798d27cd8bcfa7e07bd30aeac61fdadd5e9c10865c232163a5dab2b3a76dd9d",
+        "fresh_prefix_matches_training": true,
+        "fresh_prefix_recomputed": true,
+        "max_abs_diff": 0.0,
+        "mean_abs_diff": 0.0,
+        "objective": {
+          "ignore_index": -100,
+          "input_ids": [
+            128000,
+            3701,
+            11898,
+            25,
+            10564,
+            12128,
+            26579,
+            23383,
+            449,
+            46763,
+            10860,
+            51,
+            220,
+            777,
+            13,
+            23
+          ],
+          "input_length": 16,
+          "label_mask": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "labels": [
+            3701,
+            11898,
+            25,
+            10564,
+            12128,
+            26579,
+            23383,
+            449,
+            46763,
+            10860,
+            51,
+            220,
+            777,
+            13,
+            23
+          ],
+          "logit_positions": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14
+          ],
+          "loss": "torch.nn.functional.cross_entropy(logits[:, :-1, :].float().reshape(-1,V), labels.reshape(-1), ignore_index=-100, reduction='mean')",
+          "reduction": "mean over non-ignored shifted labels",
+          "shift": "labels=input_ids[1:], logits=logits[:-1]",
+          "valid_label_count": 15
+        },
+        "record_id": "trace_edge_0035",
+        "reloaded_loss": 7.881006717681885,
+        "rms_diff": 0.0,
+        "saved_post_logits_sha256_file": "2180923feaa74aa4e6a96a64f134c25d6ae5164a7d7c851bbf6990735135e26c",
+        "token_ids": [
+          128000,
+          3701,
+          11898,
+          25,
+          10564,
+          12128,
+          26579,
+          23383,
+          449,
+          46763,
+          10860,
+          51,
+          220,
+          777,
+          13,
+          23
+        ]
+      },
+      "trace_schema_0034": {
+        "actual_logits_sha256": "9b3c52cb0b172c19e0f8f51a92ff8aff918d36742d181174ac60268e72417677",
+        "adapter_fingerprint_sha256": "e47485074619902c8d12fbe56e619b37cb2cded285e61d953b85ac9a28fbb69e",
+        "adapter_tensor_hashes": {
+          "lora_A": "4ca48a812dc807e7f3f5245762dbfa535cdc0b459e807713750eb5fc270a8502",
+          "lora_B": "97ae108f3453aec115cb43155bdfde61b319f4cdc9f2b001a4d38db7a10a2c14"
+        },
+        "all_logits_finite": true,
+        "exact_logits_match": true,
+        "fresh_prefix_activation_sha256": "8f966981181075d559257f8f490c26a3f44fda9852c0cb887adaa4380b8d6eb6",
+        "fresh_prefix_matches_training": true,
+        "fresh_prefix_recomputed": true,
+        "max_abs_diff": 0.0,
+        "mean_abs_diff": 0.0,
+        "objective": {
+          "ignore_index": -100,
+          "input_ids": [
+            128000,
+            3701,
+            11898,
+            25,
+            13714,
+            67966,
+            23383,
+            11007,
+            13,
+            1221,
+            55857,
+            11036,
+            16070,
+            7946,
+            627,
+            21255
+          ],
+          "input_length": 16,
+          "label_mask": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "labels": [
+            3701,
+            11898,
+            25,
+            13714,
+            67966,
+            23383,
+            11007,
+            13,
+            1221,
+            55857,
+            11036,
+            16070,
+            7946,
+            627,
+            21255
+          ],
+          "logit_positions": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14
+          ],
+          "loss": "torch.nn.functional.cross_entropy(logits[:, :-1, :].float().reshape(-1,V), labels.reshape(-1), ignore_index=-100, reduction='mean')",
+          "reduction": "mean over non-ignored shifted labels",
+          "shift": "labels=input_ids[1:], logits=logits[:-1]",
+          "valid_label_count": 15
+        },
+        "record_id": "trace_schema_0034",
+        "reloaded_loss": 6.62296199798584,
+        "rms_diff": 0.0,
+        "saved_post_logits_sha256_file": "1a8ae8182554e69320dede76780a78f608886fec4cc151cb49bbbaf06a8667be",
+        "token_ids": [
+          128000,
+          3701,
+          11898,
+          25,
+          13714,
+          67966,
+          23383,
+          11007,
+          13,
+          1221,
+          55857,
+          11036,
+          16070,
+          7946,
+          627,
+          21255
+        ]
+      }
+    },
+    "resource": {
+      "available_ram_bytes": 15305101312,
+      "max_suffix_resident_partitions": 11,
+      "process_rss_bytes": 426967040,
+      "resident_after_release": [],
+      "suffix_partition_count": 11
+    },
+    "status": "passed"
+  },
+  "frozen_backbone_unchanged": true,
+  "frozen_suffix_source_fingerprints_after": {
+    "IMP_GLOBAL_EMBEDDING_TOKEN": "3c451a86e5f09748fac607debe9df63b3315d8816ee4f7e8c11856a4f2ce17ff",
+    "IMP_GLOBAL_LANGUAGE_MODEL_OUTPUT_NORM": "7ab8d0ca7bc658920a9c9f809d944ddee95d4773b3fe3853c80c17574a2bce2a",
+    "IMP_L27_ATTENTION_INPUT_NORM": "ad3f8ff76e6837769d472d56aea6ab7e8097f1ae10aedd4bce72dc142e10dde9",
+    "IMP_L27_ATTENTION_KEY_PROJECTION": "a62d2cd4618c7bfe7862bd7a370ff0b518716c2e492fa4923a23bf05a41c9899",
+    "IMP_L27_ATTENTION_OUTPUT_PROJECTION": "5889586d2fb1294c728c8baa1b6156af0726a13b57f239a39f4fd56abdbc2072",
+    "IMP_L27_ATTENTION_QUERY_PROJECTION": "f3f0e6f1044fb68c9c5cd4a77ca19b0c67213abea9403b5da7045771607f274a",
+    "IMP_L27_ATTENTION_VALUE_PROJECTION": "7425e65baa19321ad11ad8e2ec94aa6ee984a2d7aa8406bacff82795e8a27934",
+    "IMP_L27_FEED_FORWARD_DOWN_PROJECTION": "684176b910e55e4bf795a0d03079accf195f4fa60d242f7cf44940facaaf7887",
+    "IMP_L27_FEED_FORWARD_GATE_PROJECTION": "1591a7e85dd165593c12aaad6971a9e7733a775ba478583bd25132bbe73cdc7b",
+    "IMP_L27_FEED_FORWARD_INPUT_NORM": "e5a30263349e3b885c5844aa4872708daacd829b506c8c9dfebf62b642ae25e0",
+    "IMP_L27_FEED_FORWARD_UP_PROJECTION": "9551a7324d44d58a402758b498330bf416aa43fd6b794f89e348d2972337948c"
+  },
+  "frozen_suffix_source_fingerprints_before": {
+    "IMP_GLOBAL_EMBEDDING_TOKEN": "3c451a86e5f09748fac607debe9df63b3315d8816ee4f7e8c11856a4f2ce17ff",
+    "IMP_GLOBAL_LANGUAGE_MODEL_OUTPUT_NORM": "7ab8d0ca7bc658920a9c9f809d944ddee95d4773b3fe3853c80c17574a2bce2a",
+    "IMP_L27_ATTENTION_INPUT_NORM": "ad3f8ff76e6837769d472d56aea6ab7e8097f1ae10aedd4bce72dc142e10dde9",
+    "IMP_L27_ATTENTION_KEY_PROJECTION": "a62d2cd4618c7bfe7862bd7a370ff0b518716c2e492fa4923a23bf05a41c9899",
+    "IMP_L27_ATTENTION_OUTPUT_PROJECTION": "5889586d2fb1294c728c8baa1b6156af0726a13b57f239a39f4fd56abdbc2072",
+    "IMP_L27_ATTENTION_QUERY_PROJECTION": "f3f0e6f1044fb68c9c5cd4a77ca19b0c67213abea9403b5da7045771607f274a",
+    "IMP_L27_ATTENTION_VALUE_PROJECTION": "7425e65baa19321ad11ad8e2ec94aa6ee984a2d7aa8406bacff82795e8a27934",
+    "IMP_L27_FEED_FORWARD_DOWN_PROJECTION": "684176b910e55e4bf795a0d03079accf195f4fa60d242f7cf44940facaaf7887",
+    "IMP_L27_FEED_FORWARD_GATE_PROJECTION": "1591a7e85dd165593c12aaad6971a9e7733a775ba478583bd25132bbe73cdc7b",
+    "IMP_L27_FEED_FORWARD_INPUT_NORM": "e5a30263349e3b885c5844aa4872708daacd829b506c8c9dfebf62b642ae25e0",
+    "IMP_L27_FEED_FORWARD_UP_PROJECTION": "9551a7324d44d58a402758b498330bf416aa43fd6b794f89e348d2972337948c"
+  },
+  "frozen_tensor_fingerprints_after": {
+    "IMP_GLOBAL_EMBEDDING_TOKEN": {
+      "model.embed_tokens.weight": "0fc7818a9704e8a00ca26a2a8aff299fedb69d84996a403c285b94d9f569bc41"
+    },
+    "IMP_GLOBAL_LANGUAGE_MODEL_OUTPUT_NORM": {
+      "model.norm.weight": "da7e3308ca68714b42452bbd868ee8b649f831a9cbc4ce00dca99931d16812ce"
+    },
+    "IMP_L27_ATTENTION_INPUT_NORM": {
+      "model.layers.27.input_layernorm.weight": "18ea0d7ad090805b9e0acd48d595b39f90c9dc22ad92b4bfdb8fea41dd168908"
+    },
+    "IMP_L27_ATTENTION_KEY_PROJECTION": {
+      "model.layers.27.self_attn.k_proj.weight": "0e2e4bbc422e22954146266638ba566e918cf37812145a0e84add5e86400fd28"
+    },
+    "IMP_L27_ATTENTION_OUTPUT_PROJECTION": {
+      "model.layers.27.self_attn.o_proj.weight": "2a298eafadbd65584311957171b62d1fe87fdcdf25207df00e2df6f917b02d70"
+    },
+    "IMP_L27_ATTENTION_QUERY_PROJECTION": {
+      "model.layers.27.self_attn.q_proj.weight": "264bc911c45d9690b632844492f7805a2c27ffb0b34b51d6e292a997085c2f1c"
+    },
+    "IMP_L27_ATTENTION_VALUE_PROJECTION": {
+      "model.layers.27.self_attn.v_proj.weight": "9095954d26d8357ea06330ad2f5408e2ce1cc9435689e58b1b228beada8d2192"
+    },
+    "IMP_L27_FEED_FORWARD_DOWN_PROJECTION": {
+      "model.layers.27.mlp.down_proj.weight": "e0d4236fffb35beb240286288a341923375b1786dab4643f29fb7534dc3f6071"
+    },
+    "IMP_L27_FEED_FORWARD_GATE_PROJECTION": {
+      "model.layers.27.mlp.gate_proj.weight": "4ccd27a7693960cd8da28998282095a0805b9df0ae33f6204a726dc5d677fd1e"
+    },
+    "IMP_L27_FEED_FORWARD_INPUT_NORM": {
+      "model.layers.27.post_attention_layernorm.weight": "9d1835a7c970469e453ed607e582dcf1fa13b2be85485842b463112402777e74"
+    },
+    "IMP_L27_FEED_FORWARD_UP_PROJECTION": {
+      "model.layers.27.mlp.up_proj.weight": "31a9ab4f68e5c1299368939b49d33a35ec94dbd169b95b10b16aa9135c7c35ad"
+    }
+  },
+  "frozen_tensor_fingerprints_before": {
+    "IMP_GLOBAL_EMBEDDING_TOKEN": {
+      "model.embed_tokens.weight": "0fc7818a9704e8a00ca26a2a8aff299fedb69d84996a403c285b94d9f569bc41"
+    },
+    "IMP_GLOBAL_LANGUAGE_MODEL_OUTPUT_NORM": {
+      "model.norm.weight": "da7e3308ca68714b42452bbd868ee8b649f831a9cbc4ce00dca99931d16812ce"
+    },
+    "IMP_L27_ATTENTION_INPUT_NORM": {
+      "model.layers.27.input_layernorm.weight": "18ea0d7ad090805b9e0acd48d595b39f90c9dc22ad92b4bfdb8fea41dd168908"
+    },
+    "IMP_L27_ATTENTION_KEY_PROJECTION": {
+      "model.layers.27.self_attn.k_proj.weight": "0e2e4bbc422e22954146266638ba566e918cf37812145a0e84add5e86400fd28"
+    },
+    "IMP_L27_ATTENTION_OUTPUT_PROJECTION": {
+      "model.layers.27.self_attn.o_proj.weight": "2a298eafadbd65584311957171b62d1fe87fdcdf25207df00e2df6f917b02d70"
+    },
+    "IMP_L27_ATTENTION_QUERY_PROJECTION": {
+      "model.layers.27.self_attn.q_proj.weight": "264bc911c45d9690b632844492f7805a2c27ffb0b34b51d6e292a997085c2f1c"
+    },
+    "IMP_L27_ATTENTION_VALUE_PROJECTION": {
+      "model.layers.27.self_attn.v_proj.weight": "9095954d26d8357ea06330ad2f5408e2ce1cc9435689e58b1b228beada8d2192"
+    },
+    "IMP_L27_FEED_FORWARD_DOWN_PROJECTION": {
+      "model.layers.27.mlp.down_proj.weight": "e0d4236fffb35beb240286288a341923375b1786dab4643f29fb7534dc3f6071"
+    },
+    "IMP_L27_FEED_FORWARD_GATE_PROJECTION": {
+      "model.layers.27.mlp.gate_proj.weight": "4ccd27a7693960cd8da28998282095a0805b9df0ae33f6204a726dc5d677fd1e"
+    },
+    "IMP_L27_FEED_FORWARD_INPUT_NORM": {
+      "model.layers.27.post_attention_layernorm.weight": "9d1835a7c970469e453ed607e582dcf1fa13b2be85485842b463112402777e74"
+    },
+    "IMP_L27_FEED_FORWARD_UP_PROJECTION": {
+      "model.layers.27.mlp.up_proj.weight": "31a9ab4f68e5c1299368939b49d33a35ec94dbd169b95b10b16aa9135c7c35ad"
+    }
+  },
+  "heldout": {
+    "loss_after": 6.62296199798584,
+    "loss_before": 6.622901916503906,
+    "loss_delta": 6.008148193359375e-05,
+    "record_id": "trace_schema_0034"
+  },
+  "heldout_record_id": "trace_schema_0034",
+  "last_attempted_operation": "suffix_load:IMP_GLOBAL_EMBEDDING_TOKEN",
+  "last_completed_operation": "fresh_process_reloaded_adapter_and_recomputed_prefixes",
+  "loaded_suffix_partition_count": 11,
+  "max_resident_prefix_partitions": 1,
+  "max_resident_suffix_partitions": 11,
+  "minimum_available_ram_sampled_bytes": 12421083136,
+  "optimizer": {
+    "gradient_l2": 0.23620322346687317,
+    "learning_rate": 0.0001,
+    "name": "AdamW",
+    "steps": 1,
+    "weight_decay": 0.0
+  },
+  "peak_process_rss_bytes_sampled": 1479823360,
+  "preflight": {
+    "adapter_gradient_and_adamw_state_bytes": 294912,
+    "adapter_parameter_bytes": 98304,
+    "adapter_parameter_count": 24576,
+    "adapter_update_snapshot_bytes": 98304,
+    "available_ram_bytes": 13211942912,
+    "explicit_headroom_bytes": 536870912,
+    "feasible": true,
+    "max_prefix_resident_partitions": 1,
+    "max_suffix_resident_partitions": 11,
+    "peak_working_set_bytes": 1026619904,
+    "prefix_activation_working_set_bytes": 3932160,
+    "prefix_largest_partition_bytes": 788017152,
+    "prefix_peak_working_set_bytes": 825274880,
+    "required_available_ram_bytes": 6547461017,
+    "reserve_bytes": 4983970201,
+    "reserve_fraction": 0.2,
+    "suffix_partition_bytes": {
+      "IMP_GLOBAL_EMBEDDING_TOKEN": 788017152,
+      "IMP_GLOBAL_LANGUAGE_MODEL_OUTPUT_NORM": 6144,
+      "IMP_L27_ATTENTION_INPUT_NORM": 6144,
+      "IMP_L27_ATTENTION_KEY_PROJECTION": 6291456,
+      "IMP_L27_ATTENTION_OUTPUT_PROJECTION": 18874368,
+      "IMP_L27_ATTENTION_QUERY_PROJECTION": 18874368,
+      "IMP_L27_ATTENTION_VALUE_PROJECTION": 6291456,
+      "IMP_L27_FEED_FORWARD_DOWN_PROJECTION": 50331648,
+      "IMP_L27_FEED_FORWARD_GATE_PROJECTION": 50331648,
+      "IMP_L27_FEED_FORWARD_INPUT_NORM": 6144,
+      "IMP_L27_FEED_FORWARD_UP_PROJECTION": 50331648
+    },
+    "suffix_partition_bytes_total": 989362176,
+    "suffix_peak_working_set_bytes": 1026619904,
+    "total_ram_bytes": 24919851008,
+    "train_activation_and_logits_working_set_bytes": 37257728
+  },
+  "resident_partitions_after_release": [],
+  "resource_preflight": {
+    "adapter_gradient_and_adamw_state_bytes": 294912,
+    "adapter_parameter_bytes": 98304,
+    "adapter_parameter_count": 24576,
+    "adapter_update_snapshot_bytes": 98304,
+    "available_ram_bytes": 13211942912,
+    "explicit_headroom_bytes": 536870912,
+    "feasible": true,
+    "max_prefix_resident_partitions": 1,
+    "max_suffix_resident_partitions": 11,
+    "peak_working_set_bytes": 1026619904,
+    "prefix_activation_working_set_bytes": 3932160,
+    "prefix_largest_partition_bytes": 788017152,
+    "prefix_peak_working_set_bytes": 825274880,
+    "required_available_ram_bytes": 6547461017,
+    "reserve_bytes": 4983970201,
+    "reserve_fraction": 0.2,
+    "suffix_partition_bytes": {
+      "IMP_GLOBAL_EMBEDDING_TOKEN": 788017152,
+      "IMP_GLOBAL_LANGUAGE_MODEL_OUTPUT_NORM": 6144,
+      "IMP_L27_ATTENTION_INPUT_NORM": 6144,
+      "IMP_L27_ATTENTION_KEY_PROJECTION": 6291456,
+      "IMP_L27_ATTENTION_OUTPUT_PROJECTION": 18874368,
+      "IMP_L27_ATTENTION_QUERY_PROJECTION": 18874368,
+      "IMP_L27_ATTENTION_VALUE_PROJECTION": 6291456,
+      "IMP_L27_FEED_FORWARD_DOWN_PROJECTION": 50331648,
+      "IMP_L27_FEED_FORWARD_GATE_PROJECTION": 50331648,
+      "IMP_L27_FEED_FORWARD_INPUT_NORM": 6144,
+      "IMP_L27_FEED_FORWARD_UP_PROJECTION": 50331648
+    },
+    "suffix_partition_bytes_total": 989362176,
+    "suffix_peak_working_set_bytes": 1026619904,
+    "total_ram_bytes": 24919851008,
+    "train_activation_and_logits_working_set_bytes": 37257728
+  },
+  "resource_samples": [
+    {
+      "available_ram_bytes": 15342235648,
+      "partition_id": "IMP_L27_ATTENTION_INPUT_NORM",
+      "phase": "suffix_partition_loaded",
+      "process_rss_bytes": 384499712,
+      "resident_partition_bytes": 0,
+      "resident_partition_count": 1
+    },
+    {
+      "available_ram_bytes": 15324119040,
+      "partition_id": "IMP_L27_ATTENTION_QUERY_PROJECTION",
+      "phase": "suffix_partition_loaded",
+      "process_rss_bytes": 403378176,
+      "resident_partition_bytes": 0,
+      "resident_partition_count": 2
+    },
+    {
+      "available_ram_bytes": 15318175744,
+      "partition_id": "IMP_L27_ATTENTION_KEY_PROJECTION",
+      "phase": "suffix_partition_loaded",
+      "process_rss_bytes": 409677824,
+      "resident_partition_bytes": 0,
+      "resident_partition_count": 3
+    },
+    {
+      "available_ram_bytes": 15312224256,
+      "partition_id": "IMP_L27_ATTENTION_VALUE_PROJECTION",
+      "phase": "suffix_partition_loaded",
+      "process_rss_bytes": 415977472,
+      "resident_partition_bytes": 0,
+      "resident_partition_count": 4
+    },
+    {
+      "available_ram_bytes": 15296638976,
+      "partition_id": "IMP_L27_ATTENTION_OUTPUT_PROJECTION",
+      "phase": "suffix_partition_loaded",
+      "process_rss_bytes": 434855936,
+      "resident_partition_bytes": 0,
+      "resident_partition_count": 5
+    },
+    {
+      "available_ram_bytes": 15296643072,
+      "partition_id": "IMP_L27_FEED_FORWARD_INPUT_NORM",
+      "phase": "suffix_partition_loaded",
+      "process_rss_bytes": 434855936,
+      "resident_partition_bytes": 0,
+      "resident_partition_count": 6
+    },
+    {
+      "available_ram_bytes": 15248035840,
+      "partition_id": "IMP_L27_FEED_FORWARD_GATE_PROJECTION",
+      "phase": "suffix_partition_loaded",
+      "process_rss_bytes": 485191680,
+      "resident_partition_bytes": 0,
+      "resident_partition_count": 7
+    },
+    {
+      "available_ram_bytes": 15199277056,
+      "partition_id": "IMP_L27_FEED_FORWARD_UP_PROJECTION",
+      "phase": "suffix_partition_loaded",
+      "process_rss_bytes": 535527424,
+      "resident_partition_bytes": 0,
+      "resident_partition_count": 8
+    },
+    {
+      "available_ram_bytes": 15148953600,
+      "partition_id": "IMP_L27_FEED_FORWARD_DOWN_PROJECTION",
+      "phase": "suffix_partition_loaded",
+      "process_rss_bytes": 585867264,
+      "resident_partition_bytes": 0,
+      "resident_partition_count": 9
+    },
+    {
+      "available_ram_bytes": 15148994560,
+      "partition_id": "IMP_GLOBAL_LANGUAGE_MODEL_OUTPUT_NORM",
+      "phase": "suffix_partition_loaded",
+      "process_rss_bytes": 585867264,
+      "resident_partition_bytes": 0,
+      "resident_partition_count": 10
+    },
+    {
+      "available_ram_bytes": 14353117184,
+      "partition_id": "IMP_GLOBAL_EMBEDDING_TOKEN",
+      "phase": "suffix_partition_loaded",
+      "process_rss_bytes": 1373888512,
+      "resident_partition_bytes": 0,
+      "resident_partition_count": 11
+    },
+    {
+      "available_ram_bytes": 13230166016,
+      "phase": "prefix_complete",
+      "process_rss_bytes": 384446464,
+      "record_id": "trace_edge_0035",
+      "resident_partitions": []
+    },
+    {
+      "available_ram_bytes": 15344001024,
+      "phase": "prefix_complete",
+      "process_rss_bytes": 384499712,
+      "record_id": "trace_schema_0034",
+      "resident_partitions": []
+    },
+    {
+      "aggregate_partition_bytes": 989362176,
+      "available_ram_bytes": 14353793024,
+      "phase": "suffix_loaded",
+      "process_rss_bytes": 1373892608,
+      "resident_partition_ids": [
+        "IMP_GLOBAL_EMBEDDING_TOKEN",
+        "IMP_GLOBAL_LANGUAGE_MODEL_OUTPUT_NORM",
+        "IMP_L27_ATTENTION_INPUT_NORM",
+        "IMP_L27_ATTENTION_KEY_PROJECTION",
+        "IMP_L27_ATTENTION_OUTPUT_PROJECTION",
+        "IMP_L27_ATTENTION_QUERY_PROJECTION",
+        "IMP_L27_ATTENTION_VALUE_PROJECTION",
+        "IMP_L27_FEED_FORWARD_DOWN_PROJECTION",
+        "IMP_L27_FEED_FORWARD_GATE_PROJECTION",
+        "IMP_L27_FEED_FORWARD_INPUT_NORM",
+        "IMP_L27_FEED_FORWARD_UP_PROJECTION"
+      ]
+    },
+    {
+      "aggregate_partition_bytes": 989362176,
+      "available_ram_bytes": 14197219328,
+      "phase": "post_update_suffix_peak_sample",
+      "process_rss_bytes": 1479823360,
+      "resident_partition_ids": [
+        "IMP_GLOBAL_EMBEDDING_TOKEN",
+        "IMP_GLOBAL_LANGUAGE_MODEL_OUTPUT_NORM",
+        "IMP_L27_ATTENTION_INPUT_NORM",
+        "IMP_L27_ATTENTION_KEY_PROJECTION",
+        "IMP_L27_ATTENTION_OUTPUT_PROJECTION",
+        "IMP_L27_ATTENTION_QUERY_PROJECTION",
+        "IMP_L27_ATTENTION_VALUE_PROJECTION",
+        "IMP_L27_FEED_FORWARD_DOWN_PROJECTION",
+        "IMP_L27_FEED_FORWARD_GATE_PROJECTION",
+        "IMP_L27_FEED_FORWARD_INPUT_NORM",
+        "IMP_L27_FEED_FORWARD_UP_PROJECTION"
+      ]
+    },
+    {
+      "available_ram_bytes": 15338852352,
+      "partition_id": "IMP_L27_ATTENTION_INPUT_NORM",
+      "phase": "suffix_partition_loaded",
+      "process_rss_bytes": 385417216,
+      "resident_partition_bytes": 0,
+      "resident_partition_count": 1
+    },
+    {
+      "available_ram_bytes": 15321456640,
+      "partition_id": "IMP_L27_ATTENTION_QUERY_PROJECTION",
+      "phase": "suffix_partition_loaded",
+      "process_rss_bytes": 404299776,
+      "resident_partition_bytes": 0,
+      "resident_partition_count": 2
+    },
+    {
+      "available_ram_bytes": 15315521536,
+      "partition_id": "IMP_L27_ATTENTION_KEY_PROJECTION",
+      "phase": "suffix_partition_loaded",
+      "process_rss_bytes": 410599424,
+      "resident_partition_bytes": 0,
+      "resident_partition_count": 3
+    },
+    {
+      "available_ram_bytes": 15309574144,
+      "partition_id": "IMP_L27_ATTENTION_VALUE_PROJECTION",
+      "phase": "suffix_partition_loaded",
+      "process_rss_bytes": 416894976,
+      "resident_partition_bytes": 0,
+      "resident_partition_count": 4
+    },
+    {
+      "available_ram_bytes": 15291457536,
+      "partition_id": "IMP_L27_ATTENTION_OUTPUT_PROJECTION",
+      "phase": "suffix_partition_loaded",
+      "process_rss_bytes": 435777536,
+      "resident_partition_bytes": 0,
+      "resident_partition_count": 5
+    },
+    {
+      "available_ram_bytes": 15291404288,
+      "partition_id": "IMP_L27_FEED_FORWARD_INPUT_NORM",
+      "phase": "suffix_partition_loaded",
+      "process_rss_bytes": 435777536,
+      "resident_partition_bytes": 0,
+      "resident_partition_count": 6
+    },
+    {
+      "available_ram_bytes": 15231762432,
+      "partition_id": "IMP_L27_FEED_FORWARD_GATE_PROJECTION",
+      "phase": "suffix_partition_loaded",
+      "process_rss_bytes": 486113280,
+      "resident_partition_bytes": 0,
+      "resident_partition_count": 7
+    },
+    {
+      "available_ram_bytes": 15193575424,
+      "partition_id": "IMP_L27_FEED_FORWARD_UP_PROJECTION",
+      "phase": "suffix_partition_loaded",
+      "process_rss_bytes": 536449024,
+      "resident_partition_bytes": 0,
+      "resident_partition_count": 8
+    },
+    {
+      "available_ram_bytes": 15145107456,
+      "partition_id": "IMP_L27_FEED_FORWARD_DOWN_PROJECTION",
+      "phase": "suffix_partition_loaded",
+      "process_rss_bytes": 586784768,
+      "resident_partition_bytes": 0,
+      "resident_partition_count": 9
+    },
+    {
+      "available_ram_bytes": 15145119744,
+      "partition_id": "IMP_GLOBAL_LANGUAGE_MODEL_OUTPUT_NORM",
+      "phase": "suffix_partition_loaded",
+      "process_rss_bytes": 586784768,
+      "resident_partition_bytes": 0,
+      "resident_partition_count": 10
+    },
+    {
+      "available_ram_bytes": 14355767296,
+      "partition_id": "IMP_GLOBAL_EMBEDDING_TOKEN",
+      "phase": "suffix_partition_loaded",
+      "process_rss_bytes": 1374806016,
+      "resident_partition_bytes": 0,
+      "resident_partition_count": 11
+    }
+  ],
+  "resource_telemetry_path": "[REDACTED_LOCAL_PATH]\\.gemini\\antigravity\\scratch\\[PROJECT_NAME]\\experiments\\impression_002e\\streaming_training\\run03\\resource_telemetry.jsonl",
+  "run_identity": {
+    "alpha": 8,
+    "cache_identity_sha256": {
+      "trace_edge_0035": "855a3c4946b7a2cd6124c8cffff9b2a8a9af2dc8294b9419101c3af3a71091ce",
+      "trace_schema_0034": "9ee163d11b83cc35ba433b3a6df9d65fe1393c2b6cae75e8abc3f76426da1cbc"
+    },
+    "checkpoint_revision": "392a6f57223e7ccfe6ef4ebdb2ff101a42d57364",
+    "device": "cpu",
+    "experiment": "IMPRESSION-002E",
+    "heldout_record": "trace_schema_0034",
+    "heldout_token_ids": [
+      128000,
+      3701,
+      11898,
+      25,
+      13714,
+      67966,
+      23383,
+      11007,
+      13,
+      1221,
+      55857,
+      11036,
+      16070,
+      7946,
+      627,
+      21255
+    ],
+    "learning_rate": 0.0001,
+    "optimizer": "AdamW",
+    "precision": "BF16 frozen backbone / FP32 LoRA",
+    "rank": 4,
+    "run_identity_sha256": "2257bc9668001258f1642b156a729a7b216b58d8d88f88aff236e8abaa795ae0",
+    "schema_version": 1,
+    "source_metadata_sha256": "92da0ab9c8f911b1339188821ec729a7574db84a4b90e4d92b7e8b04ce90802e",
+    "steps": 1,
+    "target_module": "model.layers.27.self_attn.q_proj",
+    "training_record": "trace_edge_0035",
+    "training_token_ids": [
+      128000,
+      3701,
+      11898,
+      25,
+      10564,
+      12128,
+      26579,
+      23383,
+      449,
+      46763,
+      10860,
+      51,
+      220,
+      777,
+      13,
+      23
+    ],
+    "weight_decay": 0.0
+  },
+  "source_metadata_path": "[REDACTED_LOCAL_PATH]\\.gemini\\antigravity\\scratch\\[PROJECT_NAME]\\experiments\\impression_002b\\checkpoints\\streamed_lora_layer27_qproj_run02\\adapter\\adapter_metadata.json",
+  "source_metadata_sha256": "92da0ab9c8f911b1339188821ec729a7574db84a4b90e4d92b7e8b04ce90802e",
+  "status": "passed",
+  "training": {
+    "loss_after": 7.881006717681885,
+    "loss_before": 7.881356239318848,
+    "loss_delta": -0.0003495216369628906,
+    "record_id": "trace_edge_0035"
+  },
+  "training_record_id": "trace_edge_0035",
+  "training_update_started": true,
+  "verification_preflight": {
+    "adapter_gradient_and_adamw_state_bytes": 294912,
+    "adapter_parameter_bytes": 98304,
+    "adapter_parameter_count": 24576,
+    "adapter_update_snapshot_bytes": 98304,
+    "available_ram_bytes": 15349268480,
+    "explicit_headroom_bytes": 536870912,
+    "feasible": true,
+    "max_prefix_resident_partitions": 1,
+    "max_suffix_resident_partitions": 11,
+    "peak_working_set_bytes": 1026619904,
+    "prefix_activation_working_set_bytes": 3932160,
+    "prefix_largest_partition_bytes": 788017152,
+    "prefix_peak_working_set_bytes": 825274880,
+    "required_available_ram_bytes": 6547461017,
+    "reserve_bytes": 4983970201,
+    "reserve_fraction": 0.2,
+    "suffix_partition_bytes": {
+      "IMP_GLOBAL_EMBEDDING_TOKEN": 788017152,
+      "IMP_GLOBAL_LANGUAGE_MODEL_OUTPUT_NORM": 6144,
+      "IMP_L27_ATTENTION_INPUT_NORM": 6144,
+      "IMP_L27_ATTENTION_KEY_PROJECTION": 6291456,
+      "IMP_L27_ATTENTION_OUTPUT_PROJECTION": 18874368,
+      "IMP_L27_ATTENTION_QUERY_PROJECTION": 18874368,
+      "IMP_L27_ATTENTION_VALUE_PROJECTION": 6291456,
+      "IMP_L27_FEED_FORWARD_DOWN_PROJECTION": 50331648,
+      "IMP_L27_FEED_FORWARD_GATE_PROJECTION": 50331648,
+      "IMP_L27_FEED_FORWARD_INPUT_NORM": 6144,
+      "IMP_L27_FEED_FORWARD_UP_PROJECTION": 50331648
+    },
+    "suffix_partition_bytes_total": 989362176,
+    "suffix_peak_working_set_bytes": 1026619904,
+    "total_ram_bytes": 24919851008,
+    "train_activation_and_logits_working_set_bytes": 37257728
+  },
+  "verification_started": true
+}

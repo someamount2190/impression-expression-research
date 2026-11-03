@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "experiment": "IMPRESSION-006-followup",
+  "purpose": "Audit data sufficiency for a trustworthy configuration-decision evaluation before any decision-policy training.",
+  "frozen_before_decision_model_training": true,
+  "status": "frozen_empty_splits_insufficient_independent_evidence",
+  "verified_controller_workload_families": [
+    "expression_family_disjoint_one_step"
+  ],
+  "verified_family_count": 1,
+  "available_split_names": [
+    "train",
+    "validation",
+    "test"
+  ],
+  "family_assignments": {
+    "train": [],
+    "validation": [],
+    "test": [],
+    "unassigned_ineligible_for_any_split": [
+      "expression_family_disjoint_one_step"
+    ]
+  },
+  "split_is_trainable": false,
+  "decision_model_training_performed": false,
+  "reason": "The verified IMPRESSION-004 end-to-end config outcomes and IMPRESSION-005 A/B/C decisions all come from one objective family. Other repository curricula are task examples, not measured end-to-end outcomes for each configuration. Assigning them as decision labels would fabricate evidence.",
+  "counterfactual_resource_scenarios": {
+    "kept_separate_from_actual_measurements": true,
+    "scenario_ids": [
+      "heldout_vram_constrained_snapshot",
+      "heldout_ram_infeasible_snapshot"
+    ]
+  },
+  "verified_candidate_outcomes": {
+    "successful_cycle_count": 5,
+    "unique_configuration_count": 4,
+    "repeat_count_by_configuration": {
+      "dense_cpu1": 1,
+      "sparse_supervised_cpu1": 1,
+      "sparse_supervised_cpu2": 1,
+      "sparse_cuda_head_cpu_suffix": 2
+    },
+    "all_have_fresh_process_reload_verification": true,
+    "all_preserve_frozen_backbone": true
+  },
+  "verified_failures": {
+    "collected_in_separate_failure_inventory": true,
+    "used_as_configuration_quality_labels": false,
+    "note": "Persistence and numerical-path failures are recorded with their failure mode; they are not treated as measured candidate quality outcomes unless the failure is attributable to that configuration under a matched workload."
+  },
+  "rules": [
+    "All examples from a workload family stay together in exactly one split.",
+    "Actual live telemetry and counterfactual safety challenges have distinct snapshot_kind values and are never pooled as hardware measurements.",
+    "Successful and failed attempts remain separate; failures without comparable objective results do not become numeric loss or latency labels.",
+    "Do not train a native decision adapter until at least three independent measured workload families support nonempty train, validation, and test splits."
+  ],
+  "test_is_sealed_independent_set": false,
+  "test_reason": "No pre-existing verified candidate family can serve as an unseen test because it informed the prior IMPRESSION-004 optimization and IMPRESSION-005 evaluation.",
+  "split_is_evaluable": false
+}

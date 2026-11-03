@@ -1,0 +1,17 @@
+{
+  "verified_candidate_cycles": 5,
+  "successful_other_training_receipts": 2,
+  "failure_or_correction_records": 6,
+  "decision_outcome_families": [
+    "expression_family_disjoint_one_step"
+  ],
+  "failed_run_families": [
+    "expression_family_disjoint_one_step",
+    "expression_growth_training",
+    "manual_connector_research",
+    "streamed_trace_adapter_reintegration"
+  ],
+  "counterfactuals_included_as_measurements": false,
+  "eligible_split_family_count": 0,
+  "decision_training_performed": false
+}

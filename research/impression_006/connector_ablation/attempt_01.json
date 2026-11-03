@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "experiment": "IMPRESSION-006-followup",
+  "run_id": "connector_family_split_capture_01",
+  "status": "aborted_before_optimizer_update",
+  "start_local": "2026-11-03 23:48:28",
+  "end_local_approx": "2026-11-04 00:28:34",
+  "elapsed_seconds_approx": 2406,
+  "reason": "The frozen-prefix capture for the six preselected train/validation examples did not complete within the 40-minute bounded window. No capture receipt or optimizer update was produced.",
+  "frozen_split_manifest": "experiments/impression_006/frozen_sets/connector_family_split_manifest.json",
+  "train_ids": ["train_file_generation_pipeline_000", "train_symbolic_norm_reduction_000", "train_error_recovery_000"],
+  "validation_ids": ["validation_file_readback_audit_000", "validation_symbolic_threshold_000", "validation_untrusted_completion_claim_000"],
+  "sealed_test_ids_used": [],
+  "optimizer_updates": 0,
+  "connector_or_baseline_checkpoint_written": false,
+  "production_graph_modified": false,
+  "gpu_used": false,
+  "ram_sampling": {
+    "peak_process_rss_observed_bytes": 6925634355,
+    "minimum_system_available_bytes_observed": 7709464576,
+    "system_total_bytes": 24919851008,
+    "20_percent_reserve_bytes": 4983970201,
+    "reserve_breached": false,
+    "sampling_method": "periodic process/OS snapshots during run; not continuous"
+  },
+  "model_threads": 1,
+  "stop_method": "Ctrl+C sent to the experiment process after the bounded window; process exited and was confirmed absent."
+}

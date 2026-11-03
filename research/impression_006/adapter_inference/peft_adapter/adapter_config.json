@@ -1,0 +1,15 @@
+{
+  "base_model_name_or_path": "[BASE_MODEL_REPOSITORY]",
+  "revision": "392a6f57223e7ccfe6ef4ebdb2ff101a42d57364",
+  "r": 4,
+  "lora_alpha": 8,
+  "lora_dropout": 0.0,
+  "target_modules": [
+    "model.layers.27.self_attn.q_proj"
+  ],
+  "bias": "none",
+  "fan_in_fan_out": false,
+  "use_dora": false,
+  "use_rslora": false,
+  "task_type": "CAUSAL_LM"
+}

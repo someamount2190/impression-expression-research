@@ -1,0 +1,9 @@
+experiment: IMPRESSION-002E
+checkpoint_revision: 392a6f57223e7ccfe6ef4ebdb2ff101a42d57364
+checkpoint_snapshot: [LOCAL_MODEL_CACHE]/hub/models--dphn--[BASE_MODEL]/snapshots/392a6f57223e7ccfe6ef4ebdb2ff101a42d57364
+source_experiment: IMPRESSION-002D
+primary_reader: experiments.impression_002d.worker.raw_partition_manager.RawPartitionResidencyManager
+native_torch_safetensors_reader: quarantined
+ram_reserve_fraction: 0.20
+max_concurrent_workers: 1
+max_concurrent_gpu_jobs: 1

@@ -1,0 +1,21 @@
+{
+  "source_adapter": "experiments/impression_004/partition_training_receipts/cuda_head_sparse02/adapter/adapter.safetensors",
+  "source_adapter_sha256": "474b77f3f822dcfc51066e42831c192778a422203d8bb483fb751a225d3f3569",
+  "source_metadata_sha256": "c80011efe59fa95d4630efbbe74d345e29f59f765ee6b6cdbb84f980d65c6f5f",
+  "source_base_gguf_sha256": "5d6d02eeefa1ab5dbf23f97afdf5c2c95ad3d946dc3b6e9ab72e6c1637d54177",
+  "source_keys": [
+    "lora_A",
+    "lora_B"
+  ],
+  "converted_keys": [
+    "base_model.model.model.layers.27.self_attn.q_proj.lora_A.weight",
+    "base_model.model.model.layers.27.self_attn.q_proj.lora_B.weight"
+  ],
+  "rank": 4,
+  "alpha": 8,
+  "scale": 2.0,
+  "target_module": "model.layers.27.self_attn.q_proj",
+  "base_checkpoint_revision": "392a6f57223e7ccfe6ef4ebdb2ff101a42d57364",
+  "conversion_method": "scripts/merge_lora_to_gguf.py; Q4 target dequantized, scaled LoRA added with Q/K GGUF permutation, target requantized to Q8_0; unrelated tensors copied raw",
+  "adapter_is_impression_trained": true
+}

@@ -1,0 +1,26 @@
+{
+  "experiment": "IMPRESSION-004",
+  "schema_version": 1,
+  "status": "complete",
+  "started_local": "2026-11-03T18:16:00+08:00",
+  "completed_local": "2026-11-03T21:44:00+08:00",
+  "runtime_used_seconds": 12480,
+  "hard_deadline_local": "2026-11-04T02:16:00+08:00",
+  "checkpoint_revision": "392a6f57223e7ccfe6ef4ebdb2ff101a42d57364",
+  "checkpoint_repo": "[BASE_MODEL_REPOSITORY]",
+  "runtime_owner": "root",
+  "active_agent_limit": 2,
+  "recursive_delegation": false,
+  "phase_status": {
+    "baseline_and_bottleneck_attribution": "complete",
+    "computation_optimization": "complete; sparse and cuda-head paths verified",
+    "adaptive_hardware_scheduling": "complete for measured execution placement; structural reorganization remains unimplemented",
+    "parallel_partition_infrastructure": "not_accepted; only one trainable region updated",
+    "expression_training_continuation": "bounded_one_step_trials_complete; no_symbolic_gain_demonstrated",
+    "verification_and_reporting": "complete; regression suite passed"
+  },
+  "active_work": null,
+  "previous_verified_checkpoints_preserved": true,
+  "sealed_evaluation_accessed": false,
+  "last_updated_local": "2026-11-03T21:44:00+08:00"
+}

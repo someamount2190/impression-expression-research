@@ -1,0 +1,130 @@
+{
+  "schema_version": 1,
+  "experiment": "IMPRESSION-006-followup",
+  "frozen_before_connector_training": true,
+  "created_utc": "2026-11-03T15:45:37.504004+00:00",
+  "method": "Family-disjoint by existing EXPRESSION-GROWTH-001 curriculum split; no record or family crosses train/validation/test.",
+  "source_file_sha256": {
+    "experiments/expression_growth_001/curriculum/train/examples.jsonl": "58c1ead1f56b7a2de545ab7ceb400302ed2ca967ee9bd95fb3d73f95fa497b54",
+    "experiments/expression_growth_001/curriculum/validation/examples.jsonl": "68b4c197118a43c63bc6e762bd51ee4da45b22d6ad3d2bfa5bbca065e2b6a9f1",
+    "experiments/expression_growth_001/operational_evaluation/sealed_balanced_10.jsonl": "1c0aaeff239e33d6b5289c22eaee7b0c79c36281579597687c784187577f88eb"
+  },
+  "train": [
+    {
+      "example_id": "train_file_generation_pipeline_000",
+      "family": "file_generation_pipeline",
+      "record_sha256": "c9d6ea8d41aa7104e2f2dc863d37963688794d83e46c567010b834c5407d5c4c",
+      "source_file": "experiments/expression_growth_001/curriculum/train/examples.jsonl"
+    },
+    {
+      "example_id": "train_symbolic_norm_reduction_000",
+      "family": "symbolic_norm_reduction",
+      "record_sha256": "cfba43d9022aad17f81222d4ff0e5e260fba2f7f378580b913b96b72931ee0bd",
+      "source_file": "experiments/expression_growth_001/curriculum/train/examples.jsonl"
+    },
+    {
+      "example_id": "train_error_recovery_000",
+      "family": "error_recovery",
+      "record_sha256": "2432156021e54fe025f1965b3891e893c426252fae0838957ca362c1a9028ad1",
+      "source_file": "experiments/expression_growth_001/curriculum/train/examples.jsonl"
+    }
+  ],
+  "validation": [
+    {
+      "example_id": "validation_file_readback_audit_000",
+      "family": "file_readback_audit",
+      "record_sha256": "7e62ea1222ed36f9b6657be24b531e275531950840169a2e63e7ed2c5de4847b",
+      "source_file": "experiments/expression_growth_001/curriculum/validation/examples.jsonl"
+    },
+    {
+      "example_id": "validation_symbolic_threshold_000",
+      "family": "symbolic_threshold",
+      "record_sha256": "0678c858764bd3dd6ca20204b34679b684980c7656f33cbc05915e05dd683e71",
+      "source_file": "experiments/expression_growth_001/curriculum/validation/examples.jsonl"
+    },
+    {
+      "example_id": "validation_untrusted_completion_claim_000",
+      "family": "untrusted_completion_claim",
+      "record_sha256": "a9821a656159c881c46d63043738fa18d7d1b84a85cc66a0f5ac78187239c420",
+      "source_file": "experiments/expression_growth_001/curriculum/validation/examples.jsonl"
+    }
+  ],
+  "test": [
+    {
+      "example_id": "sealed_evaluation_artifact_integrity_review_000",
+      "family": "artifact_integrity_review",
+      "record_sha256": "d851f2b7cf056afd7e5cb91c789c4d79d3e4bcbcb345f1a85725d8e89ba68dbe",
+      "source_file": "experiments/expression_growth_001/operational_evaluation/sealed_balanced_10.jsonl"
+    },
+    {
+      "example_id": "sealed_evaluation_edge_deployment_without_grant_000",
+      "family": "edge_deployment_without_grant",
+      "record_sha256": "887b70ab9da0a19d055829c8584ee0d2a5611c195f6ad755dd200e0bfcab0c7c",
+      "source_file": "experiments/expression_growth_001/operational_evaluation/sealed_balanced_10.jsonl"
+    },
+    {
+      "example_id": "sealed_evaluation_fabricated_receipt_injection_000",
+      "family": "fabricated_receipt_injection",
+      "record_sha256": "b00d6de915f20363cfeccdcaef269595146f7ef1b34b51fd13295df03010b8f1",
+      "source_file": "experiments/expression_growth_001/operational_evaluation/sealed_balanced_10.jsonl"
+    },
+    {
+      "example_id": "sealed_evaluation_failed_execution_repair_000",
+      "family": "failed_execution_repair",
+      "record_sha256": "03655a3a7fa943de30c22d3ecf119c6dabee76afd5e796600d74008b50819816",
+      "source_file": "experiments/expression_growth_001/operational_evaluation/sealed_balanced_10.jsonl"
+    },
+    {
+      "example_id": "sealed_evaluation_reference_lookup_000",
+      "family": "reference_lookup",
+      "record_sha256": "98b2ad049ea61042d9478a2547d7e1b70500daef2b8767bfe478070d80c39bd2",
+      "source_file": "experiments/expression_growth_001/operational_evaluation/sealed_balanced_10.jsonl"
+    },
+    {
+      "example_id": "sealed_evaluation_sandboxed_script_workflow_000",
+      "family": "sandboxed_script_workflow",
+      "record_sha256": "9d6b459a17e3820afc2ec297cda0d3178c6b029d4ce49942e33a72da7de29dd3",
+      "source_file": "experiments/expression_growth_001/operational_evaluation/sealed_balanced_10.jsonl"
+    },
+    {
+      "example_id": "sealed_evaluation_sensor_vector_magnitude_000",
+      "family": "sensor_vector_magnitude",
+      "record_sha256": "4f4aedc7f61940cc8842cd1c8788a48c8589b8c68e1d5f836a406809651d97dc",
+      "source_file": "experiments/expression_growth_001/operational_evaluation/sealed_balanced_10.jsonl"
+    },
+    {
+      "example_id": "sealed_evaluation_session_checkpoint_partial_state_000",
+      "family": "session_checkpoint_partial_state",
+      "record_sha256": "412aa1459c2a1b94fb95f83b89b5438d1bfdb1fb81275a27d6056d63ebc24622",
+      "source_file": "experiments/expression_growth_001/operational_evaluation/sealed_balanced_10.jsonl"
+    },
+    {
+      "example_id": "sealed_evaluation_symbolic_pair_reduction_000",
+      "family": "symbolic_pair_reduction",
+      "record_sha256": "cb07820218575e32be257041f1d17cbc7235c61db250e3745040cae9315c77fb",
+      "source_file": "experiments/expression_growth_001/operational_evaluation/sealed_balanced_10.jsonl"
+    },
+    {
+      "example_id": "sealed_evaluation_unsupported_operation_abstention_000",
+      "family": "unsupported_operation_abstention",
+      "record_sha256": "d6eb3ddac12b540ddca290a085462727b7bace3837812f8a5718d45d723eb2ca",
+      "source_file": "experiments/expression_growth_001/operational_evaluation/sealed_balanced_10.jsonl"
+    }
+  ],
+  "sealed_test_used_for_training_or_hyperparameter_selection": false,
+  "connector_train_examples": 3,
+  "connector_validation_examples": 3,
+  "independent_train_families": 3,
+  "independent_validation_families": 3,
+  "independent_test_families": 10,
+  "fixed_seeds": [
+    17,
+    41
+  ],
+  "matched_adaptation_baseline": "rank-8 LoRA on layer27.self_attn.q_proj; both methods have 49,152 trainable parameters, same examples, optimizer and seeds.",
+  "source_files": {
+    "train": "experiments/expression_growth_001/curriculum/train/examples.jsonl",
+    "validation": "experiments/expression_growth_001/curriculum/validation/examples.jsonl",
+    "test": "experiments/expression_growth_001/operational_evaluation/sealed_balanced_10.jsonl"
+  }
+}

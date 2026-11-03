@@ -1,0 +1,7 @@
+{
+  "config_sha256": "e21ff53ea39726f972362beba869807216775d5e308bc2f531784846c06a0249",
+  "model_index_sha256": "e6322ad005d27134ba439f7ddd572e632e5b2116ebfbdc88186596dada904c75",
+  "original_checkpoint_mutated": false,
+  "revision": "392a6f57223e7ccfe6ef4ebdb2ff101a42d57364",
+  "snapshot_basename": "392a6f57223e7ccfe6ef4ebdb2ff101a42d57364"
+}

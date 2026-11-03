@@ -1,0 +1,293 @@
+{
+  "adapter_file_sha256": "a5d981160a826cf60959cdbd03e7ebc9fd9505800272ea9d2c52d4a57eaa814b",
+  "adapter_fingerprint_sha256": "e47485074619902c8d12fbe56e619b37cb2cded285e61d953b85ac9a28fbb69e",
+  "checkpoint_revision": "392a6f57223e7ccfe6ef4ebdb2ff101a42d57364",
+  "fresh_process": true,
+  "frozen_backbone_unchanged": true,
+  "frozen_partition_hashes": {
+    "IMP_GLOBAL_EMBEDDING_TOKEN": "3c451a86e5f09748fac607debe9df63b3315d8816ee4f7e8c11856a4f2ce17ff",
+    "IMP_GLOBAL_LANGUAGE_MODEL_OUTPUT_NORM": "7ab8d0ca7bc658920a9c9f809d944ddee95d4773b3fe3853c80c17574a2bce2a",
+    "IMP_L27_ATTENTION_INPUT_NORM": "ad3f8ff76e6837769d472d56aea6ab7e8097f1ae10aedd4bce72dc142e10dde9",
+    "IMP_L27_ATTENTION_KEY_PROJECTION": "a62d2cd4618c7bfe7862bd7a370ff0b518716c2e492fa4923a23bf05a41c9899",
+    "IMP_L27_ATTENTION_OUTPUT_PROJECTION": "5889586d2fb1294c728c8baa1b6156af0726a13b57f239a39f4fd56abdbc2072",
+    "IMP_L27_ATTENTION_QUERY_PROJECTION": "f3f0e6f1044fb68c9c5cd4a77ca19b0c67213abea9403b5da7045771607f274a",
+    "IMP_L27_ATTENTION_VALUE_PROJECTION": "7425e65baa19321ad11ad8e2ec94aa6ee984a2d7aa8406bacff82795e8a27934",
+    "IMP_L27_FEED_FORWARD_DOWN_PROJECTION": "684176b910e55e4bf795a0d03079accf195f4fa60d242f7cf44940facaaf7887",
+    "IMP_L27_FEED_FORWARD_GATE_PROJECTION": "1591a7e85dd165593c12aaad6971a9e7733a775ba478583bd25132bbe73cdc7b",
+    "IMP_L27_FEED_FORWARD_INPUT_NORM": "e5a30263349e3b885c5844aa4872708daacd829b506c8c9dfebf62b642ae25e0",
+    "IMP_L27_FEED_FORWARD_UP_PROJECTION": "9551a7324d44d58a402758b498330bf416aa43fd6b794f89e348d2972337948c"
+  },
+  "frozen_tensor_fingerprints": {
+    "IMP_GLOBAL_EMBEDDING_TOKEN": {
+      "model.embed_tokens.weight": "0fc7818a9704e8a00ca26a2a8aff299fedb69d84996a403c285b94d9f569bc41"
+    },
+    "IMP_GLOBAL_LANGUAGE_MODEL_OUTPUT_NORM": {
+      "model.norm.weight": "da7e3308ca68714b42452bbd868ee8b649f831a9cbc4ce00dca99931d16812ce"
+    },
+    "IMP_L27_ATTENTION_INPUT_NORM": {
+      "model.layers.27.input_layernorm.weight": "18ea0d7ad090805b9e0acd48d595b39f90c9dc22ad92b4bfdb8fea41dd168908"
+    },
+    "IMP_L27_ATTENTION_KEY_PROJECTION": {
+      "model.layers.27.self_attn.k_proj.weight": "0e2e4bbc422e22954146266638ba566e918cf37812145a0e84add5e86400fd28"
+    },
+    "IMP_L27_ATTENTION_OUTPUT_PROJECTION": {
+      "model.layers.27.self_attn.o_proj.weight": "2a298eafadbd65584311957171b62d1fe87fdcdf25207df00e2df6f917b02d70"
+    },
+    "IMP_L27_ATTENTION_QUERY_PROJECTION": {
+      "model.layers.27.self_attn.q_proj.weight": "264bc911c45d9690b632844492f7805a2c27ffb0b34b51d6e292a997085c2f1c"
+    },
+    "IMP_L27_ATTENTION_VALUE_PROJECTION": {
+      "model.layers.27.self_attn.v_proj.weight": "9095954d26d8357ea06330ad2f5408e2ce1cc9435689e58b1b228beada8d2192"
+    },
+    "IMP_L27_FEED_FORWARD_DOWN_PROJECTION": {
+      "model.layers.27.mlp.down_proj.weight": "e0d4236fffb35beb240286288a341923375b1786dab4643f29fb7534dc3f6071"
+    },
+    "IMP_L27_FEED_FORWARD_GATE_PROJECTION": {
+      "model.layers.27.mlp.gate_proj.weight": "4ccd27a7693960cd8da28998282095a0805b9df0ae33f6204a726dc5d677fd1e"
+    },
+    "IMP_L27_FEED_FORWARD_INPUT_NORM": {
+      "model.layers.27.post_attention_layernorm.weight": "9d1835a7c970469e453ed607e582dcf1fa13b2be85485842b463112402777e74"
+    },
+    "IMP_L27_FEED_FORWARD_UP_PROJECTION": {
+      "model.layers.27.mlp.up_proj.weight": "31a9ab4f68e5c1299368939b49d33a35ec94dbd169b95b10b16aa9135c7c35ad"
+    }
+  },
+  "record_results": {
+    "trace_edge_0035": {
+      "actual_logits_sha256": "bb31b20033540ee8eb75fd488d9106cb561a3e91f7e451e41c9fd3ccfdd6d196",
+      "adapter_fingerprint_sha256": "e47485074619902c8d12fbe56e619b37cb2cded285e61d953b85ac9a28fbb69e",
+      "adapter_tensor_hashes": {
+        "lora_A": "4ca48a812dc807e7f3f5245762dbfa535cdc0b459e807713750eb5fc270a8502",
+        "lora_B": "97ae108f3453aec115cb43155bdfde61b319f4cdc9f2b001a4d38db7a10a2c14"
+      },
+      "all_logits_finite": true,
+      "exact_logits_match": true,
+      "fresh_prefix_activation_sha256": "d798d27cd8bcfa7e07bd30aeac61fdadd5e9c10865c232163a5dab2b3a76dd9d",
+      "fresh_prefix_matches_training": true,
+      "fresh_prefix_recomputed": true,
+      "max_abs_diff": 0.0,
+      "mean_abs_diff": 0.0,
+      "objective": {
+        "ignore_index": -100,
+        "input_ids": [
+          128000,
+          3701,
+          11898,
+          25,
+          10564,
+          12128,
+          26579,
+          23383,
+          449,
+          46763,
+          10860,
+          51,
+          220,
+          777,
+          13,
+          23
+        ],
+        "input_length": 16,
+        "label_mask": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "labels": [
+          3701,
+          11898,
+          25,
+          10564,
+          12128,
+          26579,
+          23383,
+          449,
+          46763,
+          10860,
+          51,
+          220,
+          777,
+          13,
+          23
+        ],
+        "logit_positions": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14
+        ],
+        "loss": "torch.nn.functional.cross_entropy(logits[:, :-1, :].float().reshape(-1,V), labels.reshape(-1), ignore_index=-100, reduction='mean')",
+        "reduction": "mean over non-ignored shifted labels",
+        "shift": "labels=input_ids[1:], logits=logits[:-1]",
+        "valid_label_count": 15
+      },
+      "record_id": "trace_edge_0035",
+      "reloaded_loss": 7.881006717681885,
+      "rms_diff": 0.0,
+      "saved_post_logits_sha256_file": "2180923feaa74aa4e6a96a64f134c25d6ae5164a7d7c851bbf6990735135e26c",
+      "token_ids": [
+        128000,
+        3701,
+        11898,
+        25,
+        10564,
+        12128,
+        26579,
+        23383,
+        449,
+        46763,
+        10860,
+        51,
+        220,
+        777,
+        13,
+        23
+      ]
+    },
+    "trace_schema_0034": {
+      "actual_logits_sha256": "9b3c52cb0b172c19e0f8f51a92ff8aff918d36742d181174ac60268e72417677",
+      "adapter_fingerprint_sha256": "e47485074619902c8d12fbe56e619b37cb2cded285e61d953b85ac9a28fbb69e",
+      "adapter_tensor_hashes": {
+        "lora_A": "4ca48a812dc807e7f3f5245762dbfa535cdc0b459e807713750eb5fc270a8502",
+        "lora_B": "97ae108f3453aec115cb43155bdfde61b319f4cdc9f2b001a4d38db7a10a2c14"
+      },
+      "all_logits_finite": true,
+      "exact_logits_match": true,
+      "fresh_prefix_activation_sha256": "8f966981181075d559257f8f490c26a3f44fda9852c0cb887adaa4380b8d6eb6",
+      "fresh_prefix_matches_training": true,
+      "fresh_prefix_recomputed": true,
+      "max_abs_diff": 0.0,
+      "mean_abs_diff": 0.0,
+      "objective": {
+        "ignore_index": -100,
+        "input_ids": [
+          128000,
+          3701,
+          11898,
+          25,
+          13714,
+          67966,
+          23383,
+          11007,
+          13,
+          1221,
+          55857,
+          11036,
+          16070,
+          7946,
+          627,
+          21255
+        ],
+        "input_length": 16,
+        "label_mask": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "labels": [
+          3701,
+          11898,
+          25,
+          13714,
+          67966,
+          23383,
+          11007,
+          13,
+          1221,
+          55857,
+          11036,
+          16070,
+          7946,
+          627,
+          21255
+        ],
+        "logit_positions": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14
+        ],
+        "loss": "torch.nn.functional.cross_entropy(logits[:, :-1, :].float().reshape(-1,V), labels.reshape(-1), ignore_index=-100, reduction='mean')",
+        "reduction": "mean over non-ignored shifted labels",
+        "shift": "labels=input_ids[1:], logits=logits[:-1]",
+        "valid_label_count": 15
+      },
+      "record_id": "trace_schema_0034",
+      "reloaded_loss": 6.62296199798584,
+      "rms_diff": 0.0,
+      "saved_post_logits_sha256_file": "1a8ae8182554e69320dede76780a78f608886fec4cc151cb49bbbaf06a8667be",
+      "token_ids": [
+        128000,
+        3701,
+        11898,
+        25,
+        13714,
+        67966,
+        23383,
+        11007,
+        13,
+        1221,
+        55857,
+        11036,
+        16070,
+        7946,
+        627,
+        21255
+      ]
+    }
+  },
+  "resource": {
+    "available_ram_bytes": 15305101312,
+    "max_suffix_resident_partitions": 11,
+    "process_rss_bytes": 426967040,
+    "resident_after_release": [],
+    "suffix_partition_count": 11
+  },
+  "status": "passed"
+}

@@ -1,0 +1,103 @@
+{
+  "experiment": "IMPRESSION-001",
+  "phase": "selective_training",
+  "status": "fresh_process_parity_failed",
+  "training_started": true,
+  "model": "[BASE_MODEL]",
+  "registry_source_checkpoint": "[REDACTED_LOCAL_PATH]\\.gemini\\antigravity\\scratch\\[PROJECT_NAME]\\models\\[BASE_MODEL].gguf",
+  "registry_source_sha256": "5d6d02eeefa1ab5dbf23f97afdf5c2c95ad3d946dc3b6e9ab72e6c1637d54177",
+  "checkpoint_provenance": {
+    "repo_id": "[BASE_MODEL_REPOSITORY]",
+    "revision": "392a6f57223e7ccfe6ef4ebdb2ff101a42d57364",
+    "local_snapshot_path": "[REDACTED_LOCAL_PATH]\\.cache\\huggingface\\hub\\models--dphn--[BASE_MODEL]\\snapshots\\392a6f57223e7ccfe6ef4ebdb2ff101a42d57364",
+    "license_tag": "llama3.2",
+    "license_url": "https://dev.meta.ai/llama/llama3_2/license",
+    "model_url": "https://huggingface.co/[BASE_MODEL_REPOSITORY]/tree/392a6f57223e7ccfe6ef4ebdb2ff101a42d57364",
+    "verified_files": {
+      "model-00001-of-00002.safetensors": {
+        "size_bytes": 4965811384,
+        "sha256": "30660d7b8dc6288690933fcad0609d250bd7cd8d88e633e5886c7f5a500236f2"
+      },
+      "model-00002-of-00002.safetensors": {
+        "size_bytes": 1459729952,
+        "sha256": "ea93d07c32c36d1385491bf45f13188e1e08647c066de01e33fc20a262448bf5"
+      }
+    }
+  },
+  "memory_estimate": {
+    "parameter_count": 3212756032,
+    "model_resident_bytes": 6425512064,
+    "largest_shard_bytes": 4965811384,
+    "conservative_load_peak_bytes": 11391323448,
+    "required_free_ram_bytes_after_load": 4983970201,
+    "available_ram_bytes": 16563408896,
+    "total_ram_bytes": 24919851008,
+    "feasible": true
+  },
+  "architecture_verified_against_gguf": {
+    "num_hidden_layers": 28,
+    "hidden_size": 3072,
+    "intermediate_size": 8192,
+    "num_attention_heads": 24,
+    "num_key_value_heads": 8
+  },
+  "selected_partition": "IMP_L00_FEED_FORWARD_GATE_PROJECTION",
+  "selected_module": "model.layers.0.mlp.gate_proj.weight",
+  "selected_base_parameter_count": 25165824,
+  "trainable_adapter_parameters": 45056,
+  "frozen_parameter_sha256_before": "d31f019f638f0f90d2fbf6d9ed05e2dc8653410b016a392c9a20ac3e32a70feb",
+  "frozen_parameter_sha256_after": "d31f019f638f0f90d2fbf6d9ed05e2dc8653410b016a392c9a20ac3e32a70feb",
+  "frozen_parameters_unchanged": true,
+  "train_examples": [
+    "trace_edge_0026",
+    "trace_edge_0089",
+    "trace_schema_0038"
+  ],
+  "validation_example": "trace_multistep_0114",
+  "validation_loss_before": 4.0352702140808105,
+  "validation_loss_after": 4.034318923950195,
+  "validation_loss_improved": true,
+  "adapter_parameters_changed": 2,
+  "adapter_update_l2": 0.03911860132871767,
+  "validation_logits_max_abs_change": 0.4609375,
+  "rollback_verified": true,
+  "rollback_logits_max_abs_diff": 0.0,
+  "training_steps": 3,
+  "loss_history": [
+    {
+      "step": 1,
+      "train_loss": 4.694333076477051
+    },
+    {
+      "step": 2,
+      "train_loss": 4.810832977294922
+    },
+    {
+      "step": 3,
+      "train_loss": 4.585022449493408
+    }
+  ],
+  "training_wall_seconds": 2997.308106799999,
+  "load_wall_seconds": 0.7492581000005885,
+  "peak_process_rss_bytes": 8292810752,
+  "rss_before_load_bytes": 1077673984,
+  "available_ram_before_load_bytes": 16972419072,
+  "available_ram_after_load_bytes": 16542294016,
+  "available_ram_after_training_bytes": 10153689088,
+  "total_ram_bytes": 24919851008,
+  "minimum_free_ram_fraction": 0.2,
+  "device": "cpu",
+  "dtype": "torch.bfloat16",
+  "adapter_path": "[REDACTED_LOCAL_PATH]\\.gemini\\antigravity\\scratch\\[PROJECT_NAME]\\checkpoints\\impression_001\\layer0_ffn_gate_lora",
+  "fresh_process_reload_verified": false,
+  "efficiency_gain_measured": false,
+  "limitations": [
+    "Only one layer-zero FFN gate projection's LoRA adapter was trained.",
+    "Validation-loss change on one held-out local sample is not evidence of general capability improvement.",
+    "No speed or memory efficiency gain was measured against a conventional full-model or PEFT baseline."
+  ],
+  "fresh_process_max_abs_logit_diff": 0.625,
+  "fresh_process_reload_wall_seconds": 2.243945199999871,
+  "fresh_process_available_ram_before_bytes": 16499560448,
+  "fresh_process_available_ram_after_load_bytes": 16473624576
+}

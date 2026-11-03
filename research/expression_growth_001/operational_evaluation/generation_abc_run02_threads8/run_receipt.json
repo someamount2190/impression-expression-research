@@ -1,0 +1,27 @@
+{
+  "status": "stopped_after_no_material_thread_speedup",
+  "requested_arms": [
+    "A",
+    "B",
+    "C"
+  ],
+  "manifest_sha256": "5635078f52eec37ab2a43764e1076065433ed500b30a38801c998ae19e0e9a99",
+  "subset_sha256": "1c0aaeff239e33d6b5289c22eaee7b0c79c36281579597687c784187577f88eb",
+  "checkpoint_snapshot": "[REDACTED_LOCAL_PATH]\\.cache\\huggingface\\hub\\models--dphn--[BASE_MODEL]\\snapshots\\392a6f57223e7ccfe6ef4ebdb2ff101a42d57364",
+  "cpu_threads": 8,
+  "adapter_sha256": "589ce0f66f9f72530521662a839daab616014ffede3273b51b2c1373fdeda8b9",
+  "macro_library_sha256": "02b89a9b3c3150c73278cffeaee4a17e9de891419d630c4dda3bcd76b52e88dc",
+  "execution_enabled": false,
+  "runtime_completion_scored": false,
+  "provider_usage": null,
+  "model_load_seconds": 16.4690000000046,
+  "completed_calls": [
+    {
+      "arm": "A",
+      "example_id": "sealed_evaluation_artifact_integrity_review_000"
+    }
+  ],
+  "stopped_at_utc": "2026-11-03T09:28:59.8263753Z",
+  "stop_reason": "Eight-thread CPU call took 649.6 seconds for one token versus 679.0 seconds on one thread for the same 314-token prompt (about 4.3% faster, one task and one sample only). Neither result was usable JSON or a plan; no material speedup was demonstrated.",
+  "elapsed_run_seconds": 742.5
+}

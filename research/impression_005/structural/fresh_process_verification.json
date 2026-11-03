@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "fresh_process": true,
+  "checkpoint_revision": "392a6f57223e7ccfe6ef4ebdb2ff101a42d57364",
+  "checkpoint_index_sha256": "e6322ad005d27134ba439f7ddd572e632e5b2116ebfbdc88186596dada904c75",
+  "adapter_sha256": "c575b20a4ddd7104988dd12de6c377dd91608571b30f25e7582b36d04938b31e",
+  "train_logits_equal_bitwise": true,
+  "train_logits_max_abs_diff": 0.0,
+  "validation_logits_equal_bitwise": true,
+  "validation_logits_max_abs_diff": 0.0,
+  "baseline_train_logits_equal_bitwise": true,
+  "baseline_validation_logits_equal_bitwise": true,
+  "candidate_retained_by_validation": true,
+  "actual_decoder_layer26_executed_with_connector": true,
+  "ram_available_after_load_bytes": 13806034944
+}

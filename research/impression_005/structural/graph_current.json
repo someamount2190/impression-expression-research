@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "graph_id": "[BASE_MODEL]3_layer26_residual_connector_v1",
+  "checkpoint_revision": "392a6f57223e7ccfe6ef4ebdb2ff101a42d57364",
+  "backbone_layers": 28,
+  "registered_target_partition": "IMP_L27_ATTENTION_QUERY_PROJECTION",
+  "trainable_neural_regions_before": [
+    "layer27.self_attn.q_proj adapter (historical; not loaded here)"
+  ],
+  "connector_nodes": [
+    {
+      "node_id": "IMP_L26_L27_RESIDUAL_CONNECTOR_001",
+      "source_region": "model.layers.26 full decoder block output",
+      "target_region": "model.layers.27 full decoder block input",
+      "kind": "trainable_low_rank_residual_branch",
+      "input_size": 3072,
+      "output_size": 3072,
+      "rank": 8,
+      "initial_output_is_zero": true,
+      "checkpoint": "experiments\\impression_005\\structural\\connector.safetensors",
+      "checkpoint_sha256": "c575b20a4ddd7104988dd12de6c377dd91608571b30f25e7582b36d04938b31e"
+    }
+  ],
+  "graph_modified": true,
+  "edges": [
+    {
+      "from": "model.layers.26",
+      "to": "IMP_L26_L27_RESIDUAL_CONNECTOR_001",
+      "type": "hidden_state_fork"
+    },
+    {
+      "from": "IMP_L26_L27_RESIDUAL_CONNECTOR_001",
+      "to": "model.layers.27",
+      "type": "residual_add"
+    }
+  ],
+  "candidate_retained": true,
+  "rollback_to_graph_id": "[BASE_MODEL]3_impression004_fixed_graph_v1"
+}

@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "graph_id": "[BASE_MODEL]3_impression004_fixed_graph_v1",
+  "checkpoint_revision": "392a6f57223e7ccfe6ef4ebdb2ff101a42d57364",
+  "backbone_layers": 28,
+  "registered_target_partition": "IMP_L27_ATTENTION_QUERY_PROJECTION",
+  "trainable_neural_regions_before": [
+    "layer27.self_attn.q_proj adapter (historical; not loaded here)"
+  ],
+  "connector_nodes": [],
+  "graph_modified": false
+}

@@ -1,0 +1,65 @@
+{
+  "experiment": "IMPRESSION-005",
+  "status": "completed_with_partial_acceptance",
+  "started_at_local": "2026-11-03",
+  "finished_at_local": "2026-11-03",
+  "runtime_limit_hours": 8,
+  "preserve_impression_004": true,
+  "active_training_process": false,
+  "phase_status": {
+    "A_local_inference": "passed_for_local_ollama_base; HF_CPU_reference_failed_practical_latency_gate",
+    "B_native_decision_interface": "passed_for_registered_typed_proposal_actions; no training or topology mutation dispatched",
+    "C_native_decision_evaluation": "partial; provenance comparison completed, native choices inefficient and one unsafe proposal rejected",
+    "D_native_decision_learning": "not_met; provenance dataset built, adapter training withheld for lack of family-disjoint evidence",
+    "E_structural_adaptation": "passed_as_manual_reversible_research_experiment; not selected by [SYSTEM_NAME]"
+  },
+  "inference_gate": {
+    "initial_capacity_tokens": 64,
+    "final_capacity_tokens": 128,
+    "minimum_required_tokens": 32,
+    "warm_latency_seconds_max": 30,
+    "cold_latency_seconds_max": 60,
+    "required_plan": "parseable typed three-step plan",
+    "gate_set_before_benchmark": true,
+    "capacity_amended_after_documented_truncation": true,
+    "latency_thresholds_changed": false
+  },
+  "acceptance": {
+    "level_1_practical_local_inference": "passed_for_unmodified_Ollama_Q4_base; IMPRESSION_adapter_inference_not_verified",
+    "level_2_native_typed_proposals": "passed_proposal_plumbing_only",
+    "level_3_blinded_abc_comparison": "partial_not_passed; one measured workload family only",
+    "level_4_learned_decision_improvement": "not_met",
+    "level_5_reversible_graph_expansion": "passed_in_isolated_research_runtime; orchestrator_selected_connector",
+    "level_6_integrated_autonomous_adaptation_benefit": "not_met"
+  },
+  "native_decision_evaluation": {
+    "cases": 4,
+    "origin": "local_[BASE_MODEL]",
+    "local_model_tag": "[BASE_MODEL]-3b:latest",
+    "configuration_selected_in_all_cases": "dense_cpu1",
+    "mean_decision_latency_seconds": 6.84,
+    "generated_tokens_total": 272,
+    "proposal_origin_independently_assigned_by_runtime": true,
+    "online_orchestrator_selected_C": false,
+    "graph_mutated_by_C": false
+  },
+  "structural_experiment": {
+    "candidate_graph_id": "[BASE_MODEL]3_layer26_residual_connector_v1",
+    "origin": "external_orchestrator_research_proposal",
+    "candidate_retained_by_validation": true,
+    "validation_loss_before": 3.7946877479553223,
+    "validation_loss_after": 3.6964499950408936,
+    "validation_loss_delta": -0.09823775291442871,
+    "fresh_process_reload_verified": true,
+    "train_logits_equal_bitwise": true,
+    "validation_logits_equal_bitwise": true,
+    "rollback_reproduced_baseline_logits_bitwise": true,
+    "connector_sha256": "c575b20a4ddd7104988dd12de6c377dd91608571b30f25e7582b36d04938b31e",
+    "production_runtime_integration_verified": false
+  },
+  "measured_efficiency_gain_in_impression_005": false,
+  "symbolic_generation_gain_measured": false,
+  "impression_004_preserved": true,
+  "llm_monitor_agents_used": 0,
+  "recursive_delegation": false
+}

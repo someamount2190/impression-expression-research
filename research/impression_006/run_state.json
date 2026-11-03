@@ -1,0 +1,72 @@
+{
+  "experiment": "IMPRESSION-006-followup",
+  "status": "partial_evidence_collected; requested_acceptance_not_met",
+  "started_local": "2026-11-03",
+  "last_updated_local": "2026-11-04",
+  "preserve_impression_004_and_005": true,
+  "decision_evaluation": {
+    "verified_successful_candidate_cycles": 5,
+    "independent_measured_workload_families": [
+      "expression_family_disjoint_one_step"
+    ],
+    "counterfactual_resource_scenarios_separated": true,
+    "family_disjoint_split_frozen_before_training": true,
+    "train_families": [],
+    "validation_families": [],
+    "test_families": [],
+    "decision_training_performed": false,
+    "status": "insufficient_independent_measured_workload_families; no valid split assignment",
+    "unassigned_ineligible_family": "expression_family_disjoint_one_step"
+  },
+  "native_choice_diagnosis": {
+    "prompt_ablation_calls": 8,
+    "repeats_per_prompt_variant": 2,
+    "historical_prompt_choice": "dense_cpu1",
+    "baseline_anchor_removed_choice": "sparse_supervised_cpu1",
+    "compact_mixed_order_choice": "sparse_supervised_cpu2",
+    "compact_fastest_first_choice": "sparse_cuda_head_cpu_suffix",
+    "live_broker_rejections": 2,
+    "rejection_reason": "insufficient current VRAM after reserve and guard",
+    "decision_execution_performed": false
+  },
+  "broker_safety": {
+    "changed_to_check_every_repeated_profile": true,
+    "resource_preflight_enabled": true,
+    "graph_mutation_enabled": false,
+    "regression_tests": "19 passed, 1 skipped"
+  },
+  "fair_abc_trial": {
+    "new_workload_family_trials_run": 0,
+    "repeated_cycles_completed": 0,
+    "status": "not_run",
+    "reason": "No verified multi-family candidate outcomes exist; reusing the IMPRESSION-004 single-family runtime measurements on new workloads would be an invalid comparison."
+  },
+  "connector_followup": {
+    "split_frozen_before_training": true,
+    "train_families": 3,
+    "validation_families": 3,
+    "sealed_test_families": 10,
+    "seeds": [
+      17,
+      41
+    ],
+    "matched_qproj_lora_baseline": "specified_same_49152_trainable_parameters",
+    "capture_attempt_elapsed_seconds": 2406,
+    "optimizer_updates": 0,
+    "status": "aborted_before_optimizer_update_due_cpu_capture_latency",
+    "production_graph_modified": false
+  },
+  "impression_adapter_inference": {
+    "source_adapter_sha256": "474b77f3f822dcfc51066e42831c192778a422203d8bb483fb751a225d3f3569",
+    "gguf_conversion_and_tensor_mapping": "passed",
+    "ollama_tag": "impression006-[BASE_MODEL]3-adapter-eval",
+    "matched_base_adapter_generation_prompts": 2,
+    "base_adapter_text_identical_on_probes": true,
+    "typed_generation_quality": "failed_on_both_probes_for_both_models",
+    "raw_bf16_fresh_process_reload_parity": "passed_in_impression_004",
+    "converted_gguf_full_logit_parity_against_raw_bf16": "not_measured"
+  },
+  "production_graph_expansion_or_reconnection": "disabled_not_integrated",
+  "efficiency_gain_measured": false,
+  "symbolic_reasoning_gain_measured": false
+}
