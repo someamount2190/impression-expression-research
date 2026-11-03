@@ -1,7 +1,7 @@
 # Copyright and third-party notices
 
-Copyright ownership for the collected source, experiment records, datasets and derived artifacts has not yet been independently established. The source project did not provide a repository-wide license in the reviewed snapshot. No reuse license is granted by this research snapshot.
+Original material in this repository is released under the MIT License; see `LICENSE`. Copyright (c) 2026 Christian Correa.
 
-The reports refer to the [BASE_MODEL] model and other third-party dependencies. Their weights, code, and terms are not included here. Consult each upstream project’s current terms before using, redistributing, or publishing dependent artifacts.
+The MIT License applies only to rights held by the copyright holder. Third-party models, libraries, marks, and other dependencies remain subject to their own licenses and terms. No third-party model weights are included here; consult upstream terms before using related artifacts.
 
-**Release gate:** confirm project ownership and contributor permissions; identify applicable third-party licenses; choose a license for original code and a separate data license if appropriate; then update this notice and the repository metadata before public publication.
+Experiment records and derived data are included only to the extent they are part of the original material covered by this release. This license does not grant rights to omitted third-party assets.
