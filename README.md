@@ -42,4 +42,6 @@ A citation file is provided at `CITATION.cff`. Until an archival release exists,
 
 ## License
 
-No license is included because ownership and redistribution rights for all source, derived datasets, and model-related material have not been established. Do not assume this repository grants permission to reuse its contents. Set an appropriate license before making the repository public.
+Unless a file or directory includes a different notice, original source code and documentation in this repository are released under the MIT License; see [`LICENSE`](LICENSE). Copyright is held by Christian Correa, 2026.
+
+The MIT License applies only to material for which the project author can grant those rights. It does not grant rights to third-party software, model weights or outputs, external datasets, or other materials whose terms are set by their respective owners. Check the notices and source references accompanying each artifact before reuse. No model weights are included in this repository.
